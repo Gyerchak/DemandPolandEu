@@ -19,3 +19,4 @@ __pycache__/
 # Runtime data
 .opencode-data/
 sessions/
+.opencode/agent
