@@ -1,0 +1,17 @@
+# OpenCodeBox shared skills/commands (symlinks; never commit)
+.opencode/skills
+.opencode/command
+
+# ProjectTXT artifacts
+ProjectTXT
+ProjectTXT.txt
+
+# Build artifacts / deps
+node_modules/
+out/
+build/
+dist/
+
+# Runtime data
+.opencode-data/
+sessions/
