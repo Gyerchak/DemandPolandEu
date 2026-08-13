@@ -12,6 +12,10 @@ out/
 build/
 dist/
 
+# Python
+__pycache__/
+*.pyc
+
 # Runtime data
 .opencode-data/
 sessions/

@@ -1,0 +1,124 @@
+{
+  "products": [
+    {
+      "id": "electric-scooter",
+      "name": "Elektryczna hulajnoga 500W",
+      "category": "Elektromobilnosc",
+      "local_price_pln": 1899,
+      "demand": 0.92,
+      "popularity": 0.95,
+      "weight_kg": 16.0,
+      "note": "Boom sezonowy wiosna-lato; mocna konkurencja Allegro"
+    },
+    {
+      "id": "e-bike-conversion",
+      "name": "Zestaw konwersji roweru na e-bike 36V",
+      "category": "Elektromobilnosc",
+      "local_price_pln": 1499,
+      "demand": 0.7,
+      "popularity": 0.55,
+      "weight_kg": 9.0,
+      "note": "Wzrost po dotacjach rowerowych"
+    },
+    {
+      "id": "power-station",
+      "name": "Power station 1000Wh LiFePO4",
+      "category": "Energia",
+      "local_price_pln": 2799,
+      "demand": 0.8,
+      "popularity": 0.6,
+      "weight_kg": 11.5,
+      "note": "Czarny scenariusz/campingowy popyt"
+    },
+    {
+      "id": "solar-panel-400w",
+      "name": "Panel fotowoltaiczny 400W",
+      "category": "Energia",
+      "local_price_pln": 649,
+      "demand": 0.65,
+      "popularity": 0.5,
+      "weight_kg": 22.0,
+      "note": "Mocno wrazliwy na transport (duze, kruche)"
+    },
+    {
+      "id": "smart-heater",
+      "name": "Olejowy grzejnik smart 2000W",
+      "category": "Dom i ogrzewanie",
+      "local_price_pln": 349,
+      "demand": 0.75,
+      "popularity": 0.45,
+      "weight_kg": 13.0,
+      "note": "Popyt sezonowy zima"
+    },
+    {
+      "id": "air-fryer",
+      "name": "Air fryer 5.5L cyfrowy",
+      "category": "AGD",
+      "local_price_pln": 429,
+      "demand": 0.85,
+      "popularity": 0.9,
+      "weight_kg": 6.0,
+      "note": "Trend utrzymuje sie od 2 lat"
+    },
+    {
+      "id": "garden-pruner",
+      "name": "Akumulatorowy sekator do zywoplotu",
+      "category": "Ogrod",
+      "local_price_pln": 289,
+      "demand": 0.6,
+      "popularity": 0.4,
+      "weight_kg": 2.8,
+      "note": "Sezon ogrodowy kwiecien-czerwiec"
+    },
+    {
+      "id": "bike-rack",
+      "name": "Bagaznik rowerowy na haka",
+      "category": "Motoryzacja",
+      "local_price_pln": 899,
+      "demand": 0.55,
+      "popularity": 0.5,
+      "weight_kg": 14.0,
+      "note": "Wymagane certyfikaty EN"
+    },
+    {
+      "id": "robot-vacuum",
+      "name": "Robot sprzatajacy LiDAR 5000Pa",
+      "category": "AGD",
+      "local_price_pln": 1099,
+      "demand": 0.88,
+      "popularity": 0.92,
+      "weight_kg": 4.5,
+      "note": "Wysoki churn, czestosc zakupu niska ale duzy rynek"
+    },
+    {
+      "id": "electric-grill",
+      "name": "Elektryczny grill 2200W z rusztem",
+      "category": "Dom i ogrzewanie",
+      "local_price_pln": 599,
+      "demand": 0.72,
+      "popularity": 0.6,
+      "weight_kg": 9.5,
+      "note": "Sezon grillowy maj-sierpien"
+    },
+    {
+      "id": "solar-charger",
+      "name": "Ladowarka solarna 100W przenosna",
+      "category": "Energia",
+      "local_price_pln": 499,
+      "demand": 0.5,
+      "popularity": 0.35,
+      "weight_kg": 2.1,
+      "note": "Niski popyt, slim margins"
+    },
+    {
+      "id": "heat-gun",
+      "name": "Opalarka 2000W z LCD",
+      "category": "Narzedzia",
+      "local_price_pln": 179,
+      "demand": 0.45,
+      "popularity": 0.4,
+      "weight_kg": 1.1,
+      "note": "Kategoria nasycona"
+    }
+  ]
+}

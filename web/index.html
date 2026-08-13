@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DemandPolandEu — Monitor polskiego popytu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>DemandPolandEu</h1>
+    <p class="subtitle">Monitor polskiego rynku popytu — tani dostawcy (Chiny + UE) z kosztami transportu</p>
+  </header>
+
+  <section class="controls">
+    <label>Sortowanie
+      <select id="sort">
+        <option value="opportunity" selected>Opportunity score (domyślne)</option>
+        <option value="demand">Poziom popytu</option>
+        <option value="profit_margin">Marża zysku</option>
+        <option value="profit_per_unit">Zysk na sztukę</option>
+        <option value="success_rate">Success rate</option>
+      </select>
+    </label>
+    <label>Marża referencyjna
+      <input id="margin-ref" type="number" min="0.05" max="1" step="0.05" value="0.30">
+    </label>
+    <label class="check">
+      <input id="vat" type="checkbox"> Uwzględnij VAT 23%
+    </label>
+    <button id="refresh">Odśwież</button>
+  </section>
+
+  <section id="meta" class="meta"></section>
+
+  <table id="rank">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Produkt</th>
+        <th>Popyt</th>
+        <th>Popularność</th>
+        <th>Success rate</th>
+        <th>Marża</th>
+        <th>Zysk/szt</th>
+        <th>Koszt lądowania</th>
+        <th>Najlepszy region</th>
+        <th>Dostawca</th>
+        <th>Opportunity</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <section id="detail" class="detail hidden"></section>
+
+  <footer>
+    <div class="formulas">
+      <p><strong>Success rate</strong>: 0.5&times;popularność + 0.5&times;popyt (prawdopodobieństwo sprzedaży)</p>
+      <p><strong>Opportunity score</strong>: 100 &times; success_rate &times; &radic;(marża / marża_referencyjna)
+        &mdash; „bezpieczne i dochodowe&rdquo;: wysoki wynik wymaga jednocześnie wysokiego prawdopodobieństwa sprzedaży
+        <em>i</em> sensownej marży.</p>
+      <p><strong>Koszt lądowania</strong>: cena dostawcy + fracht (za kg + za sztukę) + cło/opłaty + opcjonalnie VAT.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
