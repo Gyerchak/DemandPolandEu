@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=DemandPolandEu
+GenericName=Demand market monitor
+Comment=Polish demand market monitor (C++)
+Exec=bash -c "cd /run/media/hubertg/SONIC/DemandPolandEu && ./run.sh"
+Icon=utilities-system-monitor
+Terminal=true
+Categories=Utility;Office;
