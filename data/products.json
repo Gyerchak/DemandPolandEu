@@ -2,123 +2,159 @@
   "products": [
     {
       "id": "electric-scooter",
-      "name": "Elektryczna hulajnoga 500W",
-      "category": "Elektromobilnosc",
-      "local_price_pln": 1899,
-      "demand": 0.92,
-      "popularity": 0.95,
+      "name": "Electric scooter 500W",
       "weight_kg": 16.0,
-      "note": "Boom sezonowy wiosna-lato; mocna konkurencja Allegro"
+      "markets": {
+        "poland": {"buy": 1240, "sell": 1599, "demand": 0.92, "popularity": 0.95},
+        "visegrad": {"buy": 1150, "sell": 1520, "demand": 0.80, "popularity": 0.80},
+        "china": {"buy": 690, "sell": 980, "demand": 0.70, "popularity": 0.70},
+        "europe": {"buy": 1180, "sell": 1500, "demand": 0.72, "popularity": 0.72},
+        "baltic": {"buy": 1200, "sell": 1540, "demand": 0.70, "popularity": 0.70},
+        "turkiye": {"buy": 980, "sell": 1320, "demand": 0.66, "popularity": 0.66},
+        "westeu": {"buy": 1350, "sell": 1750, "demand": 0.75, "popularity": 0.75},
+        "turkic": {"buy": 1100, "sell": 1500, "demand": 0.55, "popularity": 0.55},
+        "ukraine": {"buy": 1050, "sell": 1420, "demand": 0.60, "popularity": 0.60},
+        "balkan": {"buy": 1120, "sell": 1480, "demand": 0.58, "popularity": 0.58}
+      }
     },
     {
       "id": "e-bike-conversion",
-      "name": "Zestaw konwersji roweru na e-bike 36V",
-      "category": "Elektromobilnosc",
-      "local_price_pln": 1499,
-      "demand": 0.7,
-      "popularity": 0.55,
+      "name": "E-bike conversion kit 36V",
       "weight_kg": 9.0,
-      "note": "Wzrost po dotacjach rowerowych"
+      "category": "Electronics",
+      "markets": {
+        "poland": {"buy": 1050, "sell": 1299, "demand": 0.70, "popularity": 0.55},
+        "visegrad": {"buy": 990, "sell": 1240, "demand": 0.62, "popularity": 0.55},
+        "china": {"buy": 460, "sell": 700, "demand": 0.55, "popularity": 0.50},
+        "europe": {"buy": 1000, "sell": 1250, "demand": 0.55, "popularity": 0.50},
+        "turkiye": {"buy": 820, "sell": 1100, "demand": 0.55, "popularity": 0.50}
+      }
     },
     {
       "id": "power-station",
       "name": "Power station 1000Wh LiFePO4",
-      "category": "Energia",
-      "local_price_pln": 2799,
-      "demand": 0.8,
-      "popularity": 0.6,
       "weight_kg": 11.5,
-      "note": "Czarny scenariusz/campingowy popyt"
+      "markets": {
+        "poland": {"buy": 2200, "sell": 2600, "demand": 0.80, "popularity": 0.60},
+        "visegrad": {"buy": 2100, "sell": 2520, "demand": 0.68, "popularity": 0.58},
+        "china": {"buy": 880, "sell": 1250, "demand": 0.62, "popularity": 0.55},
+        "europe": {"buy": 2150, "sell": 2550, "demand": 0.60, "popularity": 0.52},
+        "baltic": {"buy": 2200, "sell": 2600, "demand": 0.62, "popularity": 0.55},
+        "westeu": {"buy": 2400, "sell": 2850, "demand": 0.65, "popularity": 0.58}
+      }
     },
     {
       "id": "solar-panel-400w",
-      "name": "Panel fotowoltaiczny 400W",
-      "category": "Energia",
-      "local_price_pln": 649,
-      "demand": 0.65,
-      "popularity": 0.5,
+      "name": "Solar panel 400W",
       "weight_kg": 22.0,
-      "note": "Mocno wrazliwy na transport (duze, kruche)"
+      "markets": {
+        "poland": {"buy": 480, "sell": 620, "demand": 0.65, "popularity": 0.50},
+        "visegrad": {"buy": 450, "sell": 590, "demand": 0.58, "popularity": 0.50},
+        "china": {"buy": 190, "sell": 320, "demand": 0.55, "popularity": 0.50},
+        "europe": {"buy": 460, "sell": 600, "demand": 0.50, "popularity": 0.48},
+        "turkiye": {"buy": 380, "sell": 520, "demand": 0.58, "popularity": 0.50}
+      }
     },
     {
       "id": "smart-heater",
-      "name": "Olejowy grzejnik smart 2000W",
-      "category": "Dom i ogrzewanie",
-      "local_price_pln": 349,
-      "demand": 0.75,
-      "popularity": 0.45,
+      "name": "Smart oil heater 2000W",
       "weight_kg": 13.0,
-      "note": "Popyt sezonowy zima"
+      "category": "Home & Garden",
+      "markets": {
+        "poland": {"buy": 240, "sell": 320, "demand": 0.75, "popularity": 0.45},
+        "visegrad": {"buy": 225, "sell": 305, "demand": 0.66, "popularity": 0.45},
+        "china": {"buy": 120, "sell": 200, "demand": 0.55, "popularity": 0.42},
+        "europe": {"buy": 230, "sell": 310, "demand": 0.55, "popularity": 0.40},
+        "baltic": {"buy": 235, "sell": 315, "demand": 0.60, "popularity": 0.44},
+        "ukraine": {"buy": 200, "sell": 280, "demand": 0.62, "popularity": 0.45}
+      }
     },
     {
       "id": "air-fryer",
-      "name": "Air fryer 5.5L cyfrowy",
-      "category": "AGD",
-      "local_price_pln": 429,
-      "demand": 0.85,
-      "popularity": 0.9,
+      "name": "Digital air fryer 5.5L",
       "weight_kg": 6.0,
-      "note": "Trend utrzymuje sie od 2 lat"
+      "category": "Appliances",
+      "markets": {
+        "poland": {"buy": 300, "sell": 380, "demand": 0.85, "popularity": 0.90},
+        "visegrad": {"buy": 285, "sell": 365, "demand": 0.75, "popularity": 0.80},
+        "china": {"buy": 155, "sell": 240, "demand": 0.65, "popularity": 0.70},
+        "europe": {"buy": 290, "sell": 370, "demand": 0.68, "popularity": 0.70},
+        "baltic": {"buy": 295, "sell": 375, "demand": 0.70, "popularity": 0.72},
+        "turkiye": {"buy": 250, "sell": 340, "demand": 0.68, "popularity": 0.70}
+      }
     },
     {
       "id": "garden-pruner",
-      "name": "Akumulatorowy sekator do zywoplotu",
-      "category": "Ogrod",
-      "local_price_pln": 289,
-      "demand": 0.6,
-      "popularity": 0.4,
+      "name": "Cordless hedge pruner",
       "weight_kg": 2.8,
-      "note": "Sezon ogrodowy kwiecien-czerwiec"
+      "markets": {
+        "poland": {"buy": 200, "sell": 260, "demand": 0.60, "popularity": 0.40},
+        "visegrad": {"buy": 190, "sell": 248, "demand": 0.52, "popularity": 0.40},
+        "china": {"buy": 88, "sell": 150, "demand": 0.50, "popularity": 0.38},
+        "europe": {"buy": 195, "sell": 252, "demand": 0.48, "popularity": 0.38}
+      }
     },
     {
       "id": "bike-rack",
-      "name": "Bagaznik rowerowy na haka",
-      "category": "Motoryzacja",
-      "local_price_pln": 899,
-      "demand": 0.55,
-      "popularity": 0.5,
+      "name": "Towbar bike rack",
       "weight_kg": 14.0,
-      "note": "Wymagane certyfikaty EN"
+      "category": "Automotive",
+      "markets": {
+        "poland": {"buy": 640, "sell": 800, "demand": 0.55, "popularity": 0.50},
+        "visegrad": {"buy": 610, "sell": 770, "demand": 0.50, "popularity": 0.50},
+        "china": {"buy": 320, "sell": 480, "demand": 0.50, "popularity": 0.48},
+        "europe": {"buy": 630, "sell": 790, "demand": 0.50, "popularity": 0.48}
+      }
     },
     {
       "id": "robot-vacuum",
-      "name": "Robot sprzatajacy LiDAR 5000Pa",
-      "category": "AGD",
-      "local_price_pln": 1099,
-      "demand": 0.88,
-      "popularity": 0.92,
+      "name": "Robot vacuum LiDAR 5000Pa",
       "weight_kg": 4.5,
-      "note": "Wysoki churn, czestosc zakupu niska ale duzy rynek"
+      "markets": {
+        "poland": {"buy": 780, "sell": 950, "demand": 0.88, "popularity": 0.92},
+        "visegrad": {"buy": 740, "sell": 910, "demand": 0.78, "popularity": 0.82},
+        "china": {"buy": 420, "sell": 600, "demand": 0.72, "popularity": 0.75},
+        "europe": {"buy": 750, "sell": 920, "demand": 0.72, "popularity": 0.75},
+        "baltic": {"buy": 770, "sell": 940, "demand": 0.74, "popularity": 0.76},
+        "westeu": {"buy": 830, "sell": 1010, "demand": 0.78, "popularity": 0.80}
+      }
     },
     {
       "id": "electric-grill",
-      "name": "Elektryczny grill 2200W z rusztem",
-      "category": "Dom i ogrzewanie",
-      "local_price_pln": 599,
-      "demand": 0.72,
-      "popularity": 0.6,
+      "name": "Electric grill 2200W",
       "weight_kg": 9.5,
-      "note": "Sezon grillowy maj-sierpien"
+      "category": "Home & Garden",
+      "markets": {
+        "poland": {"buy": 420, "sell": 520, "demand": 0.72, "popularity": 0.60},
+        "visegrad": {"buy": 400, "sell": 500, "demand": 0.62, "popularity": 0.55},
+        "china": {"buy": 210, "sell": 310, "demand": 0.55, "popularity": 0.50},
+        "turkiye": {"buy": 340, "sell": 450, "demand": 0.60, "popularity": 0.55},
+        "balkan": {"buy": 390, "sell": 490, "demand": 0.55, "popularity": 0.50}
+      }
     },
     {
       "id": "solar-charger",
-      "name": "Ladowarka solarna 100W przenosna",
-      "category": "Energia",
-      "local_price_pln": 499,
-      "demand": 0.5,
-      "popularity": 0.35,
+      "name": "Portable solar charger 100W",
       "weight_kg": 2.1,
-      "note": "Niski popyt, slim margins"
+      "category": "Energy",
+      "markets": {
+        "poland": {"buy": 360, "sell": 440, "demand": 0.50, "popularity": 0.35},
+        "visegrad": {"buy": 345, "sell": 425, "demand": 0.45, "popularity": 0.35},
+        "china": {"buy": 135, "sell": 210, "demand": 0.45, "popularity": 0.35},
+        "turkiye": {"buy": 280, "sell": 370, "demand": 0.45, "popularity": 0.35}
+      }
     },
     {
       "id": "heat-gun",
-      "name": "Opalarka 2000W z LCD",
-      "category": "Narzedzia",
-      "local_price_pln": 179,
-      "demand": 0.45,
-      "popularity": 0.4,
+      "name": "Heat gun 2000W LCD",
       "weight_kg": 1.1,
-      "note": "Kategoria nasycona"
+      "category": "Tools",
+      "markets": {
+        "poland": {"buy": 120, "sell": 160, "demand": 0.45, "popularity": 0.40},
+        "visegrad": {"buy": 115, "sell": 155, "demand": 0.40, "popularity": 0.40},
+        "china": {"buy": 48, "sell": 90, "demand": 0.40, "popularity": 0.38},
+        "europe": {"buy": 118, "sell": 158, "demand": 0.38, "popularity": 0.38}
+      }
     }
   ]
 }

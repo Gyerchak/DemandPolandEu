@@ -1,109 +1,82 @@
 #pragma once
 
+#include <map>
 #include <string>
 #include <vector>
 
 namespace dpe {
 
-struct SuccessWeights {
-    double popularity = 0.5;
-    double demand = 0.5;
-};
-
-struct Region {
+struct Market {
     std::string id;
     std::string name;
+    std::string role;          // home | main | other
+    bool watch = false;        // main markets to watch
     std::string currency;
-    double fx_to_pln = 1.0;
-    double freight_per_kg_pln = 0.0;
-    double freight_per_unit_pln = 0.0;
-    double duty_rate = 0.0;
-    double handling_pln = 0.0;
-    double vat_rate = 0.0;
+    double fx_to_eur = 1.0;
+    double freight_per_kg_eur = 0.0;
+    double freight_per_unit_eur = 0.0;
+    double duty_rate = 0.0;    // import duty into this market
+    double handling_eur = 0.0;
+    double vat_rate = 0.0;     // VAT charged on a sale in this market
     int lead_days = 30;
+    std::string note;
+};
+
+struct ProductMarket {
+    double buy = 0.0;          // what you pay to acquire (local currency)
+    double sell = 0.0;         // what a buyer pays you (local currency)
+    double demand = 0.0;
+    double popularity = 0.0;
 };
 
 struct Product {
     std::string id;
     std::string name;
-    std::string category;
-    double local_price_pln = 0.0;
-    double demand = 0.0;
-    double popularity = 0.0;
+    std::string category;      // broad, English; may be empty -> fallback
     double weight_kg = 0.0;
+    std::map<std::string, ProductMarket> markets;  // market_id -> data
 };
 
-struct Supplier {
-    std::string id;
-    std::string name;
-    std::string region_id;
-    int lead_days = 30;
-    // prices: product_id -> unit price in region currency
-    std::vector<std::pair<std::string, double>> prices;
-};
-
-struct LandingCost {
-    double supplier = 0.0;
-    double freight = 0.0;
-    double duty = 0.0;
-    double vat = 0.0;
-    double total = 0.0;
-};
-
-struct Offer {
+struct Trade {
+    std::string kind;          // "import" | "export"
     std::string product_id;
-    std::string supplier_id;
-    std::string supplier_name;
-    std::string region_id;
-    std::string region_name;
-    std::string currency;
-    double unit_price = 0.0;      // in region currency
-    double unit_price_pln = 0.0;  // converted to PLN
-    double landing_cost_pln = 0.0;
-    double profit_per_unit = 0.0;
-    double profit_margin = 0.0;
-    double freight_pln = 0.0;
-    double duty_pln = 0.0;
-    double vat_pln = 0.0;
-    int lead_days = 0;
-    double success_rate = 0.0;
-    double opportunity = 0.0;
-};
-
-struct ProductRow {
-    std::string id;
-    std::string name;
+    std::string product_name;
     std::string category;
-    double local_price_pln = 0.0;
-    double demand = 0.0;
-    double popularity = 0.0;
-    double weight_kg = 0.0;
+    std::string from_market_id;
+    std::string from_market;
+    std::string to_market_id;
+    std::string to_market;
+    double buy_eur = 0.0;
+    double sell_eur = 0.0;
+    double freight_eur = 0.0;
+    double duty_eur = 0.0;
+    double handling_eur = 0.0;
+    double vat_eur = 0.0;
+    double cost_eur = 0.0;     // buy + freight + duty + handling
+    double total_eur = 0.0;    // cost + vat (all payments)
+    double profit_eur = 0.0;
+    double margin = 0.0;       // profit / sell
     double success_rate = 0.0;
-    double profit_margin = 0.0;
-    double profit_per_unit = 0.0;
     double opportunity = 0.0;
-    Offer best_offer;
-    std::vector<Offer> offers;  // sorted by landing cost
+    int lead_days = 0;
 };
 
 double clamp01(double v);
-double success_rate(double popularity, double demand, const SuccessWeights& w = SuccessWeights{});
-double freight_cost(const Region& region, const Product& product);
-double duty_cost(const Region& region, double supplier_price_pln, const Product& product);
-LandingCost landing_cost(double supplier_price_pln, const Region& region,
-                         const Product& product, bool include_vat);
+double success_rate(double popularity, double demand);
 double opportunity_score(double sr, double margin, double margin_ref = 0.3);
+std::string resolve_category(const Product& p, const std::string& dir);
 
-// Data loading (JSON via nlohmann)
+std::vector<Market> load_markets(const std::string& dir);
 std::vector<Product> load_products(const std::string& dir);
-std::vector<Region> load_regions(const std::string& dir);
-std::vector<Supplier> load_suppliers(const std::string& dir);
 
-// Analyzer
-std::vector<ProductRow> build_rows(const std::string& dir,
-                                   const SuccessWeights& weights = SuccessWeights{},
-                                   double margin_ref = 0.3,
-                                   bool include_vat = false);
-void sort_rows(std::vector<ProductRow>& rows, const std::string& key);
+// Build import/export trades. home_market_id anchors the trade; watch_markets
+// restricts the counterparty markets (empty = all markets).
+std::vector<Trade> build_trades(const std::string& dir,
+                                const std::string& home_market_id,
+                                const std::vector<std::string>& watch_markets,
+                                bool include_sale_vat,
+                                double margin_ref = 0.3);
+void sort_trades(std::vector<Trade>& trades, const std::string& key);
+std::vector<std::string> list_categories(const std::string& dir);
 
 }  // namespace dpe

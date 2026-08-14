@@ -1,120 +1,129 @@
 "use strict";
 
-const $ = (sel) => document.querySelector(sel);
+const $ = (s) => document.querySelector(s);
 const sortSel = $("#sort");
-const marginRef = $("#margin-ref");
+const catSel = $("#category");
+const homeSel = $("#home");
 const vatCheck = $("#vat");
+const allCheck = $("#all");
 const refreshBtn = $("#refresh");
-const tbody = $("#rank tbody");
+const marketsDiv = $("#markets");
 const meta = $("#meta");
-const detail = $("#detail");
+const importsTbody = $("#imports tbody");
+const exportsTbody = $("#exports tbody");
+
+let markets = [];
+let selected = new Set();
+
+const MAIN_WATCH = ["visegrad", "china", "poland", "europe", "baltic", "turkiye", "westeu"];
+
+function fmtMoney(v) {
+  return v.toLocaleString("en-IE", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " €";
+}
+function fmtPct(v) { return (v * 100).toFixed(1) + "%"; }
 
 function scoreClass(v) {
   if (v >= 65) return "hi";
   if (v >= 35) return "mid";
   return "lo";
 }
+function moneyClass(v) { return v >= 0 ? "good" : "bad"; }
 
-function bar(value, extra = "") {
-  const pct = Math.round(Math.min(100, Math.max(0, value * 100)));
-  const cls = pct >= 66 ? "good" : pct >= 34 ? "warn" : "bad";
-  return `<span class="bar ${cls}"><span style="width:${pct}%"></span></span>`;
+async function loadMarkets() {
+  const res = await fetch("/api/markets");
+  markets = await res.json();
+  homeSel.innerHTML = markets
+    .map((m) => `<option value="${m.id}">${m.name}${m.role === "home" ? " (home)" : ""}${m.role === "main" ? " (main)" : ""}</option>`)
+    .join("");
+  // default home = poland
+  homeSel.value = markets.find((m) => m.role === "home")?.id || markets[0].id;
+  marketsDiv.innerHTML = markets
+    .map((m) => `<label class="chip"><input type="checkbox" value="${m.id}" ${m.watch ? "checked" : ""}> ${m.name}</label>`)
+    .join("");
+  marketsDiv.querySelectorAll("input").forEach((cb) => {
+    cb.addEventListener("change", () => {
+      if (cb.checked) selected.add(cb.value);
+      else selected.delete(cb.value);
+    });
+  });
+  markets.forEach((m) => { if (m.watch) selected.add(m.id); });
 }
 
-function regionTag(regionId) {
-  if (regionId.startsWith("cn")) return `<span class="tag cn">Chiny</span>`;
-  if (regionId.startsWith("pl")) return `<span class="tag pl">PL</span>`;
-  return `<span class="tag eu">UE</span>`;
+async function loadCategories() {
+  const res = await fetch("/api/categories");
+  const cats = await res.json();
+  catSel.innerHTML = '<option value="">All categories</option>' +
+    cats.map((c) => `<option value="${c}">${c}</option>`).join("");
 }
 
-function fmtMoney(v) {
-  return v.toLocaleString("pl-PL", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " PLN";
+function tableHeaders() {
+  return `
+    <tr>
+      <th>Product</th><th>Cat</th><th>From</th><th>To</th>
+      <th>Buy</th><th>Freight</th><th>Duty</th><th>Handling</th><th>VAT</th>
+      <th>Total cost</th><th>Sell</th><th>Profit</th><th>Margin</th><th>Opp</th>
+    </tr>`;
 }
 
-function fmtPct(v) {
-  return (v * 100).toFixed(1) + "%";
+function rowHtml(t) {
+  return `
+    <tr>
+      <td><b>${t.product_name}</b></td>
+      <td><small style="color:var(--muted)">${t.category}</small></td>
+      <td>${t.from_market}</td>
+      <td>${t.to_market}</td>
+      <td>${fmtMoney(t.buy_eur)}</td>
+      <td>${fmtMoney(t.freight_eur)}</td>
+      <td>${fmtMoney(t.duty_eur)}</td>
+      <td>${fmtMoney(t.handling_eur)}</td>
+      <td>${fmtMoney(t.vat_eur)}</td>
+      <td><b>${fmtMoney(t.total_eur)}</b></td>
+      <td>${fmtMoney(t.sell_eur)}</td>
+      <td style="color:${moneyClass(t.profit_eur)}"><b>${fmtMoney(t.profit_eur)}</b></td>
+      <td style="color:${moneyClass(t.margin)}">${fmtPct(t.margin)}</td>
+      <td><span class="score ${scoreClass(t.opportunity)}">${t.opportunity.toFixed(0)}</span></td>
+    </tr>`;
+}
+
+function renderTable(tbody, rows) {
+  tbody.innerHTML = rows.length ? rows.map(rowHtml).join("") : "<tr><td colspan=15 style='color:var(--muted)'>No trades</td></tr>";
 }
 
 async function load() {
   meta.innerHTML = "";
-  detail.classList.add("hidden");
+  const watch = allCheck.checked ? "all" : Array.from(selected).join(",");
   const params = new URLSearchParams({
     sort: sortSel.value,
+    home: homeSel.value,
+    category: catSel.value,
+    markets: watch,
     vat: vatCheck.checked ? "1" : "0",
-    margin_ref: marginRef.value,
+    margin_ref: 0.3,
   });
   try {
-    const res = await fetch("/api/rank?" + params.toString());
+    const res = await fetch("/api/trades?" + params.toString());
     if (!res.ok) throw new Error("HTTP " + res.status);
     const data = await res.json();
-    render(data);
+    meta.innerHTML = `${data.count} trades (${data.imports.length} import, ${data.exports.length} export) &middot; home: <b>${data.home}</b> &middot; sort: <b>${sortSel.value}</b>`;
+    renderTable(importsTbody, data.imports.slice(0, 40));
+    renderTable(exportsTbody, data.exports.slice(0, 40));
   } catch (err) {
-    meta.innerHTML = `<span class="err">Błąd: ${err.message}</span>`;
+    meta.innerHTML = `<span class="err">Error: ${err.message}</span>`;
   }
 }
 
-function render(data) {
-  meta.innerHTML = `${data.count} produktów &middot; sortowanie: <b>${data.sort}</b>`;
-  tbody.innerHTML = "";
-  data.rows.forEach((row, idx) => {
-    const best = row.best_offer;
-    const tr = document.createElement("tr");
-    tr.innerHTML = `
-      <td>${idx + 1}</td>
-      <td><b>${row.name}</b><br><small style="color:var(--muted)">${row.category}</small></td>
-      <td>${(row.demand * 100).toFixed(0)}%${bar(row.demand)}</td>
-      <td>${(row.popularity * 100).toFixed(0)}%${bar(row.popularity)}</td>
-      <td>${(row.success_rate * 100).toFixed(1)}%${bar(row.success_rate)}</td>
-      <td style="color:${row.profit_margin > 0 ? "var(--good)" : "var(--bad)"}">${fmtPct(row.profit_margin)}</td>
-      <td>${fmtMoney(row.profit_per_unit)}</td>
-      <td>${fmtMoney(best.landing_cost_pln)}</td>
-      <td>${regionTag(best.region_id)} <small>${best.region_name}</small></td>
-      <td>${best.supplier_name}</td>
-      <td><span class="score ${scoreClass(row.opportunity)}">${row.opportunity.toFixed(0)}</span></td>
-      <td class="expand" title="Szczegóły ofert">▼</td>
-    `;
-    tr.querySelector(".expand").addEventListener("click", () => showDetail(row));
-    tbody.appendChild(tr);
-  });
-}
-
-function showDetail(row) {
-  detail.innerHTML = `
-    <h2>${row.name} — wszystkie oferty</h2>
-    <p style="color:var(--muted);margin-top:4px">
-      Cena lokalna: <b>${fmtMoney(row.local_price_pln)}</b> &middot;
-      Popyt: ${(row.demand * 100).toFixed(0)}% &middot;
-      Popularność: ${(row.popularity * 100).toFixed(0)}% &middot;
-      Success rate: <b>${(row.success_rate * 100).toFixed(1)}%</b> &middot;
-      Opportunity: <b>${row.opportunity.toFixed(1)}</b>
-    </p>
-    <table>
-      <thead><tr>
-        <th>Dostawca</th><th>Region</th><th>Dostawca/PLN</th><th>Fracht</th><th>Cło</th>
-        <th>Koszt lądowania</th><th>Zysk/szt</th><th>Marża</th><th>Czas</th>
-      </tr></thead>
-      <tbody>
-        ${row.offers.map((o) => `
-          <tr>
-            <td>${o.supplier_name}</td>
-            <td>${regionTag(o.region_id)} ${o.region_name}</td>
-            <td>${o.unit_price_pln.toLocaleString("pl-PL", { maximumFractionDigits: 2 })}</td>
-            <td>${fmtMoney(o.freight_pln)}</td>
-            <td>${fmtMoney(o.duty_pln)}</td>
-            <td><b>${fmtMoney(o.landing_cost_pln)}</b></td>
-            <td style="color:${o.profit_per_unit > 0 ? "var(--good)" : "var(--bad)"}">${fmtMoney(o.profit_per_unit)}</td>
-            <td>${fmtPct(o.profit_margin)}</td>
-            <td>${o.lead_days} dni</td>
-          </tr>`).join("")}
-      </tbody>
-    </table>
-    <button id="close-detail">Zamknij</button>
-  `;
-  detail.classList.remove("hidden");
-  $("#close-detail").addEventListener("click", () => detail.classList.add("hidden"));
-}
-
 refreshBtn.addEventListener("click", load);
-["change", "input"].forEach((ev) => [sortSel, marginRef, vatCheck].forEach((el) => el.addEventListener(ev, load)));
+["change", "input"].forEach((ev) =>
+  [sortSel, catSel, homeSel, vatCheck, allCheck].forEach((el) => el.addEventListener(ev, load)));
 
-load();
+(async () => {
+  try {
+    await loadMarkets();
+    await loadCategories();
+    $("#imports thead").innerHTML = tableHeaders();
+    $("#exports thead").innerHTML = tableHeaders();
+    await load();
+  } catch (err) {
+    meta.innerHTML = `<span class="err">Init error: ${err.message}</span>`;
+  }
+})();

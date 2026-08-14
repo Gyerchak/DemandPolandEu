@@ -1,67 +1,76 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DemandPolandEu — Monitor polskiego popytu</title>
+  <title>DemandPolandEu — Market Trade Monitor</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>DemandPolandEu</h1>
-    <p class="subtitle">Monitor polskiego rynku popytu — tani dostawcy (Chiny + UE) z kosztami transportu</p>
+    <h1>DemandPolandEu — Trade Monitor</h1>
+    <p class="subtitle">Find the most profitable import &amp; export trades across markets (costs incl. freight, duty, handling + sale VAT). Home market: Poland.</p>
   </header>
 
   <section class="controls">
-    <label>Sortowanie
+    <label>Sort
       <select id="sort">
-        <option value="opportunity" selected>Opportunity score (domyślne)</option>
-        <option value="demand">Poziom popytu</option>
-        <option value="profit_margin">Marża zysku</option>
-        <option value="profit_per_unit">Zysk na sztukę</option>
+        <option value="opportunity" selected>Opportunity score (default)</option>
+        <option value="profit">Profit / unit</option>
+        <option value="margin">Margin %</option>
         <option value="success_rate">Success rate</option>
+        <option value="sell">Sell price</option>
       </select>
     </label>
-    <label>Marża referencyjna
-      <input id="margin-ref" type="number" min="0.05" max="1" step="0.05" value="0.30">
+    <label>Category
+      <select id="category"><option value="">All categories</option></select>
     </label>
-    <label class="check">
-      <input id="vat" type="checkbox"> Uwzględnij VAT 23%
+    <label>Home market
+      <select id="home"></select>
     </label>
-    <button id="refresh">Odśwież</button>
+    <label class="check"><input id="vat" type="checkbox"> Include sale VAT</label>
+    <label class="check"><input id="all" type="checkbox"> All markets</label>
+    <button id="refresh">Refresh</button>
+  </section>
+
+  <section class="markets-bar">
+    <span class="bar-label">Watch:</span>
+    <div id="markets" class="chips"></div>
   </section>
 
   <section id="meta" class="meta"></section>
 
-  <table id="rank">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Produkt</th>
-        <th>Popyt</th>
-        <th>Popularność</th>
-        <th>Success rate</th>
-        <th>Marża</th>
-        <th>Zysk/szt</th>
-        <th>Koszt lądowania</th>
-        <th>Najlepszy region</th>
-        <th>Dostawca</th>
-        <th>Opportunity</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+  <div class="cols">
+    <section class="col">
+      <h2>⬇ Import trades <small>buy abroad → sell at home</small></h2>
+      <table id="imports"><thead></thead><tbody></tbody></table>
+    </section>
+    <section class="col">
+      <h2>⬆ Export trades <small>buy at home → sell abroad</small></h2>
+      <table id="exports"><thead></thead><tbody></tbody></table>
+    </section>
+  </div>
 
-  <section id="detail" class="detail hidden"></section>
+  <section class="guide">
+    <h2>Trade &amp; Tax Guide</h2>
+    <p>Running a cross-border trading business involves a few core rules. Always confirm current numbers with a tax advisor — this is a reminder, not legal advice.</p>
+    <ul>
+      <li><strong>Cost to get goods to you</strong> = purchase price + freight + import duty + handling. That's what you pay until it ships to you.</li>
+      <li><strong>VAT on sale</strong>: when you sell, you charge VAT at your category/market rate (e.g. 23% standard, reduced for some goods). You owe it on the sale price.</li>
+      <li><strong>Home market = Poland</strong> (VAT 23% standard). Visegrad is your main export/import market.</li>
+      <li><strong>Duty</strong>: within the EU single market duty is 0%. Buying outside the EU (China, Turkiye, UK...) adds import duty.</li>
+      <li><strong>Register for VAT</strong> (and possibly Intrastat + an EORI number for EU trade) once you trade above thresholds.</li>
+      <li><strong>Keep invoices</strong> for every purchase and sale — you need them for VAT deduction and records.</li>
+      <li><strong>Invoice</strong> in EUR (default currency here) and watch FX for non-EUR markets (China CNY, Turkiye TRY, etc).</li>
+    </ul>
+  </section>
 
   <footer>
     <div class="formulas">
-      <p><strong>Success rate</strong>: 0.5&times;popularność + 0.5&times;popyt (prawdopodobieństwo sprzedaży)</p>
-      <p><strong>Opportunity score</strong>: 100 &times; success_rate &times; &radic;(marża / marża_referencyjna)
-        &mdash; „bezpieczne i dochodowe&rdquo;: wysoki wynik wymaga jednocześnie wysokiego prawdopodobieństwa sprzedaży
-        <em>i</em> sensownej marży.</p>
-      <p><strong>Koszt lądowania</strong>: cena dostawcy + fracht (za kg + za sztukę) + cło/opłaty + opcjonalnie VAT.</p>
+      <p><strong>Cost</strong>: cost = buy + freight + duty + handling (payments until it ships to you).</p>
+      <p><strong>Profit</strong>: profit = sell − (cost + VAT), VAT applied on the sale price when enabled.</p>
+      <p><strong>Opportunity score</strong>: 100 × success_rate × √(margin / margin_ref) — high score needs BOTH good sell probability and a worthwhile margin.</p>
+      <p><strong>Main markets to watch</strong>: visegrad, china, poland, europe, baltic, turkiye, westeu.</p>
     </div>
   </footer>
 

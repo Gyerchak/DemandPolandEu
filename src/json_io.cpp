@@ -4,55 +4,60 @@ namespace dpe {
 
 using json = nlohmann::json;
 
-json offer_to_json(const Offer& o) {
+json trade_to_json(const Trade& t) {
     return json{
-        {"product_id", o.product_id},
-        {"supplier_id", o.supplier_id},
-        {"supplier_name", o.supplier_name},
-        {"region_id", o.region_id},
-        {"region_name", o.region_name},
-        {"currency", o.currency},
-        {"unit_price", o.unit_price},
-        {"unit_price_pln", o.unit_price_pln},
-        {"landing_cost_pln", o.landing_cost_pln},
-        {"profit_per_unit", o.profit_per_unit},
-        {"profit_margin", o.profit_margin},
-        {"profit_margin_pct", o.profit_margin * 100.0},
-        {"freight_pln", o.freight_pln},
-        {"duty_pln", o.duty_pln},
-        {"vat_pln", o.vat_pln},
-        {"lead_days", o.lead_days},
-        {"success_rate", o.success_rate},
-        {"opportunity", o.opportunity},
+        {"kind", t.kind},
+        {"product_id", t.product_id},
+        {"product_name", t.product_name},
+        {"category", t.category},
+        {"from_market_id", t.from_market_id},
+        {"from_market", t.from_market},
+        {"to_market_id", t.to_market_id},
+        {"to_market", t.to_market},
+        {"buy_eur", t.buy_eur},
+        {"sell_eur", t.sell_eur},
+        {"freight_eur", t.freight_eur},
+        {"duty_eur", t.duty_eur},
+        {"handling_eur", t.handling_eur},
+        {"vat_eur", t.vat_eur},
+        {"cost_eur", t.cost_eur},
+        {"total_eur", t.total_eur},
+        {"profit_eur", t.profit_eur},
+        {"margin", t.margin},
+        {"margin_pct", t.margin * 100.0},
+        {"success_rate", t.success_rate},
+        {"opportunity", t.opportunity},
+        {"lead_days", t.lead_days},
     };
 }
 
-json row_to_json(const ProductRow& r) {
-    return json{
-        {"id", r.id},
-        {"name", r.name},
-        {"category", r.category},
-        {"local_price_pln", r.local_price_pln},
-        {"demand", r.demand},
-        {"popularity", r.popularity},
-        {"weight_kg", r.weight_kg},
-        {"success_rate", r.success_rate},
-        {"profit_margin", r.profit_margin},
-        {"profit_per_unit", r.profit_per_unit},
-        {"opportunity", r.opportunity},
-        {"best_offer", offer_to_json(r.best_offer)},
-    };
-}
-
-json rows_to_json(const std::vector<ProductRow>& rows) {
+json trades_to_json(const std::vector<Trade>& trades) {
     json arr = json::array();
-    for (const auto& r : rows) {
-        json j = row_to_json(r);
-        json offers = json::array();
-        for (const auto& o : r.offers) offers.push_back(offer_to_json(o));
-        j["offers"] = offers;
-        arr.push_back(std::move(j));
-    }
+    for (const auto& t : trades) arr.push_back(trade_to_json(t));
+    return arr;
+}
+
+json market_to_json(const Market& m) {
+    return json{
+        {"id", m.id},
+        {"name", m.name},
+        {"role", m.role},
+        {"watch", m.watch},
+        {"currency", m.currency},
+        {"fx_to_eur", m.fx_to_eur},
+        {"freight_per_kg_eur", m.freight_per_kg_eur},
+        {"freight_per_unit_eur", m.freight_per_unit_eur},
+        {"duty_rate", m.duty_rate},
+        {"handling_eur", m.handling_eur},
+        {"vat_rate", m.vat_rate},
+        {"lead_days", m.lead_days},
+        {"note", m.note},
+    };
+}
+
+json markets_to_json(const std::vector<Market>& markets) {
+    json arr = json::array();
+    for (const auto& m : markets) arr.push_back(market_to_json(m));
     return arr;
 }
 

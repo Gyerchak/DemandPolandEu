@@ -2,8 +2,11 @@
 
 #include <algorithm>
 #include <cmath>
+#include <cctype>
 #include <fstream>
 #include <map>
+#include <set>
+#include <sstream>
 #include <stdexcept>
 #include <string>
 
@@ -17,40 +20,13 @@ double clamp01(double v) {
     return std::max(0.0, std::min(1.0, v));
 }
 
-double success_rate(double popularity, double demand, const SuccessWeights& w) {
-    return clamp01(w.popularity * clamp01(popularity) + w.demand * clamp01(demand));
-}
-
-double freight_cost(const Region& region, const Product& product) {
-    return region.freight_per_unit_pln + region.freight_per_kg_pln * product.weight_kg;
-}
-
-double duty_cost(const Region& region, double supplier_price_pln, const Product& product) {
-    // Region duty can be flat or product-specific (products don't carry one in the
-    // current data, but the API mirrors the Python model).
-    (void)product;
-    return supplier_price_pln * region.duty_rate + region.handling_pln;
-}
-
-LandingCost landing_cost(double supplier_price_pln, const Region& region,
-                         const Product& product, bool include_vat) {
-    LandingCost c;
-    c.supplier = supplier_price_pln;
-    c.freight = freight_cost(region, product);
-    c.duty = duty_cost(region, supplier_price_pln, product);
-    double subtotal = c.supplier + c.freight + c.duty;
-    if (include_vat) {
-        c.vat = subtotal * region.vat_rate;
-    }
-    c.total = subtotal + c.vat;
-    return c;
+double success_rate(double popularity, double demand) {
+    return clamp01(0.5 * clamp01(popularity) + 0.5 * clamp01(demand));
 }
 
 double opportunity_score(double sr, double margin, double margin_ref) {
     sr = clamp01(sr);
-    if (margin_ref <= 0.0) {
-        throw std::invalid_argument("margin_ref must be > 0");
-    }
+    if (margin_ref <= 0.0) throw std::invalid_argument("margin_ref must be > 0");
     double ratio = std::max(0.0, margin / margin_ref);
     return 100.0 * sr * std::sqrt(ratio);
 }
@@ -62,170 +38,230 @@ static double get_double(const json& j, const std::string& key, double def) {
     return def;
 }
 
+static std::string lowercase(const std::string& s) {
+    std::string out = s;
+    for (auto& c : out) c = (char)std::tolower((unsigned char)c);
+    return out;
+}
+
+static json read_json(const std::string& path) {
+    std::ifstream f(path, std::ios::binary);
+    if (!f.is_open()) throw std::runtime_error("cannot open " + path);
+    std::ostringstream ss;
+    ss << f.rdbuf();
+    return json::parse(ss.str());
+}
+
+std::vector<Market> load_markets(const std::string& dir) {
+    std::vector<Market> out;
+    json j = read_json(dir + "/data/markets.json");
+    for (const auto& e : j.at("markets")) {
+        Market m;
+        m.id = e.value("id", "");
+        m.name = e.value("name", "");
+        m.role = e.value("role", "other");
+        m.watch = e.value("watch", false);
+        m.currency = e.value("currency", "EUR");
+        m.fx_to_eur = get_double(e, "fx_to_eur", 1.0);
+        m.freight_per_kg_eur = get_double(e, "freight_per_kg_eur", 0.0);
+        m.freight_per_unit_eur = get_double(e, "freight_per_unit_eur", 0.0);
+        m.duty_rate = get_double(e, "duty_rate", 0.0);
+        m.handling_eur = get_double(e, "handling_eur", 0.0);
+        m.vat_rate = get_double(e, "vat_rate", 0.0);
+        m.lead_days = e.value("lead_days", 30);
+        m.note = e.value("note", "");
+        out.push_back(std::move(m));
+    }
+    return out;
+}
+
 std::vector<Product> load_products(const std::string& dir) {
     std::vector<Product> out;
-    std::ifstream f(dir + "/data/products.json");
-    if (!f.is_open()) throw std::runtime_error("cannot open products.json");
-    json j;
-    f >> j;
+    json j = read_json(dir + "/data/products.json");
     for (const auto& e : j.at("products")) {
         Product p;
         p.id = e.value("id", "");
         p.name = e.value("name", "");
         p.category = e.value("category", "");
-        p.local_price_pln = get_double(e, "local_price_pln", 0.0);
-        p.demand = get_double(e, "demand", 0.0);
-        p.popularity = get_double(e, "popularity", 0.0);
         p.weight_kg = get_double(e, "weight_kg", 0.0);
+        auto mk = e.find("markets");
+        if (mk != e.end() && mk->is_object()) {
+            for (auto it = mk->begin(); it != mk->end(); ++it) {
+                ProductMarket pm;
+                pm.buy = get_double(*it, "buy", 0.0);
+                pm.sell = get_double(*it, "sell", 0.0);
+                pm.demand = get_double(*it, "demand", 0.0);
+                pm.popularity = get_double(*it, "popularity", 0.0);
+                p.markets[it.key()] = pm;
+            }
+        }
         out.push_back(std::move(p));
     }
     return out;
 }
 
-std::vector<Region> load_regions(const std::string& dir) {
-    std::vector<Region> out;
-    std::ifstream f(dir + "/data/regions.json");
-    if (!f.is_open()) throw std::runtime_error("cannot open regions.json");
-    json j;
-    f >> j;
-    for (const auto& e : j.at("regions")) {
-        Region r;
-        r.id = e.value("id", "");
-        r.name = e.value("name", "");
-        r.currency = e.value("currency", "");
-        r.fx_to_pln = get_double(e, "fx_to_pln", 1.0);
-        r.freight_per_kg_pln = get_double(e, "freight_per_kg_pln", 0.0);
-        r.freight_per_unit_pln = get_double(e, "freight_per_unit_pln", 0.0);
-        r.duty_rate = get_double(e, "duty_rate", 0.0);
-        r.handling_pln = get_double(e, "handling_pln", 0.0);
-        r.vat_rate = get_double(e, "vat_rate", 0.0);
-        r.lead_days = e.value("lead_days", 30);
-        out.push_back(std::move(r));
-    }
-    return out;
-}
-
-std::vector<Supplier> load_suppliers(const std::string& dir) {
-    std::vector<Supplier> out;
-    std::ifstream f(dir + "/data/suppliers.json");
-    if (!f.is_open()) throw std::runtime_error("cannot open suppliers.json");
-    json j;
-    f >> j;
-    for (const auto& e : j.at("suppliers")) {
-        Supplier s;
-        s.id = e.value("id", "");
-        s.name = e.value("name", "");
-        s.region_id = e.value("region_id", "");
-        s.lead_days = e.value("lead_days", 30);
-        auto p = e.find("prices");
-        if (p != e.end() && p->is_object()) {
-            for (auto it = p->begin(); it != p->end(); ++it) {
-                s.prices.emplace_back(it.key(), it.value().get<double>());
+std::string resolve_category(const Product& p, const std::string& dir) {
+    if (!p.category.empty()) return p.category;
+    json cats = json::object();
+    try {
+        cats = read_json(dir + "/data/categories.json");
+    } catch (...) { cats = json::object(); }
+    std::string hay = lowercase(p.name + " " + p.id);
+    for (auto it = cats.begin(); it != cats.end(); ++it) {
+        const std::string& cat = it.key();
+        const json& c = it.value();
+        auto kw = c.find("keywords");
+        if (kw == c.end() || !kw->is_array()) continue;
+        for (const auto& k : *kw) {
+            if (k.is_string() && hay.find(lowercase(k.get<std::string>())) != std::string::npos) {
+                return cat;
             }
         }
-        out.push_back(std::move(s));
     }
-    return out;
+    return "unknown";
 }
 
-std::vector<ProductRow> build_rows(const std::string& dir, const SuccessWeights& weights,
-                                   double margin_ref, bool include_vat) {
+static double local_to_eur(double local, const Market& m) {
+    return local * m.fx_to_eur;
+}
+
+std::vector<Trade> build_trades(const std::string& dir,
+                                const std::string& home_market_id,
+                                const std::vector<std::string>& watch_markets,
+                                bool include_sale_vat,
+                                double margin_ref) {
+    auto markets = load_markets(dir);
     auto products = load_products(dir);
-    auto regions = load_regions(dir);
-    auto suppliers = load_suppliers(dir);
 
-    std::map<std::string, const Region*> region_by_id;
-    for (const auto& r : regions) region_by_id[r.id] = &r;
+    std::map<std::string, const Market*> market_by_id;
+    for (const auto& m : markets) market_by_id[m.id] = &m;
 
-    std::vector<ProductRow> rows;
-    for (const auto& product : products) {
-        const double sr = success_rate(product.popularity, product.demand, weights);
-        const double local_price = product.local_price_pln;
-
-        std::vector<Offer> offers;
-        for (const auto& supplier : suppliers) {
-            double unit_price = 0.0;
-            bool found = false;
-            for (const auto& [pid, price] : supplier.prices) {
-                if (pid == product.id) {
-                    unit_price = price;
-                    found = true;
-                    break;
-                }
-            }
-            if (!found) continue;
-            auto rit = region_by_id.find(supplier.region_id);
-            if (rit == region_by_id.end()) continue;
-            const Region& region = *rit->second;
-
-            double unit_price_pln = unit_price * region.fx_to_pln;
-            LandingCost cost = landing_cost(unit_price_pln, region, product, include_vat);
-            double profit = local_price - cost.total;
-            double margin = local_price != 0.0 ? profit / local_price : 0.0;
-
-            Offer offer;
-            offer.product_id = product.id;
-            offer.supplier_id = supplier.id;
-            offer.supplier_name = supplier.name;
-            offer.region_id = region.id;
-            offer.region_name = region.name;
-            offer.currency = region.currency;
-            offer.unit_price = unit_price;
-            offer.unit_price_pln = unit_price_pln;
-            offer.landing_cost_pln = cost.total;
-            offer.profit_per_unit = profit;
-            offer.profit_margin = margin;
-            offer.freight_pln = cost.freight;
-            offer.duty_pln = cost.duty;
-            offer.vat_pln = cost.vat;
-            offer.lead_days = supplier.lead_days != 0 ? supplier.lead_days : region.lead_days;
-            offer.success_rate = sr;
-            offer.opportunity = opportunity_score(sr, margin, margin_ref);
-            offers.push_back(std::move(offer));
-        }
-
-        if (offers.empty()) continue;
-
-        auto best = std::min_element(offers.begin(), offers.end(),
-                                     [](const Offer& a, const Offer& b) {
-                                         return a.landing_cost_pln < b.landing_cost_pln;
-                                     });
-
-        std::sort(offers.begin(), offers.end(),
-                  [](const Offer& a, const Offer& b) {
-                      return a.landing_cost_pln < b.landing_cost_pln;
-                  });
-
-        ProductRow row;
-        row.id = product.id;
-        row.name = product.name;
-        row.category = product.category;
-        row.local_price_pln = local_price;
-        row.demand = product.demand;
-        row.popularity = product.popularity;
-        row.weight_kg = product.weight_kg;
-        row.success_rate = sr;
-        row.profit_margin = best->profit_margin;
-        row.profit_per_unit = best->profit_per_unit;
-        row.opportunity = best->opportunity;
-        row.best_offer = *best;
-        row.offers = offers;
-        rows.push_back(std::move(row));
+    const Market* home = nullptr;
+    auto hit = market_by_id.find(home_market_id);
+    if (hit != market_by_id.end()) home = hit->second;
+    if (home == nullptr) {
+        for (const auto& m : markets) if (m.role == "home") { home = &m; break; }
     }
-    return rows;
+    if (home == nullptr) throw std::runtime_error("no home market");
+
+    std::set<std::string> watch;
+    for (const auto& id : watch_markets) if (market_by_id.count(id)) watch.insert(id);
+
+    std::vector<Trade> out;
+    for (const auto& product : products) {
+        auto ph = product.markets.find(home->id);
+        if (ph == product.markets.end()) continue;
+
+        for (const auto& entry : product.markets) {
+            const std::string& mid = entry.first;
+            const ProductMarket& pm = entry.second;
+            if (mid == home->id) continue;
+            if (!watch.empty() && !watch.count(mid)) continue;
+            auto mit = market_by_id.find(mid);
+            if (mit == market_by_id.end()) continue;
+            const Market& m = *mit->second;
+            if (pm.buy <= 0.0 || pm.sell <= 0.0) continue;
+            if (ph->second.sell <= 0.0 || ph->second.buy <= 0.0) continue;
+
+            const std::string cat = resolve_category(product, dir);
+
+            {
+                double buy_eur = local_to_eur(pm.buy, m);
+                double sell_eur = local_to_eur(ph->second.sell, *home);
+                double freight = m.freight_per_unit_eur + m.freight_per_kg_eur * product.weight_kg;
+                double duty = buy_eur * m.duty_rate;
+                double handling = m.handling_eur;
+                double cost = buy_eur + freight + duty + handling;
+                double vat = include_sale_vat ? sell_eur * home->vat_rate : 0.0;
+                double total = cost + vat;
+                double profit = sell_eur - total;
+                double margin = sell_eur != 0.0 ? profit / sell_eur : 0.0;
+                double sr = success_rate(ph->second.popularity, ph->second.demand);
+
+                Trade t;
+                t.kind = "import";
+                t.product_id = product.id;
+                t.product_name = product.name;
+                t.category = cat;
+                t.from_market_id = m.id;
+                t.from_market = m.name;
+                t.to_market_id = home->id;
+                t.to_market = home->name;
+                t.buy_eur = buy_eur;
+                t.sell_eur = sell_eur;
+                t.freight_eur = freight;
+                t.duty_eur = duty;
+                t.handling_eur = handling;
+                t.vat_eur = vat;
+                t.cost_eur = cost;
+                t.total_eur = total;
+                t.profit_eur = profit;
+                t.margin = margin;
+                t.success_rate = sr;
+                t.opportunity = opportunity_score(sr, margin, margin_ref);
+                t.lead_days = m.lead_days;
+                out.push_back(std::move(t));
+            }
+
+            {
+                double buy_eur = local_to_eur(ph->second.buy, *home);
+                double sell_eur = local_to_eur(pm.sell, m);
+                double freight = home->freight_per_unit_eur + home->freight_per_kg_eur * product.weight_kg;
+                double duty = buy_eur * m.duty_rate;
+                double handling = m.handling_eur;
+                double cost = buy_eur + freight + duty + handling;
+                double vat = include_sale_vat ? sell_eur * m.vat_rate : 0.0;
+                double total = cost + vat;
+                double profit = sell_eur - total;
+                double margin = sell_eur != 0.0 ? profit / sell_eur : 0.0;
+                double sr = success_rate(pm.popularity, pm.demand);
+
+                Trade t;
+                t.kind = "export";
+                t.product_id = product.id;
+                t.product_name = product.name;
+                t.category = cat;
+                t.from_market_id = home->id;
+                t.from_market = home->name;
+                t.to_market_id = m.id;
+                t.to_market = m.name;
+                t.buy_eur = buy_eur;
+                t.sell_eur = sell_eur;
+                t.freight_eur = freight;
+                t.duty_eur = duty;
+                t.handling_eur = handling;
+                t.vat_eur = vat;
+                t.cost_eur = cost;
+                t.total_eur = total;
+                t.profit_eur = profit;
+                t.margin = margin;
+                t.success_rate = sr;
+                t.opportunity = opportunity_score(sr, margin, margin_ref);
+                t.lead_days = home->lead_days + m.lead_days;
+                out.push_back(std::move(t));
+            }
+        }
+    }
+    return out;
 }
 
-void sort_rows(std::vector<ProductRow>& rows, const std::string& key) {
-    auto val = [&](const ProductRow& r) -> double {
-        if (key == "demand") return r.demand;
-        if (key == "popularity") return r.popularity;
-        if (key == "profit_margin") return r.profit_margin;
-        if (key == "profit_per_unit") return r.profit_per_unit;
-        if (key == "success_rate") return r.success_rate;
-        return r.opportunity;
+void sort_trades(std::vector<Trade>& trades, const std::string& key) {
+    auto val = [&](const Trade& t) -> double {
+        if (key == "profit") return t.profit_eur;
+        if (key == "margin") return t.margin;
+        if (key == "success_rate") return t.success_rate;
+        if (key == "sell") return t.sell_eur;
+        return t.opportunity;
     };
-    std::sort(rows.begin(), rows.end(),
-              [&](const ProductRow& a, const ProductRow& b) { return val(a) > val(b); });
+    std::sort(trades.begin(), trades.end(),
+              [&](const Trade& a, const Trade& b) { return val(a) > val(b); });
+}
+
+std::vector<std::string> list_categories(const std::string& dir) {
+    std::set<std::string> cats;
+    for (const auto& p : load_products(dir)) cats.insert(resolve_category(p, dir));
+    std::vector<std::string> out(cats.begin(), cats.end());
+    return out;
 }
 
 }  // namespace dpe

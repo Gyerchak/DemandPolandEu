@@ -6,8 +6,9 @@
 
 namespace dpe {
 
-nlohmann::json offer_to_json(const Offer& o);
-nlohmann::json row_to_json(const ProductRow& r);
-nlohmann::json rows_to_json(const std::vector<ProductRow>& rows);
+nlohmann::json trade_to_json(const Trade& t);
+nlohmann::json trades_to_json(const std::vector<Trade>& trades);
+nlohmann::json market_to_json(const Market& m);
+nlohmann::json markets_to_json(const std::vector<Market>& markets);
 
 }  // namespace dpe

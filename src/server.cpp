@@ -1,5 +1,3 @@
-// Minimal single-threaded HTTP server for the DemandPolandEu web dashboard.
-// Serves /api/rank (JSON) and the static files in ./web/.
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
@@ -36,11 +34,8 @@ std::string url_decode(const std::string& s) {
             char buf[3] = {s[i + 1], s[i + 2], 0};
             out += (char)std::strtol(buf, nullptr, 16);
             i += 2;
-        } else if (s[i] == '+') {
-            out += ' ';
-        } else {
-            out += s[i];
-        }
+        } else if (s[i] == '+') out += ' ';
+        else out += s[i];
     }
     return out;
 }
@@ -60,12 +55,22 @@ std::string query_value(const std::string& path, const std::string& key) {
     return {};
 }
 
+std::vector<std::string> split(const std::string& s, char sep) {
+    std::vector<std::string> out;
+    std::string cur;
+    for (char c : s) {
+        if (c == sep) { if (!cur.empty()) out.push_back(cur); cur.clear(); }
+        else cur += c;
+    }
+    if (!cur.empty()) out.push_back(cur);
+    return out;
+}
+
 std::string mime_type(const std::string& path) {
     if (path.size() > 5 && path.substr(path.size() - 5) == ".html") return "text/html; charset=utf-8";
     if (path.size() > 4 && path.substr(path.size() - 4) == ".css") return "text/css; charset=utf-8";
     if (path.size() > 3 && path.substr(path.size() - 3) == ".js") return "application/javascript; charset=utf-8";
     if (path.size() > 5 && path.substr(path.size() - 5) == ".json") return "application/json; charset=utf-8";
-    if (path.size() > 4 && path.substr(path.size() - 4) == ".svg") return "image/svg+xml";
     return "application/octet-stream";
 }
 
@@ -89,10 +94,7 @@ void send_response(int fd, const std::string& body, const std::string& mime, int
 int run_web(const std::string& data_dir, const std::string& host, int port) {
     (void)data_dir;
     int server_fd = socket(AF_INET, SOCK_STREAM, 0);
-    if (server_fd < 0) {
-        fprintf(stderr, "socket() failed\n");
-        return 1;
-    }
+    if (server_fd < 0) { fprintf(stderr, "socket() failed\n"); return 1; }
     int one = 1;
     setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR, &one, sizeof(one));
 
@@ -118,13 +120,9 @@ int run_web(const std::string& data_dir, const std::string& host, int port) {
         char buf[8192];
         ssize_t n = read(client, buf, sizeof(buf) - 1);
         std::string req;
-        if (n > 0) {
-            buf[n] = 0;
-            req = buf;
-        }
+        if (n > 0) { buf[n] = 0; req = buf; }
 
         std::string line = req.substr(0, req.find("\r\n"));
-        // e.g. GET /api/rank?sort=demand HTTP/1.1
         size_t sp1 = line.find(' ');
         size_t sp2 = sp1 == std::string::npos ? std::string::npos : line.find(' ', sp1 + 1);
         std::string target = sp2 == std::string::npos ? "/" : line.substr(sp1 + 1, sp2 - sp1 - 1);
@@ -132,23 +130,63 @@ int run_web(const std::string& data_dir, const std::string& host, int port) {
         size_t path_end = target.find('?');
         std::string path = path_end == std::string::npos ? target : target.substr(0, path_end);
 
-        if (path == "/api/rank") {
-            std::string sort = query_value(target, "sort");
-            if (sort.empty()) sort = "opportunity";
+        if (path == "/api/markets") {
+            auto markets = load_markets(".");
+            nlohmann::json j = markets_to_json(markets);
+            send_response(client, j.dump(), "application/json; charset=utf-8");
+            close(client);
+            continue;
+        }
+
+        if (path == "/api/categories") {
+            auto cats = list_categories(".");
+            nlohmann::json arr = nlohmann::json::array();
+            for (const auto& c : cats) arr.push_back(c);
+            send_response(client, arr.dump(), "application/json; charset=utf-8");
+            close(client);
+            continue;
+        }
+
+        if (path == "/api/trades") {
+            auto markets = load_markets(".");
+            std::string home = query_value(target, "home");
+            if (home.empty()) {
+                for (const auto& m : markets) if (m.role == "home") { home = m.id; break; }
+            }
+            std::string markets_q = query_value(target, "markets");
+            std::vector<std::string> watch;
+            if (!markets_q.empty() && markets_q != "all") watch = split(markets_q, ',');
             std::string vat = query_value(target, "vat");
             bool include_vat = (vat == "1" || vat == "true" || vat == "yes");
             std::string mr = query_value(target, "margin_ref");
             double margin_ref = mr.empty() ? 0.3 : std::atof(mr.c_str());
+            std::string sort = query_value(target, "sort");
+            if (sort.empty()) sort = "opportunity";
+            std::string category = query_value(target, "category");
 
-            auto rows = build_rows(".", SuccessWeights{}, margin_ref, include_vat);
-            sort_rows(rows, sort);
-            nlohmann::json j = rows_to_json(rows);
+            auto trades = build_trades(".", home, watch, include_vat, margin_ref);
+            if (!category.empty()) {
+                trades.erase(std::remove_if(trades.begin(), trades.end(),
+                            [&](const Trade& t) { return t.category != category; }),
+                            trades.end());
+            }
+            sort_trades(trades, sort);
+
+            nlohmann::json imports = nlohmann::json::array();
+            nlohmann::json exports = nlohmann::json::array();
+            for (const auto& t : trades) {
+                if (t.kind == "import") imports.push_back(trade_to_json(t));
+                else exports.push_back(trade_to_json(t));
+            }
+
             nlohmann::json resp{
-                {"count", rows.size()},
-                {"sort", sort},
-                {"rows", j},
+                {"home", home},
+                {"count", trades.size()},
+                {"imports", imports},
+                {"exports", exports},
                 {"meta",
-                 {{"success_formula", "success_rate = 0.5*popularity + 0.5*demand"},
+                 {{"cost", "cost = buy + freight + duty + handling (payments until it ships to you)"},
+                  {"vat", "VAT is added on the sale price (category/market VAT), included when vat=1"},
                   {"opportunity_formula", "opportunity = 100 * success_rate * sqrt(margin / margin_ref)"},
                   {"margin_ref", margin_ref}}},
             };
@@ -173,11 +211,8 @@ int run_web(const std::string& data_dir, const std::string& host, int port) {
             continue;
         }
         std::string body = read_file("web/" + rel);
-        if (body.empty()) {
-            send_response(client, "not found", "text/plain", 404);
-        } else {
-            send_response(client, body, mime_type(rel));
-        }
+        if (body.empty()) send_response(client, "not found", "text/plain", 404);
+        else send_response(client, body, mime_type(rel));
         close(client);
     }
 

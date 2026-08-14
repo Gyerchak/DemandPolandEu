@@ -1,0 +1,30 @@
+{
+  "Electronics": {
+    "vat_rate": 0.23,
+    "keywords": ["scooter", "e-bike", "ebike", "power station", "robot", "smart", "charger", "drone", "phone", "laptop", "camera", "speaker", "gadget"]
+  },
+  "Sport": {
+    "vat_rate": 0.08,
+    "keywords": ["bike", "bicycle", "scooter", "rack", "helmet", "ball", "fitness", "gym", "tennis", "skate", "pruner"]
+  },
+  "Home & Garden": {
+    "vat_rate": 0.23,
+    "keywords": ["heater", "grill", "pruner", "garden", "lamp", "furniture", "chair", "table"]
+  },
+  "Appliances": {
+    "vat_rate": 0.23,
+    "keywords": ["air fryer", "vacuum", "fryer", "kettle", "blender", "fridge", "oven"]
+  },
+  "Energy": {
+    "vat_rate": 0.08,
+    "keywords": ["solar", "panel", "power station", "battery", "charger", "inverter", "wind"]
+  },
+  "Tools": {
+    "vat_rate": 0.23,
+    "keywords": ["drill", "heat gun", "opalka", "saw", "hammer", "wrench", "tool"]
+  },
+  "Automotive": {
+    "vat_rate": 0.23,
+    "keywords": ["car", "bike rack", "trailer", "tyre", "wheel"]
+  }
+}
