@@ -2,9 +2,10 @@
 Type=Application
 Version=1.0
 Name=DemandPolandEu
-GenericName=Demand market monitor
-Comment=Polish demand market monitor (C++)
-Exec=bash -c "cd /run/media/hubertg/SONIC/OpenCodeBox/projects/DemandPolandEu && ./run.sh"
-Icon=utilities-system-monitor
-Terminal=true
-Categories=Utility;Office;
+GenericName=OpenCodeBox project terminal
+Comment=Open the DemandPolandEu project terminal
+Exec=/run/media/hubertg/SONIC/OpenCodeBox/git-projects/DemandPolandEu/box/scripts/DemandPolandEu.sh launch
+TryExec=/run/media/hubertg/SONIC/OpenCodeBox/git-projects/DemandPolandEu/box/scripts/DemandPolandEu.sh
+Icon=utilities-terminal
+Terminal=false
+Categories=Development;
