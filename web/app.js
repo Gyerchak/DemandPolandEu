@@ -33,7 +33,7 @@ async function loadMarkets() {
   const res = await fetch("/api/markets");
   markets = await res.json();
   homeSel.innerHTML = markets
-    .map((m) => `<option value="${m.id}">${m.name}${m.role === "home" ? " (home)" : ""}${m.role === "main" ? " (main)" : ""}</option>`)
+    .map((m) => `<option value="${m.id}">${m.name}${m.role === "home" ? " ⭐" : ""}</option>`)
     .join("");
   // default home = poland
   homeSel.value = markets.find((m) => m.role === "home")?.id || markets[0].id;
@@ -47,6 +47,11 @@ async function loadMarkets() {
     });
   });
   markets.forEach((m) => { if (m.watch) selected.add(m.id); });
+  const legend = $("#legend");
+  if (legend) {
+    const notes = markets.filter((m) => m.members).map((m) => `* ${m.name} = ${m.members}`);
+    legend.innerHTML = notes.length ? notes.join(" &nbsp;&middot;&nbsp; ") : "";
+  }
 }
 
 async function loadCategories() {
@@ -65,10 +70,19 @@ function tableHeaders() {
     </tr>`;
 }
 
+function productCell(t) {
+  const name = t.product_name;
+  if (t.supplier_url) {
+    return `<a class="prod" href="${t.supplier_url}" target="_blank" rel="noopener">${name}</a>`;
+  }
+  const q = encodeURIComponent(name);
+  return `<a class="prod" href="https://www.alibaba.com/trade/search?SearchText=${q}" target="_blank" rel="noopener" title="Alibaba search">${name}</a>`;
+}
+
 function rowHtml(t) {
   return `
     <tr>
-      <td><b>${t.product_name}</b></td>
+      <td><b>${productCell(t)}</b></td>
       <td><small style="color:var(--muted)">${t.category}</small></td>
       <td>${t.from_market}</td>
       <td>${t.to_market}</td>
@@ -91,15 +105,20 @@ function renderTable(tbody, rows) {
 
 async function load() {
   meta.innerHTML = "";
-  const watch = allCheck.checked ? "all" : Array.from(selected).join(",");
+  const allHomes = allCheck.checked;              // every watched market = its own home
+  const watch = Array.from(selected).join(",");
   const params = new URLSearchParams({
     sort: sortSel.value,
-    home: homeSel.value,
     category: catSel.value,
-    markets: watch,
     vat: vatCheck.checked ? "1" : "0",
     margin_ref: 0.3,
   });
+  if (allHomes) {
+    params.set("homes", "all");
+  } else {
+    params.set("home", homeSel.value);
+    params.set("markets", watch || "all");
+  }
   try {
     const res = await fetch("/api/trades?" + params.toString());
     if (!res.ok) throw new Error("HTTP " + res.status);
@@ -112,7 +131,38 @@ async function load() {
   }
 }
 
+// Sort buttons (sync with the Sort select)
+const sortBtns = document.querySelectorAll(".sort-btn");
+sortBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    sortSel.value = btn.dataset.sort;
+    sortBtns.forEach((b) => b.classList.toggle("active", b === btn));
+    load();
+  });
+});
+// keep the button highlight in sync when sorting via the dropdown
+sortSel.addEventListener("change", () => {
+  sortBtns.forEach((b) => b.classList.toggle("active", b.dataset.sort === sortSel.value));
+});
+
+// Import / Export tabs
+const tabs = document.querySelectorAll(".tab");
+tabs.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    tabs.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+    const tab = btn.dataset.tab;
+    document.querySelectorAll(".panel").forEach((p) => {
+      p.classList.toggle("hidden", p.id !== `panel-${tab}`);
+    });
+  });
+});
+
 refreshBtn.addEventListener("click", load);
+
+// Heartbeat: tell the server we're still here every 2s.
+// When this page closes, pings stop and the server shuts itself down.
+setInterval(() => { fetch("/api/ping").catch(() => {}); }, 2000);
 ["change", "input"].forEach((ev) =>
   [sortSel, catSel, homeSel, vatCheck, allCheck].forEach((el) => el.addEventListener(ev, load)));
 

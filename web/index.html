@@ -29,7 +29,7 @@
       <select id="home"></select>
     </label>
     <label class="check"><input id="vat" type="checkbox"> Include sale VAT</label>
-    <label class="check"><input id="all" type="checkbox"> All markets</label>
+    <label class="check"><input id="all" type="checkbox"> All watched as home</label>
     <button id="refresh">Refresh</button>
   </section>
 
@@ -40,11 +40,27 @@
 
   <section id="meta" class="meta"></section>
 
-  <div class="cols">
+  <div class="tabs">
+    <button class="tab active" data-tab="imports">⬇ Import trades</button>
+    <button class="tab" data-tab="exports">⬆ Export trades</button>
+  </div>
+
+  <div class="sort-bar">
+    <span class="sort-label">Sort:</span>
+    <button class="sort-btn active" data-sort="opportunity">Opportunity</button>
+    <button class="sort-btn" data-sort="profit">Profit</button>
+    <button class="sort-btn" data-sort="margin">Margin %</button>
+    <button class="sort-btn" data-sort="success_rate">Success</button>
+    <button class="sort-btn" data-sort="sell">Sell price</button>
+  </div>
+
+  <div class="panel" id="panel-imports">
     <section class="col">
       <h2>⬇ Import trades <small>buy abroad → sell at home</small></h2>
       <table id="imports"><thead></thead><tbody></tbody></table>
     </section>
+  </div>
+  <div class="panel hidden" id="panel-exports">
     <section class="col">
       <h2>⬆ Export trades <small>buy at home → sell abroad</small></h2>
       <table id="exports"><thead></thead><tbody></tbody></table>
@@ -70,7 +86,8 @@
       <p><strong>Cost</strong>: cost = buy + freight + duty + handling (payments until it ships to you).</p>
       <p><strong>Profit</strong>: profit = sell − (cost + VAT), VAT applied on the sale price when enabled.</p>
       <p><strong>Opportunity score</strong>: 100 × success_rate × √(margin / margin_ref) — high score needs BOTH good sell probability and a worthwhile margin.</p>
-      <p><strong>Main markets to watch</strong>: visegrad, china, poland, europe, baltic, turkiye, westeu.</p>
+      <p><strong>Main markets to watch</strong>: Visegrad, China, Poland, Europe, Baltic, Turkiye, West-EU.</p>
+     <p class="legend" id="legend"></p>
     </div>
   </footer>
 

@@ -5,17 +5,68 @@
       "name": "Electric scooter 500W",
       "weight_kg": 16.0,
       "markets": {
-        "poland": {"buy": 1240, "sell": 1599, "demand": 0.92, "popularity": 0.95},
-        "visegrad": {"buy": 1150, "sell": 1520, "demand": 0.80, "popularity": 0.80},
-        "china": {"buy": 690, "sell": 980, "demand": 0.70, "popularity": 0.70},
-        "europe": {"buy": 1180, "sell": 1500, "demand": 0.72, "popularity": 0.72},
-        "baltic": {"buy": 1200, "sell": 1540, "demand": 0.70, "popularity": 0.70},
-        "turkiye": {"buy": 980, "sell": 1320, "demand": 0.66, "popularity": 0.66},
-        "westeu": {"buy": 1350, "sell": 1750, "demand": 0.75, "popularity": 0.75},
-        "turkic": {"buy": 1100, "sell": 1500, "demand": 0.55, "popularity": 0.55},
-        "ukraine": {"buy": 1050, "sell": 1420, "demand": 0.60, "popularity": 0.60},
-        "balkan": {"buy": 1120, "sell": 1480, "demand": 0.58, "popularity": 0.58}
-      }
+        "poland": {
+          "buy": 1240,
+          "sell": 1599,
+          "demand": 0.92,
+          "popularity": 0.95
+        },
+        "visegrad": {
+          "buy": 1150,
+          "sell": 1520,
+          "demand": 0.8,
+          "popularity": 0.8
+        },
+        "china": {
+          "buy": 690,
+          "sell": 980,
+          "demand": 0.7,
+          "popularity": 0.7
+        },
+        "europe": {
+          "buy": 1180,
+          "sell": 1500,
+          "demand": 0.72,
+          "popularity": 0.72
+        },
+        "baltic": {
+          "buy": 1200,
+          "sell": 1540,
+          "demand": 0.7,
+          "popularity": 0.7
+        },
+        "turkiye": {
+          "buy": 980,
+          "sell": 1320,
+          "demand": 0.66,
+          "popularity": 0.66
+        },
+        "westeu": {
+          "buy": 1350,
+          "sell": 1750,
+          "demand": 0.75,
+          "popularity": 0.75
+        },
+        "turkic": {
+          "buy": 1100,
+          "sell": 1500,
+          "demand": 0.55,
+          "popularity": 0.55
+        },
+        "ukraine": {
+          "buy": 1050,
+          "sell": 1420,
+          "demand": 0.6,
+          "popularity": 0.6
+        },
+        "balkan": {
+          "buy": 1120,
+          "sell": 1480,
+          "demand": 0.58,
+          "popularity": 0.58
+        }
+      },
+      "supplier_url": "https://www.alibaba.com/product-detail/2025-New-Electric-Scooter-OOTD-T10_1601455273183.html"
     },
     {
       "id": "e-bike-conversion",
@@ -23,37 +74,120 @@
       "weight_kg": 9.0,
       "category": "Electronics",
       "markets": {
-        "poland": {"buy": 1050, "sell": 1299, "demand": 0.70, "popularity": 0.55},
-        "visegrad": {"buy": 990, "sell": 1240, "demand": 0.62, "popularity": 0.55},
-        "china": {"buy": 460, "sell": 700, "demand": 0.55, "popularity": 0.50},
-        "europe": {"buy": 1000, "sell": 1250, "demand": 0.55, "popularity": 0.50},
-        "turkiye": {"buy": 820, "sell": 1100, "demand": 0.55, "popularity": 0.50}
-      }
+        "poland": {
+          "buy": 1050,
+          "sell": 1299,
+          "demand": 0.7,
+          "popularity": 0.55
+        },
+        "visegrad": {
+          "buy": 990,
+          "sell": 1240,
+          "demand": 0.62,
+          "popularity": 0.55
+        },
+        "china": {
+          "buy": 460,
+          "sell": 700,
+          "demand": 0.55,
+          "popularity": 0.5
+        },
+        "europe": {
+          "buy": 1000,
+          "sell": 1250,
+          "demand": 0.55,
+          "popularity": 0.5
+        },
+        "turkiye": {
+          "buy": 820,
+          "sell": 1100,
+          "demand": 0.55,
+          "popularity": 0.5
+        }
+      },
+      "supplier_url": "https://www.alibaba.com/product-detail/250W-3000W-Ebike-Conversion-Kit-36V_1601926766493.html"
     },
     {
       "id": "power-station",
       "name": "Power station 1000Wh LiFePO4",
       "weight_kg": 11.5,
       "markets": {
-        "poland": {"buy": 2200, "sell": 2600, "demand": 0.80, "popularity": 0.60},
-        "visegrad": {"buy": 2100, "sell": 2520, "demand": 0.68, "popularity": 0.58},
-        "china": {"buy": 880, "sell": 1250, "demand": 0.62, "popularity": 0.55},
-        "europe": {"buy": 2150, "sell": 2550, "demand": 0.60, "popularity": 0.52},
-        "baltic": {"buy": 2200, "sell": 2600, "demand": 0.62, "popularity": 0.55},
-        "westeu": {"buy": 2400, "sell": 2850, "demand": 0.65, "popularity": 0.58}
-      }
+        "poland": {
+          "buy": 2200,
+          "sell": 2600,
+          "demand": 0.8,
+          "popularity": 0.6
+        },
+        "visegrad": {
+          "buy": 2100,
+          "sell": 2520,
+          "demand": 0.68,
+          "popularity": 0.58
+        },
+        "china": {
+          "buy": 880,
+          "sell": 1250,
+          "demand": 0.62,
+          "popularity": 0.55
+        },
+        "europe": {
+          "buy": 2150,
+          "sell": 2550,
+          "demand": 0.6,
+          "popularity": 0.52
+        },
+        "baltic": {
+          "buy": 2200,
+          "sell": 2600,
+          "demand": 0.62,
+          "popularity": 0.55
+        },
+        "westeu": {
+          "buy": 2400,
+          "sell": 2850,
+          "demand": 0.65,
+          "popularity": 0.58
+        }
+      },
+      "supplier_url": "https://www.alibaba.com/product-detail/HC-1000Wh-1000W-LiFePO4-Portable-Power_1601799400722.html"
     },
     {
       "id": "solar-panel-400w",
       "name": "Solar panel 400W",
       "weight_kg": 22.0,
       "markets": {
-        "poland": {"buy": 480, "sell": 620, "demand": 0.65, "popularity": 0.50},
-        "visegrad": {"buy": 450, "sell": 590, "demand": 0.58, "popularity": 0.50},
-        "china": {"buy": 190, "sell": 320, "demand": 0.55, "popularity": 0.50},
-        "europe": {"buy": 460, "sell": 600, "demand": 0.50, "popularity": 0.48},
-        "turkiye": {"buy": 380, "sell": 520, "demand": 0.58, "popularity": 0.50}
-      }
+        "poland": {
+          "buy": 480,
+          "sell": 620,
+          "demand": 0.65,
+          "popularity": 0.5
+        },
+        "visegrad": {
+          "buy": 450,
+          "sell": 590,
+          "demand": 0.58,
+          "popularity": 0.5
+        },
+        "china": {
+          "buy": 190,
+          "sell": 320,
+          "demand": 0.55,
+          "popularity": 0.5
+        },
+        "europe": {
+          "buy": 460,
+          "sell": 600,
+          "demand": 0.5,
+          "popularity": 0.48
+        },
+        "turkiye": {
+          "buy": 380,
+          "sell": 520,
+          "demand": 0.58,
+          "popularity": 0.5
+        }
+      },
+      "supplier_url": "https://www.alibaba.com/product-detail/High-Efficient-JA-Solar-400W-EU_1600705368223.html"
     },
     {
       "id": "smart-heater",
@@ -61,13 +195,44 @@
       "weight_kg": 13.0,
       "category": "Home & Garden",
       "markets": {
-        "poland": {"buy": 240, "sell": 320, "demand": 0.75, "popularity": 0.45},
-        "visegrad": {"buy": 225, "sell": 305, "demand": 0.66, "popularity": 0.45},
-        "china": {"buy": 120, "sell": 200, "demand": 0.55, "popularity": 0.42},
-        "europe": {"buy": 230, "sell": 310, "demand": 0.55, "popularity": 0.40},
-        "baltic": {"buy": 235, "sell": 315, "demand": 0.60, "popularity": 0.44},
-        "ukraine": {"buy": 200, "sell": 280, "demand": 0.62, "popularity": 0.45}
-      }
+        "poland": {
+          "buy": 240,
+          "sell": 320,
+          "demand": 0.75,
+          "popularity": 0.45
+        },
+        "visegrad": {
+          "buy": 225,
+          "sell": 305,
+          "demand": 0.66,
+          "popularity": 0.45
+        },
+        "china": {
+          "buy": 120,
+          "sell": 200,
+          "demand": 0.55,
+          "popularity": 0.42
+        },
+        "europe": {
+          "buy": 230,
+          "sell": 310,
+          "demand": 0.55,
+          "popularity": 0.4
+        },
+        "baltic": {
+          "buy": 235,
+          "sell": 315,
+          "demand": 0.6,
+          "popularity": 0.44
+        },
+        "ukraine": {
+          "buy": 200,
+          "sell": 280,
+          "demand": 0.62,
+          "popularity": 0.45
+        }
+      },
+      "supplier_url": "https://www.alibaba.com/product-detail/9-Fins-2000W-Freestanding-Room-Heater_1601929893335.html"
     },
     {
       "id": "air-fryer",
@@ -75,24 +240,76 @@
       "weight_kg": 6.0,
       "category": "Appliances",
       "markets": {
-        "poland": {"buy": 300, "sell": 380, "demand": 0.85, "popularity": 0.90},
-        "visegrad": {"buy": 285, "sell": 365, "demand": 0.75, "popularity": 0.80},
-        "china": {"buy": 155, "sell": 240, "demand": 0.65, "popularity": 0.70},
-        "europe": {"buy": 290, "sell": 370, "demand": 0.68, "popularity": 0.70},
-        "baltic": {"buy": 295, "sell": 375, "demand": 0.70, "popularity": 0.72},
-        "turkiye": {"buy": 250, "sell": 340, "demand": 0.68, "popularity": 0.70}
-      }
+        "poland": {
+          "buy": 300,
+          "sell": 380,
+          "demand": 0.85,
+          "popularity": 0.9
+        },
+        "visegrad": {
+          "buy": 285,
+          "sell": 365,
+          "demand": 0.75,
+          "popularity": 0.8
+        },
+        "china": {
+          "buy": 155,
+          "sell": 240,
+          "demand": 0.65,
+          "popularity": 0.7
+        },
+        "europe": {
+          "buy": 290,
+          "sell": 370,
+          "demand": 0.68,
+          "popularity": 0.7
+        },
+        "baltic": {
+          "buy": 295,
+          "sell": 375,
+          "demand": 0.7,
+          "popularity": 0.72
+        },
+        "turkiye": {
+          "buy": 250,
+          "sell": 340,
+          "demand": 0.68,
+          "popularity": 0.7
+        }
+      },
+      "supplier_url": "https://www.alibaba.com/product-detail/Multifunctional-Electric-Air-Fryer-Oil-Free_1600430223950.html"
     },
     {
       "id": "garden-pruner",
       "name": "Cordless hedge pruner",
       "weight_kg": 2.8,
       "markets": {
-        "poland": {"buy": 200, "sell": 260, "demand": 0.60, "popularity": 0.40},
-        "visegrad": {"buy": 190, "sell": 248, "demand": 0.52, "popularity": 0.40},
-        "china": {"buy": 88, "sell": 150, "demand": 0.50, "popularity": 0.38},
-        "europe": {"buy": 195, "sell": 252, "demand": 0.48, "popularity": 0.38}
-      }
+        "poland": {
+          "buy": 200,
+          "sell": 260,
+          "demand": 0.6,
+          "popularity": 0.4
+        },
+        "visegrad": {
+          "buy": 190,
+          "sell": 248,
+          "demand": 0.52,
+          "popularity": 0.4
+        },
+        "china": {
+          "buy": 88,
+          "sell": 150,
+          "demand": 0.5,
+          "popularity": 0.38
+        },
+        "europe": {
+          "buy": 195,
+          "sell": 252,
+          "demand": 0.48,
+          "popularity": 0.38
+        }
+      },
+      "supplier_url": "https://www.alibaba.com/product-detail/20V-Cordless-Electric-Hedge-Trimmer-with_10000041350229.html"
     },
     {
       "id": "bike-rack",
@@ -100,24 +317,76 @@
       "weight_kg": 14.0,
       "category": "Automotive",
       "markets": {
-        "poland": {"buy": 640, "sell": 800, "demand": 0.55, "popularity": 0.50},
-        "visegrad": {"buy": 610, "sell": 770, "demand": 0.50, "popularity": 0.50},
-        "china": {"buy": 320, "sell": 480, "demand": 0.50, "popularity": 0.48},
-        "europe": {"buy": 630, "sell": 790, "demand": 0.50, "popularity": 0.48}
-      }
+        "poland": {
+          "buy": 640,
+          "sell": 800,
+          "demand": 0.55,
+          "popularity": 0.5
+        },
+        "visegrad": {
+          "buy": 610,
+          "sell": 770,
+          "demand": 0.5,
+          "popularity": 0.5
+        },
+        "china": {
+          "buy": 320,
+          "sell": 480,
+          "demand": 0.5,
+          "popularity": 0.48
+        },
+        "europe": {
+          "buy": 630,
+          "sell": 790,
+          "demand": 0.5,
+          "popularity": 0.48
+        }
+      },
+      "supplier_url": "https://www.alibaba.com/product-detail/Towbar-Bike-Rack_10000013522794.html"
     },
     {
       "id": "robot-vacuum",
       "name": "Robot vacuum LiDAR 5000Pa",
       "weight_kg": 4.5,
       "markets": {
-        "poland": {"buy": 780, "sell": 950, "demand": 0.88, "popularity": 0.92},
-        "visegrad": {"buy": 740, "sell": 910, "demand": 0.78, "popularity": 0.82},
-        "china": {"buy": 420, "sell": 600, "demand": 0.72, "popularity": 0.75},
-        "europe": {"buy": 750, "sell": 920, "demand": 0.72, "popularity": 0.75},
-        "baltic": {"buy": 770, "sell": 940, "demand": 0.74, "popularity": 0.76},
-        "westeu": {"buy": 830, "sell": 1010, "demand": 0.78, "popularity": 0.80}
-      }
+        "poland": {
+          "buy": 780,
+          "sell": 950,
+          "demand": 0.88,
+          "popularity": 0.92
+        },
+        "visegrad": {
+          "buy": 740,
+          "sell": 910,
+          "demand": 0.78,
+          "popularity": 0.82
+        },
+        "china": {
+          "buy": 420,
+          "sell": 600,
+          "demand": 0.72,
+          "popularity": 0.75
+        },
+        "europe": {
+          "buy": 750,
+          "sell": 920,
+          "demand": 0.72,
+          "popularity": 0.75
+        },
+        "baltic": {
+          "buy": 770,
+          "sell": 940,
+          "demand": 0.74,
+          "popularity": 0.76
+        },
+        "westeu": {
+          "buy": 830,
+          "sell": 1010,
+          "demand": 0.78,
+          "popularity": 0.8
+        }
+      },
+      "supplier_url": "https://www.alibaba.com/product-detail/Vyzzle-D10-Robot-Vacuum-5000Pa-LiDAR_1601631540350.html"
     },
     {
       "id": "electric-grill",
@@ -125,12 +394,38 @@
       "weight_kg": 9.5,
       "category": "Home & Garden",
       "markets": {
-        "poland": {"buy": 420, "sell": 520, "demand": 0.72, "popularity": 0.60},
-        "visegrad": {"buy": 400, "sell": 500, "demand": 0.62, "popularity": 0.55},
-        "china": {"buy": 210, "sell": 310, "demand": 0.55, "popularity": 0.50},
-        "turkiye": {"buy": 340, "sell": 450, "demand": 0.60, "popularity": 0.55},
-        "balkan": {"buy": 390, "sell": 490, "demand": 0.55, "popularity": 0.50}
-      }
+        "poland": {
+          "buy": 420,
+          "sell": 520,
+          "demand": 0.72,
+          "popularity": 0.6
+        },
+        "visegrad": {
+          "buy": 400,
+          "sell": 500,
+          "demand": 0.62,
+          "popularity": 0.55
+        },
+        "china": {
+          "buy": 210,
+          "sell": 310,
+          "demand": 0.55,
+          "popularity": 0.5
+        },
+        "turkiye": {
+          "buy": 340,
+          "sell": 450,
+          "demand": 0.6,
+          "popularity": 0.55
+        },
+        "balkan": {
+          "buy": 390,
+          "sell": 490,
+          "demand": 0.55,
+          "popularity": 0.5
+        }
+      },
+      "supplier_url": "https://www.alibaba.com/product-detail/Electric-Steak-Grill-2200W-Indoor-Smokeless_1601155020936.html"
     },
     {
       "id": "solar-charger",
@@ -138,11 +433,32 @@
       "weight_kg": 2.1,
       "category": "Energy",
       "markets": {
-        "poland": {"buy": 360, "sell": 440, "demand": 0.50, "popularity": 0.35},
-        "visegrad": {"buy": 345, "sell": 425, "demand": 0.45, "popularity": 0.35},
-        "china": {"buy": 135, "sell": 210, "demand": 0.45, "popularity": 0.35},
-        "turkiye": {"buy": 280, "sell": 370, "demand": 0.45, "popularity": 0.35}
-      }
+        "poland": {
+          "buy": 360,
+          "sell": 440,
+          "demand": 0.5,
+          "popularity": 0.35
+        },
+        "visegrad": {
+          "buy": 345,
+          "sell": 425,
+          "demand": 0.45,
+          "popularity": 0.35
+        },
+        "china": {
+          "buy": 135,
+          "sell": 210,
+          "demand": 0.45,
+          "popularity": 0.35
+        },
+        "turkiye": {
+          "buy": 280,
+          "sell": 370,
+          "demand": 0.45,
+          "popularity": 0.35
+        }
+      },
+      "supplier_url": "https://www.alibaba.com/product-detail/Portable-100W-Solar-Battery-Charger-Monocrystalline_1600978431139.html"
     },
     {
       "id": "heat-gun",
@@ -150,11 +466,32 @@
       "weight_kg": 1.1,
       "category": "Tools",
       "markets": {
-        "poland": {"buy": 120, "sell": 160, "demand": 0.45, "popularity": 0.40},
-        "visegrad": {"buy": 115, "sell": 155, "demand": 0.40, "popularity": 0.40},
-        "china": {"buy": 48, "sell": 90, "demand": 0.40, "popularity": 0.38},
-        "europe": {"buy": 118, "sell": 158, "demand": 0.38, "popularity": 0.38}
-      }
+        "poland": {
+          "buy": 120,
+          "sell": 160,
+          "demand": 0.45,
+          "popularity": 0.4
+        },
+        "visegrad": {
+          "buy": 115,
+          "sell": 155,
+          "demand": 0.4,
+          "popularity": 0.4
+        },
+        "china": {
+          "buy": 48,
+          "sell": 90,
+          "demand": 0.4,
+          "popularity": 0.38
+        },
+        "europe": {
+          "buy": 118,
+          "sell": 158,
+          "demand": 0.38,
+          "popularity": 0.38
+        }
+      },
+      "supplier_url": "https://www.alibaba.com/product-detail/2000W-Heat-gun-soldering-gun-with_1600559234368.html"
     }
   ]
 }

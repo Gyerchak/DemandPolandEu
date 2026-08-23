@@ -9,6 +9,7 @@ json trade_to_json(const Trade& t) {
         {"kind", t.kind},
         {"product_id", t.product_id},
         {"product_name", t.product_name},
+        {"supplier_url", t.supplier_url},
         {"category", t.category},
         {"from_market_id", t.from_market_id},
         {"from_market", t.from_market},
@@ -52,6 +53,7 @@ json market_to_json(const Market& m) {
         {"vat_rate", m.vat_rate},
         {"lead_days", m.lead_days},
         {"note", m.note},
+        {"members", m.members},
     };
 }
 

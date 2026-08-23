@@ -56,7 +56,24 @@ h1 { margin: 0; font-size: 24px; letter-spacing: .4px; }
 .meta { padding: 8px 28px 0; color: var(--muted); font-size: 13px; }
 .meta .err { color: var(--bad); }
 
-.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px 28px; }
+.tabs { display: flex; gap: 8px; padding: 16px 28px 0; }
+.tab {
+  background: var(--panel); color: var(--muted); border: 1px solid var(--border);
+  border-radius: 8px 8px 0 0; padding: 9px 20px; font-size: 14px; cursor: pointer;
+  border-bottom: none;
+}
+.tab.active { background: var(--panel2); color: var(--text); font-weight: 600; border-color: var(--accent); }
+
+.sort-bar { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding: 10px 28px 0; }
+.sort-label { font-size: 12px; color: var(--muted); margin-right: 4px; }
+.sort-btn {
+  background: var(--panel); color: var(--muted); border: 1px solid var(--border);
+  border-radius: 14px; padding: 4px 12px; font-size: 12px; cursor: pointer;
+}
+.sort-btn.active { background: rgba(76,201,240,.15); color: var(--accent); border-color: var(--accent); }
+
+.panel { padding: 14px 28px; }
+.hidden { display: none; }
 .col { overflow-x: auto; }
 .col h2 { font-size: 16px; margin: 4px 0 10px; }
 .col h2 small { font-weight: normal; color: var(--muted); font-size: 12px; }
@@ -69,6 +86,9 @@ thead th {
 }
 tbody td { padding: 7px 8px; border-bottom: 1px solid var(--border); font-size: 13px; white-space: nowrap; }
 tbody tr:hover { background: rgba(76, 201, 240, 0.05); }
+
+a.prod { color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--accent); }
+a.prod:hover { color: var(--accent); text-decoration: underline; border-bottom-style: solid; }
 
 .score { font-weight: 700; font-size: 14px; padding: 2px 9px; border-radius: 8px; display: inline-block; min-width: 44px; text-align: center; }
 .score.hi { background: rgba(47,191,113,.18); color: var(--good); }
@@ -87,4 +107,4 @@ footer { padding-bottom: 30px; }
 .formulas { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 14px 20px; font-size: 13px; color: var(--muted); }
 .formulas p { margin: 8px 0; }
 
-@media (max-width: 1100px) { .cols { grid-template-columns: 1fr; } }
+.legend { margin-top: 10px; color: var(--accent); font-size: 12.5px; }

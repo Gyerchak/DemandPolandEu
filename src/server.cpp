@@ -5,9 +5,11 @@
 #include <fcntl.h>
 
 #include <algorithm>
+#include <chrono>
 #include <cstdio>
 #include <cstring>
 #include <fstream>
+#include <poll.h>
 #include <sstream>
 #include <string>
 #include <vector>
@@ -66,6 +68,18 @@ std::vector<std::string> split(const std::string& s, char sep) {
     return out;
 }
 
+// Heartbeat: the dashboard page pings /api/ping every 2s while open.
+// If the page is closed (no ping for HEARTBEAT_TIMEOUT_MS), the server
+// shuts itself down so dead servers never linger on the port.
+std::chrono::steady_clock::time_point g_last_ping = std::chrono::steady_clock::now();
+bool g_heartbeat_seen = false;
+const long HEARTBEAT_TIMEOUT_MS = 8000;
+
+void heartbeat_tick() {
+    g_last_ping = std::chrono::steady_clock::now();
+    g_heartbeat_seen = true;
+}
+
 std::string mime_type(const std::string& path) {
     if (path.size() > 5 && path.substr(path.size() - 5) == ".html") return "text/html; charset=utf-8";
     if (path.size() > 4 && path.substr(path.size() - 4) == ".css") return "text/css; charset=utf-8";
@@ -114,6 +128,23 @@ int run_web(const std::string& data_dir, const std::string& host, int port) {
     fflush(stdout);
 
     for (;;) {
+        // Wait up to 1s for an incoming request; use the pause to check
+        // whether the browser page is still alive (heartbeat).
+        struct pollfd pfd{server_fd, POLLIN, 0};
+        int pr = poll(&pfd, 1, 1000);
+        if (pr < 0) { if (errno == EINTR) continue; break; }
+        if (pr == 0) {
+            auto now = std::chrono::steady_clock::now();
+            if (g_heartbeat_seen &&
+                std::chrono::duration_cast<std::chrono::milliseconds>(now - g_last_ping).count()
+                    > HEARTBEAT_TIMEOUT_MS) {
+                printf("dashboard closed — shutting down\n");
+                fflush(stdout);
+                break;   // page is gone: exit the server cleanly
+            }
+            continue;
+        }
+
         int client = accept(server_fd, nullptr, nullptr);
         if (client < 0) continue;
 
@@ -129,6 +160,15 @@ int run_web(const std::string& data_dir, const std::string& host, int port) {
         if (target.empty()) target = "/";
         size_t path_end = target.find('?');
         std::string path = path_end == std::string::npos ? target : target.substr(0, path_end);
+
+        // any API activity = the dashboard page is alive
+        if (path.rfind("/api/", 0) == 0) heartbeat_tick();
+
+        if (path == "/api/ping") {
+            send_response(client, "{\"ok\":true}", "application/json; charset=utf-8");
+            close(client);
+            continue;
+        }
 
         if (path == "/api/markets") {
             auto markets = load_markets(".");
@@ -164,7 +204,21 @@ int run_web(const std::string& data_dir, const std::string& host, int port) {
             if (sort.empty()) sort = "opportunity";
             std::string category = query_value(target, "category");
 
-            auto trades = build_trades(".", home, watch, include_vat, margin_ref);
+            // homes=all  ->  every WATCHED market acts as its own home market,
+            // matched against ALL counterparty markets (full cross-market matrix).
+            std::string homes_q = query_value(target, "homes");
+            std::vector<Trade> trades;
+            std::string home_label = home;
+            if (homes_q == "all") {
+                for (const auto& m : markets) {
+                    if (!m.watch) continue;                    // watched = home candidates
+                    auto part = build_trades(".", m.id, {}, include_vat, margin_ref);
+                    trades.insert(trades.end(), part.begin(), part.end());
+                }
+                home_label = "all watched";
+            } else {
+                trades = build_trades(".", home, watch, include_vat, margin_ref);
+            }
             if (!category.empty()) {
                 trades.erase(std::remove_if(trades.begin(), trades.end(),
                             [&](const Trade& t) { return t.category != category; }),
@@ -180,7 +234,7 @@ int run_web(const std::string& data_dir, const std::string& host, int port) {
             }
 
             nlohmann::json resp{
-                {"home", home},
+                {"home", home_label},
                 {"count", trades.size()},
                 {"imports", imports},
                 {"exports", exports},

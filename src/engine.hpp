@@ -20,6 +20,7 @@ struct Market {
     double vat_rate = 0.0;     // VAT charged on a sale in this market
     int lead_days = 30;
     std::string note;
+    std::string members;   // country list for legend (e.g. "PL, CZ, SK, HU")
 };
 
 struct ProductMarket {
@@ -33,6 +34,7 @@ struct Product {
     std::string id;
     std::string name;
     std::string category;      // broad, English; may be empty -> fallback
+    std::string supplier_url;  // optional: direct supplier/product page
     double weight_kg = 0.0;
     std::map<std::string, ProductMarket> markets;  // market_id -> data
 };
@@ -46,6 +48,7 @@ struct Trade {
     std::string from_market;
     std::string to_market_id;
     std::string to_market;
+    std::string supplier_url;   // clickable product name -> supplier page
     double buy_eur = 0.0;
     double sell_eur = 0.0;
     double freight_eur = 0.0;

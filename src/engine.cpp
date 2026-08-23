@@ -70,6 +70,7 @@ std::vector<Market> load_markets(const std::string& dir) {
         m.vat_rate = get_double(e, "vat_rate", 0.0);
         m.lead_days = e.value("lead_days", 30);
         m.note = e.value("note", "");
+        m.members = e.value("members", "");
         out.push_back(std::move(m));
     }
     return out;
@@ -84,6 +85,7 @@ std::vector<Product> load_products(const std::string& dir) {
         p.name = e.value("name", "");
         p.category = e.value("category", "");
         p.weight_kg = get_double(e, "weight_kg", 0.0);
+        p.supplier_url = e.value("supplier_url", "");
         auto mk = e.find("markets");
         if (mk != e.end() && mk->is_object()) {
             for (auto it = mk->begin(); it != mk->end(); ++it) {
@@ -182,6 +184,7 @@ std::vector<Trade> build_trades(const std::string& dir,
                 t.kind = "import";
                 t.product_id = product.id;
                 t.product_name = product.name;
+                t.supplier_url = product.supplier_url;
                 t.category = cat;
                 t.from_market_id = m.id;
                 t.from_market = m.name;
@@ -220,6 +223,7 @@ std::vector<Trade> build_trades(const std::string& dir,
                 t.kind = "export";
                 t.product_id = product.id;
                 t.product_name = product.name;
+                t.supplier_url = product.supplier_url;
                 t.category = cat;
                 t.from_market_id = home->id;
                 t.from_market = home->name;

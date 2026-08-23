@@ -2,7 +2,7 @@
   "markets": [
     {
       "id": "poland",
-      "name": "Poland (home)",
+      "name": "Poland",
       "role": "home",
       "watch": true,
       "currency": "EUR",
@@ -13,11 +13,12 @@
       "handling_eur": 0.0,
       "vat_rate": 0.23,
       "lead_days": 3,
-      "note": "Home market"
+      "note": "Home market",
+      "members": ""
     },
     {
       "id": "visegrad",
-      "name": "Visegrad (PL,CZ,SK,HU)",
+      "name": "Visegrad",
       "role": "main",
       "watch": true,
       "currency": "EUR",
@@ -28,7 +29,8 @@
       "handling_eur": 2.0,
       "vat_rate": 0.21,
       "lead_days": 7,
-      "note": "Main market for exports and imports (not EU, PL included)"
+      "note": "Poland, Czechia, Slovakia, Hungary — main export/import market",
+      "members": "PL, CZ, SK, HU"
     },
     {
       "id": "china",
@@ -43,11 +45,12 @@
       "handling_eur": 4.0,
       "vat_rate": 0.13,
       "lead_days": 45,
-      "note": "Sourcing giant"
+      "note": "Sourcing giant",
+      "members": ""
     },
     {
       "id": "europe",
-      "name": "Europe (EU core)",
+      "name": "Europe",
       "role": "other",
       "watch": true,
       "currency": "EUR",
@@ -58,11 +61,12 @@
       "handling_eur": 1.0,
       "vat_rate": 0.21,
       "lead_days": 9,
-      "note": "EU core markets"
+      "note": "EU core markets",
+      "members": ""
     },
     {
       "id": "baltic",
-      "name": "Baltic (LT,LV,EE)",
+      "name": "Baltic",
       "role": "other",
       "watch": true,
       "currency": "EUR",
@@ -73,7 +77,8 @@
       "handling_eur": 2.0,
       "vat_rate": 0.21,
       "lead_days": 6,
-      "note": "Baltic states"
+      "note": "Lithuania, Latvia, Estonia",
+      "members": "LT, LV, EE"
     },
     {
       "id": "turkiye",
@@ -86,13 +91,14 @@
       "freight_per_unit_eur": 4.0,
       "duty_rate": 0.05,
       "handling_eur": 3.0,
-      "vat_rate": 0.20,
+      "vat_rate": 0.2,
       "lead_days": 15,
-      "note": "Manufacturing hub"
+      "note": "Manufacturing hub",
+      "members": ""
     },
     {
       "id": "westeu",
-      "name": "Western non-EU (UK,CH,NO)",
+      "name": "Western non-EU",
       "role": "other",
       "watch": true,
       "currency": "GBP",
@@ -101,13 +107,14 @@
       "freight_per_unit_eur": 5.0,
       "duty_rate": 0.02,
       "handling_eur": 3.0,
-      "vat_rate": 0.20,
+      "vat_rate": 0.2,
       "lead_days": 8,
-      "note": "Western non-EU countries"
+      "note": "Western non-EU countries",
+      "members": "UK, CH, NO"
     },
     {
       "id": "turkic",
-      "name": "Turkic (AZ,KZ,UZ,etc)",
+      "name": "Turkic",
       "role": "other",
       "watch": false,
       "currency": "USD",
@@ -118,7 +125,8 @@
       "handling_eur": 4.0,
       "vat_rate": 0.15,
       "lead_days": 25,
-      "note": "Azerbaijan + Central Asia (Turkic only)"
+      "note": "Azerbaijan + Central Asia (Turkic only)",
+      "members": "AZ, KZ, UZ (etc.)"
     },
     {
       "id": "ukraine",
@@ -131,9 +139,10 @@
       "freight_per_unit_eur": 4.0,
       "duty_rate": 0.03,
       "handling_eur": 3.0,
-      "vat_rate": 0.20,
+      "vat_rate": 0.2,
       "lead_days": 12,
-      "note": "Ukraine"
+      "note": "Ukraine",
+      "members": ""
     },
     {
       "id": "belarus",
@@ -141,14 +150,15 @@
       "role": "other",
       "watch": false,
       "currency": "BYN",
-      "fx_to_eur": 0.30,
+      "fx_to_eur": 0.3,
       "freight_per_kg_eur": 2.6,
       "freight_per_unit_eur": 5.0,
       "duty_rate": 0.04,
       "handling_eur": 3.5,
-      "vat_rate": 0.20,
+      "vat_rate": 0.2,
       "lead_days": 10,
-      "note": "Belarus"
+      "note": "Belarus",
+      "members": ""
     },
     {
       "id": "kaliningrad",
@@ -156,33 +166,35 @@
       "role": "other",
       "watch": false,
       "currency": "RUB",
-      "fx_to_eur": 0.010,
+      "fx_to_eur": 0.01,
       "freight_per_kg_eur": 2.8,
       "freight_per_unit_eur": 5.5,
       "duty_rate": 0.04,
       "handling_eur": 3.5,
-      "vat_rate": 0.20,
+      "vat_rate": 0.2,
       "lead_days": 11,
-      "note": "Kaliningrad exclave"
+      "note": "Kaliningrad exclave",
+      "members": ""
     },
     {
       "id": "belarus-russia",
-      "name": "Belarus + Russia (excl. Kaliningrad)",
+      "name": "Belarus + Russia",
       "role": "other",
       "watch": false,
       "currency": "RUB",
-      "fx_to_eur": 0.010,
+      "fx_to_eur": 0.01,
       "freight_per_kg_eur": 3.0,
       "freight_per_unit_eur": 6.0,
       "duty_rate": 0.04,
       "handling_eur": 4.0,
-      "vat_rate": 0.20,
+      "vat_rate": 0.2,
       "lead_days": 14,
-      "note": "Belarus + Russia without Kaliningrad"
+      "note": "Belarus + Russia without Kaliningrad",
+      "members": ""
     },
     {
       "id": "north-africa",
-      "name": "North Africa (MA,TN,DZ,LY)",
+      "name": "North Africa",
       "role": "other",
       "watch": false,
       "currency": "EUR",
@@ -191,13 +203,14 @@
       "freight_per_unit_eur": 5.0,
       "duty_rate": 0.06,
       "handling_eur": 4.0,
-      "vat_rate": 0.20,
+      "vat_rate": 0.2,
       "lead_days": 16,
-      "note": "Morocco, Tunisia, Algeria, Libya"
+      "note": "Morocco, Tunisia, Algeria, Libya",
+      "members": "MA, TN, DZ, LY"
     },
     {
       "id": "balkan",
-      "name": "Balkan (non-EU)",
+      "name": "Balkan",
       "role": "other",
       "watch": false,
       "currency": "EUR",
@@ -206,9 +219,10 @@
       "freight_per_unit_eur": 4.5,
       "duty_rate": 0.03,
       "handling_eur": 3.0,
-      "vat_rate": 0.20,
+      "vat_rate": 0.2,
       "lead_days": 10,
-      "note": "Non-EU Balkan countries"
+      "note": "Non-EU Balkan countries",
+      "members": "non-EU"
     }
   ]
 }
