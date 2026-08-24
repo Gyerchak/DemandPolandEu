@@ -7,7 +7,7 @@
       "markets": {
         "poland": {
           "buy": 1240,
-          "sell": 1599,
+          "sell": 677.5,
           "demand": 0.92,
           "popularity": 0.95,
           "whole": {
@@ -15,7 +15,10 @@
             "demand": 0.96,
             "popularity": 0.98
           },
-          "price_source": "est"
+          "price_source": "est",
+          "sell_low": 613.7,
+          "sell_high": 741.2,
+          "sell_est": true
         },
         "visegrad": {
           "buy": 1150,
@@ -84,7 +87,7 @@
           "link_checked": "2026-08-24"
         },
         "westeu": {
-          "buy": 629.0,
+          "buy": 409.22,
           "sell": 780.0,
           "demand": 0.75,
           "popularity": 0.75,

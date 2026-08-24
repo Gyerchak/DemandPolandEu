@@ -182,3 +182,5 @@ footer { padding-bottom: 30px; }
 }
 .best-sell:hover { background: rgba(47,191,113,.12); }
 .bulk { font-size: 11px; color: var(--accent); margin-top: 1px; }
+
+.sell-est { color: var(--warn); }

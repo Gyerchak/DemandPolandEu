@@ -38,6 +38,10 @@ struct ProductMarket {
     double whole_sell = 0.0;
     double whole_demand = 0.0;
     double whole_popularity = 0.0;
+    // Real resale range at destination (from price-comparison): mid = estimate.
+    double sell_low = 0.0;
+    double sell_high = 0.0;
+    bool sell_est = false;   // sell computed from range midpoint, not a fixed real quote
 };
 
 struct Product {
@@ -77,6 +81,9 @@ struct Trade {
     std::vector<std::string> shops;  // shops considered for this trade's sell side
     double buy_eur = 0.0;
     double sell_eur = 0.0;
+    double sell_low = 0.0;
+    double sell_high = 0.0;
+    bool sell_est = false;
     double freight_eur = 0.0;
     double duty_eur = 0.0;
     double handling_eur = 0.0;

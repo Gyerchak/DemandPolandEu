@@ -11,6 +11,7 @@ const homeSel = $("#home");
 const vatCheck = $("#vat");
 const allCheck = $("#all");
 const realOnlyCheck = $("#realOnly");
+const noApproxCheck = $("#noApprox");
 const refreshBtn = $("#refresh");
 const marketsDiv = $("#markets");
 const meta = $("#meta");
@@ -139,7 +140,9 @@ function rowHtml(t) {
       <td>${fmtMoney(t.handling_eur)}</td>
       <td>${fmtMoney(t.vat_eur)}</td>
       <td><b>${fmtMoney(t.total_eur)}</b></td>
-      <td${sellTitle}>${fmtMoney(t.sell_eur)}</td>
+      <td${sellTitle}>${t.sell_est
+        ? `<span class="est" title="sell estimated from a real price range: ${fmtMoney(t.sell_low)} – ${fmtMoney(t.sell_high)} (similar-spec offers)">~${fmtMoney(t.sell_eur)}?</span>`
+        : fmtMoney(t.sell_eur)}</td>
       <td style="color:${moneyClass(t.profit_eur)}"><b>${fmtMoney(t.profit_eur)}</b></td>
       <td style="color:${moneyClass(t.margin)}">${fmtPct(t.margin)}</td>
       <td><span class="score ${scoreClass(t.opportunity)}">${t.opportunity.toFixed(0)}</span></td>
@@ -281,13 +284,19 @@ async function load() {
     if (!res.ok) throw new Error("HTTP " + res.status);
     const data = await res.json();
     const onlyReal = realOnlyCheck.checked;
-    const keepReal = (rows) => onlyReal ? rows.filter((r) => r.price_source === "real") : rows;
+    const noApprox = noApproxCheck.checked;
+    const keepReal = (rows) => {
+      let r = onlyReal ? rows.filter((x) => x.price_source === "real") : rows;
+      if (noApprox) r = r.filter((x) => !x.sell_est);   // drop ~approximate sells
+      return r;
+    };
     const imps = keepReal(data.imports), exps = keepReal(data.exports);
     const realTot = data.imports.filter((r) => r.price_source === "real").length +
                     data.exports.filter((r) => r.price_source === "real").length;
     meta.innerHTML = `${data.count} trades (${imps.length} import shown, ${exps.length} export shown)`
       + ` &middot; real deals: <b style="color:var(--good)">${realTot}</b> &middot; home: <b>${data.home}</b>`
-      + (onlyReal ? " &middot; <b>real only</b>" : "");
+      + (onlyReal ? " &middot; <b>real only</b>" : "")
+      + (noApprox ? " &middot; <b>no ~sells</b>" : "");
     lastImports = imps;
     lastExports = exps;                                   // FIXED: was data.exports
     pageState.imports = 1; pageState.exports = 1;
@@ -354,7 +363,7 @@ refreshBtn.addEventListener("click", load);
 // When this page closes, pings stop and the server shuts itself down.
 setInterval(() => { fetch("/api/ping").catch(() => {}); }, 2000);
 ["change", "input"].forEach((ev) =>
-  [sortSel, catSel, homeSel, vatCheck, allCheck, realOnlyCheck].forEach((el) => el.addEventListener(ev, load)));
+  [sortSel, catSel, homeSel, vatCheck, allCheck, realOnlyCheck, noApproxCheck].forEach((el) => el.addEventListener(ev, load)));
 
 (async () => {
   try {

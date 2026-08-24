@@ -126,6 +126,9 @@ std::vector<Product> load_products_impl(const std::string& dir, const std::strin
                 pm.supplier_url = it->value("supplier_url", "");
                 pm.price_source = it->value("price_source", "est");
                 pm.link_checked = it->value("link_checked", "");
+                pm.sell_low = get_double(*it, "sell_low", 0.0);
+                pm.sell_high = get_double(*it, "sell_high", 0.0);
+                pm.sell_est = it->value("sell_est", false);
                 auto w = it->find("whole");
                 if (w != it->end() && w->is_object()) {
                     pm.whole_sell = get_double(*w, "sell", 0.0);
@@ -214,6 +217,10 @@ std::vector<Trade> build_trades(const std::string& dir,
                 double sell_ref = whole && hp.whole_sell > 0 ? hp.whole_sell : hp.sell;
                 double dem_ref  = whole ? hp.whole_demand  : hp.demand;
                 double pop_ref  = whole ? hp.whole_popularity : hp.popularity;
+                bool sell_est = hp.sell_est;
+                double sell_low = hp.sell_low, sell_high = hp.sell_high;
+                if (sell_est && sell_low > 0 && sell_high > 0)
+                    sell_ref = (sell_low + sell_high) / 2.0;   // midpoint = ~estimate
                 double buy_eur = local_to_eur(pm.buy, m);
                 double sell_eur = local_to_eur(sell_ref, *home);
                 double freight = m.freight_per_unit_eur + m.freight_per_kg_eur * product.weight_kg;
@@ -259,6 +266,9 @@ std::vector<Trade> build_trades(const std::string& dir,
                 t.success_rate = sr;
                 t.opportunity = opportunity_score(sr, margin, margin_ref);
                 t.lead_days = m.lead_days;
+                t.sell_est = sell_est;
+                t.sell_low = sell_low;
+                t.sell_high = sell_high;
                 out.push_back(std::move(t));
             }
 
@@ -267,6 +277,10 @@ std::vector<Trade> build_trades(const std::string& dir,
                 double sell_ref = whole && pm.whole_sell > 0 ? pm.whole_sell : pm.sell;
                 double dem_ref  = whole ? pm.whole_demand  : pm.demand;
                 double pop_ref  = whole ? pm.whole_popularity : pm.popularity;
+                bool sell_est = pm.sell_est;
+                double sell_low = pm.sell_low, sell_high = pm.sell_high;
+                if (sell_est && sell_low > 0 && sell_high > 0)
+                    sell_ref = (sell_low + sell_high) / 2.0;
                 double buy_eur = local_to_eur(hp.buy, *home);
                 double sell_eur = local_to_eur(sell_ref, m);
                 double freight = home->freight_per_unit_eur + home->freight_per_kg_eur * product.weight_kg;
@@ -312,6 +326,9 @@ std::vector<Trade> build_trades(const std::string& dir,
                 t.success_rate = sr;
                 t.opportunity = opportunity_score(sr, margin, margin_ref);
                 t.lead_days = home->lead_days + m.lead_days;
+                t.sell_est = sell_est;
+                t.sell_low = sell_low;
+                t.sell_high = sell_high;
                 out.push_back(std::move(t));
             }
         }
