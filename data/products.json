@@ -457,7 +457,7 @@
       "markets": {
         "poland": {
           "buy": 300,
-          "sell": 380,
+          "sell": 82.0,
           "demand": 0.85,
           "popularity": 0.9,
           "whole": {
@@ -480,8 +480,8 @@
           "price_source": "est"
         },
         "china": {
-          "buy": 13.5,
-          "sell": 40.0,
+          "buy": 97.0,
+          "sell": 130.0,
           "demand": 0.8,
           "popularity": 0.9,
           "price_source": "real",
@@ -528,7 +528,7 @@
       "brand": "Tefal",
       "model": "Easy Fry Classic EY2018",
       "ean": "3045380014565",
-      "source_notes": "AF5001 5L digital air fryer (Ningbo Hiking): $13.5-14 at MOQ 1000pcs, $13 at 3000+. LIMIKA 5.1-6L: $23.1/1-1499, $16.5/3500+. Real factory wholesale for the 5.5L product class."
+      "source_notes": "AF5001 5L air fryer (Ningbo Hiking): $13.50 @ MOQ 1000+, $13 @ 3000+ (real USD, stored as 97 CNY ≈ €12.6/unit). PL retail for Tefal EY2018-class fryer ≈ 349 zł (€82), not the old €380 sample."
     },
     {
       "id": "garden-pruner",

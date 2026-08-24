@@ -22,7 +22,7 @@ let selected = new Set();
 let channel = "main";
 let lastImports = [];
 let lastExports = [];
-let qtyMult = 100;   // default: bulk ×100 (real trade minimum from a supplier)
+let qtyMult = 1;     // default: per-item prices. ×100 bulk = toggle (real trade minimum)
 
 const MAIN_WATCH = ["visegrad", "china", "poland", "europe", "baltic", "turkiye", "westeu"];
 
