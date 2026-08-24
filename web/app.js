@@ -122,7 +122,7 @@ function rowHtml(t) {
       <td><small style="color:var(--muted)">${t.category}</small></td>
       <td>${t.from_market}</td>
       <td>${t.to_market}</td>
-      <td colspan="8"><span class="est" title="buy price not verified yet — deep-search this exact product">no verified price — deep-search first</span></td>
+      <td colspan="10"><span class="est" title="buy price not verified yet — deep-search this exact product">no verified price — deep-search first</span></td>
       <td>${bestSellBtn(t)}</td>
     </tr>`;
   }
