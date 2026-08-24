@@ -31,7 +31,33 @@
         "Pepper.pl shops",
         "Ceneo-listed"
       ],
-      "search": "https://www.ceneo.pl/;szukaj-{q}"
+      "search": "https://www.ceneo.pl/;szukaj-{q}",
+      "deep": [
+        [
+          "Ceneo (porównywarka)",
+          "https://www.ceneo.pl/;szukaj-{q}"
+        ],
+        [
+          "Allegro",
+          "https://allegro.pl/listing?string={q}"
+        ],
+        [
+          "Amazon.pl",
+          "https://www.amazon.pl/s?k={q}"
+        ],
+        [
+          "Media Expert",
+          "https://www.mediaexpert.pl/szukaj?query={q}"
+        ],
+        [
+          "X-KOM",
+          "https://www.x-kom.pl/szukaj?q={q}"
+        ],
+        [
+          "Morele.net",
+          "https://www.morele.net/wyszukiwarka/{q}/"
+        ]
+      ]
     },
     {
       "id": "visegrad",
@@ -61,7 +87,29 @@
         "Alfa.hu",
         "Vásárolj.hu"
       ],
-      "search": "https://www.ceneo.pl/;szukaj-{q}"
+      "search": "https://www.ceneo.pl/;szukaj-{q}",
+      "deep": [
+        [
+          "Ceneo (PL)",
+          "https://www.ceneo.pl/;szukaj-{q}"
+        ],
+        [
+          "Alza.cz",
+          "https://www.alza.cz/search.htm?exps={q}"
+        ],
+        [
+          "Alza.sk",
+          "https://www.alza.sk/search.htm?exps={q}"
+        ],
+        [
+          "eMAG.hu",
+          "https://www.emag.hu/search/{q}"
+        ],
+        [
+          "Árukereső (HU)",
+          "https://www.arukereso.hu/kereses/?q={q}"
+        ]
+      ]
     },
     {
       "id": "china",
@@ -89,7 +137,29 @@
         "JD.com",
         "Pinduoduo"
       ],
-      "search": "https://www.alibaba.com/trade/search?SearchText={q}"
+      "search": "https://www.alibaba.com/trade/search?SearchText={q}",
+      "deep": [
+        [
+          "Alibaba",
+          "https://www.alibaba.com/trade/search?SearchText={q}"
+        ],
+        [
+          "1688.com",
+          "https://s.1688.com/selloffer/offer_search.htm?keywords={q}"
+        ],
+        [
+          "AliExpress",
+          "https://www.aliexpress.com/wholesale?SearchText={q}"
+        ],
+        [
+          "Made-in-China",
+          "https://www.made-in-china.com/products-search/hot-china-products/{q}.html"
+        ],
+        [
+          "DHgate",
+          "https://www.dhgate.com/wholesale/search.do?act=search&cfrom=search&searchkey={q}"
+        ]
+      ]
     },
     {
       "id": "europe",
@@ -119,7 +189,29 @@
         "Notebooksbilliger",
         "Galaxus.de"
       ],
-      "search": "https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q={q}"
+      "search": "https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q={q}",
+      "deep": [
+        [
+          "Idealo (porównywarka)",
+          "https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q={q}"
+        ],
+        [
+          "Amazon.de",
+          "https://www.amazon.de/s?k={q}"
+        ],
+        [
+          "OTTO.de",
+          "https://www.otto.de/suche/{q}/"
+        ],
+        [
+          "eBay.de",
+          "https://www.ebay.de/sch/i.html?_nkw={q}"
+        ],
+        [
+          "MediaMarkt.de",
+          "https://www.mediamarkt.de/de/search.html?query={q}"
+        ]
+      ]
     },
     {
       "id": "baltic",
@@ -148,7 +240,25 @@
         "Hobbyteam.lt",
         "Kainos24"
       ],
-      "search": "https://kaina24.lt/search?q={q}"
+      "search": "https://kaina24.lt/search?q={q}",
+      "deep": [
+        [
+          "Kaina24 (LT)",
+          "https://kaina24.lt/search?q={q}"
+        ],
+        [
+          "Pigu.lt",
+          "https://www.pigu.lt/lt/peska?q={q}"
+        ],
+        [
+          "1a.lt",
+          "https://www.1a.lt/search?q={q}"
+        ],
+        [
+          "Senukai.lt",
+          "https://www.senukai.lt/search?q={q}"
+        ]
+      ]
     },
     {
       "id": "turkiye",
@@ -177,7 +287,33 @@
         "Mediamarkt TR shops",
         "Akakçe-listed"
       ],
-      "search": "https://www.akakce.com/arama/?q={q}"
+      "search": "https://www.akakce.com/arama/?q={q}",
+      "deep": [
+        [
+          "Akakçe (porównywarka)",
+          "https://www.akakce.com/arama/?q={q}"
+        ],
+        [
+          "Trendyol",
+          "https://www.trendyol.com/sr?q={q}"
+        ],
+        [
+          "Hepsiburada",
+          "https://www.hepsiburada.com/ara?q={q}"
+        ],
+        [
+          "N11",
+          "https://www.n11.com/arama?q={q}"
+        ],
+        [
+          "Amazon.com.tr",
+          "https://www.amazon.com.tr/s?k={q}"
+        ],
+        [
+          "Teknosa",
+          "https://www.teknosa.com/arama?s={q}"
+        ]
+      ]
     },
     {
       "id": "westeu",
@@ -207,7 +343,29 @@
         "Very.co.uk",
         "Coolblue.nl"
       ],
-      "search": "https://www.idealo.co.uk/preisvergleich/MainSearchProductCategory.html?q={q}"
+      "search": "https://www.idealo.co.uk/preisvergleich/MainSearchProductCategory.html?q={q}",
+      "deep": [
+        [
+          "Idealo UK",
+          "https://www.idealo.co.uk/preisvergleich/MainSearchProductCategory.html?q={q}"
+        ],
+        [
+          "Amazon.co.uk",
+          "https://www.amazon.co.uk/s?k={q}"
+        ],
+        [
+          "Currys",
+          "https://www.currys.co.uk/search?q={q}"
+        ],
+        [
+          "Argos",
+          "https://www.argos.co.uk/search/{q}/"
+        ],
+        [
+          "Coolblue.nl",
+          "https://www.coolblue.nl/zoeken?query={q}"
+        ]
+      ]
     },
     {
       "id": "turkic",
@@ -231,7 +389,8 @@
         "Kaspi.kz (KZ)",
         "Yandex Market"
       ],
-      "search": "https://www.alibaba.com/trade/search?SearchText={q}"
+      "search": "https://www.alibaba.com/trade/search?SearchText={q}",
+      "deep": []
     },
     {
       "id": "ukraine",
@@ -257,7 +416,8 @@
         "Citrus.ua",
         "Eldorado.ua"
       ],
-      "search": "https://hotline.ua/search/?q={q}"
+      "search": "https://hotline.ua/search/?q={q}",
+      "deep": []
     },
     {
       "id": "belarus",
@@ -282,7 +442,8 @@
         "21vek.by",
         "e-Dostavka"
       ],
-      "search": "https://catalog.onliner.by/search?query={q}"
+      "search": "https://catalog.onliner.by/search?query={q}",
+      "deep": []
     },
     {
       "id": "kaliningrad",
@@ -305,7 +466,8 @@
         "DNS-shop",
         "Citilink"
       ],
-      "search": "https://www.e-katalog.ru/ek-list.php?search_={q}"
+      "search": "https://www.e-katalog.ru/ek-list.php?search_={q}",
+      "deep": []
     },
     {
       "id": "belarus-russia",
@@ -330,7 +492,8 @@
         "Citilink",
         "M.Video"
       ],
-      "search": "https://www.e-katalog.ru/ek-list.php?search_={q}"
+      "search": "https://www.e-katalog.ru/ek-list.php?search_={q}",
+      "deep": []
     },
     {
       "id": "north-africa",
@@ -353,7 +516,8 @@
         "Tunisianet",
         "Carrefour (MA)"
       ],
-      "search": "https://www.jumia.com.ma/catalog/?q={q}"
+      "search": "https://www.jumia.com.ma/catalog/?q={q}",
+      "deep": []
     },
     {
       "id": "balkan",
@@ -378,7 +542,8 @@
         "Gigatron (RS)",
         "Studio Moderna (RO)"
       ],
-      "search": "https://www.emag.ro/search/{q}"
+      "search": "https://www.emag.ro/search/{q}",
+      "deep": []
     }
   ]
 }

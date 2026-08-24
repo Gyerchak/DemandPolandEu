@@ -135,3 +135,34 @@ footer { padding-bottom: 30px; }
   width: 58px; background: var(--panel2); color: var(--text); border: 1px solid var(--border);
   border-radius: 6px; padding: 4px 6px; font-size: 13px;
 }
+
+.prod-link {
+  background: none; border: none; color: var(--text); cursor: pointer;
+  font: inherit; text-align: left; padding: 0;
+  border-bottom: 1px dashed var(--accent);
+}
+.prod-link:hover { color: var(--accent); }
+.est { color: var(--muted); font-style: italic; font-size: 12px; }
+
+.deep-modal {
+  position: fixed; inset: 0; background: rgba(5,8,14,.78); z-index: 100;
+  display: flex; align-items: center; justify-content: center; padding: 24px;
+}
+.deep-box {
+  background: var(--panel); border: 1px solid var(--border); border-radius: 12px;
+  max-width: 760px; width: 100%; max-height: 86vh; overflow: auto; padding: 22px 26px;
+}
+.deep-box h3 { margin: 0 0 6px; font-size: 18px; }
+.deep-hint { color: var(--muted); font-size: 13px; margin: 0 0 14px; }
+.deep-list { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+.deep-link {
+  color: var(--text); text-decoration: none; font-size: 13.5px;
+  border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px;
+}
+.deep-link:hover { border-color: var(--accent); color: var(--accent); }
+.deep-actions { display: flex; gap: 10px; }
+.deep-actions button {
+  background: var(--accent); color: #04202d; border: none; border-radius: 8px;
+  padding: 10px 18px; font-weight: 600; cursor: pointer;
+}
+.deep-actions #deepClose { background: var(--panel2); color: var(--text); }

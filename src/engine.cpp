@@ -75,6 +75,15 @@ std::vector<Market> load_markets(const std::string& dir) {
         if (sh != e.end() && sh->is_array())
             for (const auto& s : *sh) if (s.is_string()) m.shops.push_back(s.get<std::string>());
         m.search = e.value("search", "");
+        auto dp = e.find("deep");
+        if (dp != e.end() && dp->is_array()) {
+            for (const auto& pair : *dp) {
+                if (pair.is_array() && pair.size() >= 2 &&
+                    pair[0].is_string() && pair[1].is_string()) {
+                    m.deep.push_back({pair[0].get<std::string>(), pair[1].get<std::string>()});
+                }
+            }
+        }
         out.push_back(std::move(m));
     }
     return out;

@@ -60,6 +60,7 @@ json market_to_json(const Market& m) {
         {"members", m.members},
         {"search", m.search},
         {"shops", m.shops},
+        {"deep", m.deep},
     };
 }
 

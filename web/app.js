@@ -87,12 +87,9 @@ function productCell(t) {
       ? ` verified ${t.link_checked}` : ` not yet link-checked`;
     return `<a class="prod" href="${t.supplier_url}" target="_blank" rel="noopener" title="direct source of the buy price in ${buyMarket}${fresh}">${name}</a>`;
   }
-  // No direct listing recorded -> go to the market's price-comparison page
-  // (Ceneo/Akakçe/Idealo/…) — exactly where that market's prices live.
-  const mk = markets.find((m) => m.id === t.from_market_id);
-  const tmpl = (mk && mk.search) ? mk.search : "https://www.alibaba.com/trade/search?SearchText=" + q;
-  const href = tmpl.replace("{q}", q);
-  return `<a class="prod" href="${href}" target="_blank" rel="noopener" title="compare ${buyMarket} prices for this product (no direct listing recorded)">${name} ⛓</a>`;
+  // No verified deal => DEEP-SEARCH this product across the whole supply market.
+  return `<button class="prod-link" data-deep="${t.product_name}" data-market="${t.from_market_id}"
+     title="deep-search this product across every market & platform">${name} 🔎</button>`;
 }
 
 function rowHtml(t) {
@@ -107,8 +104,8 @@ function rowHtml(t) {
       <td>${t.from_market}</td>
       <td>${t.to_market}</td>
       <td>${t.price_source === "real"
-        ? `<span title="verified price from the linked source" style="color:var(--good)">✓</span> ${fmtMoney(t.buy_eur)}`
-        : `<span title="sample estimate — verify on the market search" style="color:var(--warn)">≈</span> ${fmtMoney(t.buy_eur)}`}</td>
+        ? `<span title="verified price from the linked exact product" style="color:var(--good)">✓</span> ${fmtMoney(t.buy_eur)}`
+        : `<span class="est" title="no verified price yet — deep-search this product">no data</span>`}</td>
       <td>${fmtMoney(t.freight_eur)}</td>
       <td>${fmtMoney(t.duty_eur)}</td>
       <td>${fmtMoney(t.handling_eur)}</td>
@@ -166,6 +163,54 @@ function renderTable(tbody, side, rows) {
     ? pagerHtml(side, pages)
     : `<span style="color:var(--muted);font-size:12px">${total} trades — all on one page</span>`;
 }
+
+// ---------- DEEP SEARCH MODAL ----------
+// Opens this product on EVERY platform of EVERY market at once — a true
+// whole-supply-market scan (porównywarki + main marketplaces per region).
+function openDeep(productName, marketId) {
+  const q = encodeURIComponent(productName);
+  const urls = [];
+  const origin = markets.find((m) => m.id === marketId);
+  if (origin && origin.deep) {
+    for (const [name, tmpl] of origin.deep)
+      urls.push({ label: name + " — " + origin.name, href: tmpl.replace("{q}", q) });
+  }
+  for (const m of markets) {
+    if (m.id === marketId) continue;
+    if (m.deep) {
+      for (const [name, tmpl] of m.deep.slice(0, 2))
+        urls.push({ label: name + " — " + m.name, href: tmpl.replace("{q}", q) });
+    }
+  }
+  const box = document.createElement("div");
+  box.className = "deep-modal";
+  const close = () => box.remove();
+  box.innerHTML = `
+    <div class="deep-box">
+      <h3>Deep search: ${productName}</h3>
+      <p class="deep-hint">Scanning the whole supply market — ${urls.length} sources. Click one, or open all.</p>
+      <div class="deep-list">${urls.map((u) =>
+        `<a class="deep-link" href="${u.href}" target="_blank" rel="noopener">${u.label}</a>`).join("")}</div>
+      <div class="deep-actions">
+        <button id="deepAll">Open all (${urls.length} tabs)</button>
+        <button id="deepClose">Close</button>
+      </div>
+    </div>`;
+  document.body.appendChild(box);
+  box.querySelector("#deepClose").addEventListener("click", close);
+  box.querySelector("#deepAll").addEventListener("click", () => {
+    urls.forEach((u, i) => setTimeout(() => window.open(u.href, "_blank", "noopener"), i * 180));
+    close();
+  });
+  box.addEventListener("click", (e) => { if (e.target === box) close(); });
+}
+document.addEventListener("click", (e) => {
+  const b = e.target.closest(".prod-link");
+  if (b) { openDeep(b.dataset.deep, b.dataset.market); return; }
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") document.querySelector(".deep-modal")?.remove();
+});
 
 // pager clicks: page numbers, prev/next, jump-to-page
 document.addEventListener("click", (e) => {
