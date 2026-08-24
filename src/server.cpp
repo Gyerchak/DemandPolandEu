@@ -178,6 +178,18 @@ int run_web(const std::string& data_dir, const std::string& host, int port) {
             continue;
         }
 
+        if (path == "/api/rates") {
+            nlohmann::json r{
+                {"display", "PLN"},
+                {"pln_per_eur", 4.3165},   // NBP Tabela A, 2026-08-20 (update when rate moves)
+                {"symbol", "zł"},
+                {"rate_date", "2026-08-20"},
+            };
+            send_response(client, r.dump(), "application/json; charset=utf-8");
+            close(client);
+            continue;
+        }
+
         if (path == "/api/categories") {
             auto cats = list_categories(".");
             nlohmann::json arr = nlohmann::json::array();

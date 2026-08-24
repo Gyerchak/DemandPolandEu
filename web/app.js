@@ -22,15 +22,16 @@ let selected = new Set();
 let channel = "main";
 let lastImports = [];
 let lastExports = [];
-let qtyMult = 1;     // default: per-item prices. ×100 bulk = toggle (real trade minimum)
+let qtyMult = 1;     // per-item by default; ×100 via bulk toggle when added
+let cur = "PLN";     // display currency — PLN default (NBP), EUR optional
+let plnPerEur = 4.3165;  // NBP Tabela A 2026-08-20; refreshed from /api/rates on load
 
 const MAIN_WATCH = ["visegrad", "china", "poland", "europe", "baltic", "turkiye", "westeu"];
 
 function fmtMoney(v) {
-  // ×100 by default: every price shown is the bulk trade value (buying from a
-  // real supplier means 100+ units). Columns keep their names — values are bulk.
-  const bulk = v * qtyMult;
-  return bulk.toLocaleString("en-IE", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " €";
+  const value = v * qtyMult * (cur === "PLN" ? plnPerEur : 1);
+  return value.toLocaleString("pl-PL", { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+    + (cur === "PLN" ? " zł" : " €");
 }
 function fmtPct(v) { return (v * 100).toFixed(1) + "%"; }
 
@@ -324,6 +325,18 @@ tabs.forEach((btn) => {
   });
 });
 
+// PLN/EUR + ×1/×100 chips
+function refreshMoneyUI() {
+  document.querySelectorAll(".cur-btn").forEach((b) => b.classList.toggle("active", b.dataset.cur === cur));
+  document.querySelectorAll(".qty-btn").forEach((b) => b.classList.toggle("active", b.dataset.q === String(qtyMult)));
+}
+document.addEventListener("click", (e) => {
+  const cb = e.target.closest(".cur-btn");
+  if (cb) { cur = cb.dataset.cur; refreshMoneyUI(); load(); return; }
+  const qb = e.target.closest(".qty-btn");
+  if (qb) { qtyMult = Number(qb.dataset.q); refreshMoneyUI(); load(); return; }
+});
+
 // Main Market / Whole Market switch
 function setChannel(c) {
   channel = c;
@@ -345,6 +358,8 @@ setInterval(() => { fetch("/api/ping").catch(() => {}); }, 2000);
 
 (async () => {
   try {
+    const r = await fetch("/api/rates").then((x) => x.json()).catch(() => null);
+    if (r && r.pln_per_eur) { plnPerEur = r.pln_per_eur; cur = r.display || "PLN"; refreshMoneyUI(); }
     await loadMarkets();
     await loadCategories();
     $("#imports thead").innerHTML = tableHeaders();
