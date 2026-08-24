@@ -2,6 +2,7 @@
 
 const MAG = "🔎";   // deep-search icon (magnifier)
 const CHK = "✓";   // verified-price checkmark
+const CART = "🛒";   // shopping-cart icon (best-sell button)
 
 const $ = (s) => document.querySelector(s);
 const sortSel = $("#sort");
