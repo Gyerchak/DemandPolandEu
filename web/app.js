@@ -92,19 +92,27 @@ function productCell(t) {
 }
 
 function rowHtml(t) {
-  // Whole market: hover the sell price to see which shops make up the price.
+  const real = t.price_source === "real";   // only REAL buy prices drive profit math
   const sellTitle = (channel === "whole" && t.shops && t.shops.length)
     ? ` title="Whole-market price across: ${t.shops.join(", ")}" style="border-bottom:1px dotted var(--muted);cursor:help"`
     : "";
+  if (!real) {
+    return `
+    <tr class="est-row">
+      <td><b>${productCell(t)}</b></td>
+      <td><small style="color:var(--muted)">${t.category}</small></td>
+      <td>${t.from_market}</td>
+      <td>${t.to_market}</td>
+      <td colspan="9"><span class="est" title="buy price not verified yet — deep-search this exact product">no verified price — deep-search first</span></td>
+    </tr>`;
+  }
   return `
     <tr>
       <td><b>${productCell(t)}</b></td>
       <td><small style="color:var(--muted)">${t.category}</small></td>
       <td>${t.from_market}</td>
       <td>${t.to_market}</td>
-      <td>${t.price_source === "real"
-        ? `<span title="verified price from the linked exact product" style="color:var(--good)">✓</span> ${fmtMoney(t.buy_eur)}`
-        : `<span class="est" title="no verified price yet — deep-search this product">no data</span>`}</td>
+      <td><span title="verified price from the linked exact product" style="color:var(--good)">${CHK}</span> ${fmtMoney(t.buy_eur)}</td>
       <td>${fmtMoney(t.freight_eur)}</td>
       <td>${fmtMoney(t.duty_eur)}</td>
       <td>${fmtMoney(t.handling_eur)}</td>
