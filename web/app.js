@@ -63,15 +63,11 @@ async function loadCategories() {
 }
 
 function tableHeaders() {
-  const shopsCol = channel === "whole"
-    ? `<th>Shops (whole market)</th>`
-    : "";
   return `
     <tr>
       <th>Product</th><th>Cat</th><th>From</th><th>To</th>
       <th>Buy</th><th>Freight</th><th>Duty</th><th>Handling</th><th>VAT</th>
       <th>Total cost</th><th>Sell</th><th>Profit</th><th>Margin</th><th>Opp</th>
-      ${shopsCol}
     </tr>`;
 }
 
@@ -87,14 +83,15 @@ function productCell(t) {
   if (t.supplier_url) {
     return `<a class="prod" href="${t.supplier_url}" target="_blank" rel="noopener" title="supplier page for buy price in ${buyMarket}">${name}</a>`;
   }
-  // No direct supplier link for this market yet -> platform search for the product.
-  return `<a class="prod" href="https://www.alibaba.com/trade/search?SearchText=${q}" target="_blank" rel="noopener" title="search supplier for ${buyMarket} (direct source not set yet)">${name} 🔍</a>`;
+  // No direct page recorded for this market -> open the buy market's OWN
+  // platform search (the same place its price comes from), e.g. Hepsiburada for TR.
+  const mk = markets.find((m) => m.id === t.from_market_id);
+  const tmpl = (mk && mk.search) ? mk.search : "https://www.alibaba.com/trade/search?SearchText=" + q;
+  const href = tmpl.replace("{q}", q);
+  return `<a class="prod" href="${href}" target="_blank" rel="noopener" title="search ${buyMarket} platform for this product (direct source not recorded)">${name} 🔍</a>`;
 }
 
 function rowHtml(t) {
-  const shopsCell = channel === "whole"
-    ? `  <td><small style="color:var(--muted)" title="${(t.shops||[]).join(", ")}">${(t.shops||[]).slice(0,3).join(" · ")}${(t.shops||[]).length>3 ? " …+"+(t.shops.length-3) : ""}</small></td>`
-    : "";
   return `
     <tr>
       <td><b>${productCell(t)}</b></td>
@@ -111,13 +108,11 @@ function rowHtml(t) {
       <td style="color:${moneyClass(t.profit_eur)}"><b>${fmtMoney(t.profit_eur)}</b></td>
       <td style="color:${moneyClass(t.margin)}">${fmtPct(t.margin)}</td>
       <td><span class="score ${scoreClass(t.opportunity)}">${t.opportunity.toFixed(0)}</span></td>
-      ${shopsCell}
     </tr>`;
 }
 
 function renderTable(tbody, rows) {
-  const span = channel === "whole" ? 16 : 15;
-  tbody.innerHTML = rows.length ? rows.map(rowHtml).join("") : `<tr><td colspan=${span} style='color:var(--muted)'>No trades</td></tr>`;
+  tbody.innerHTML = rows.length ? rows.map(rowHtml).join("") : "<tr><td colspan=15 style='color:var(--muted)'>No trades</td></tr>";
 }
 
 async function load() {

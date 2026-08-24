@@ -22,6 +22,7 @@ struct Market {
     std::string note;
     std::string members;   // country list for legend (e.g. "PL, CZ, SK, HU")
     std::vector<std::string> shops;  // marketplaces/porównywarki-listed shops for Whole Market view
+    std::string search;               // search template for this market's own platform ("{q}" = product)
 };
 
 struct ProductMarket {

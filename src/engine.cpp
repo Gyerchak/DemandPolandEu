@@ -74,6 +74,7 @@ std::vector<Market> load_markets(const std::string& dir) {
         auto sh = e.find("shops");
         if (sh != e.end() && sh->is_array())
             for (const auto& s : *sh) if (s.is_string()) m.shops.push_back(s.get<std::string>());
+        m.search = e.value("search", "");
         out.push_back(std::move(m));
     }
     return out;

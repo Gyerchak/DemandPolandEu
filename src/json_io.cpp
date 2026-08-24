@@ -56,6 +56,7 @@ json market_to_json(const Market& m) {
         {"lead_days", m.lead_days},
         {"note", m.note},
         {"members", m.members},
+        {"search", m.search},
     };
 }
 

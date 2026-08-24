@@ -72,6 +72,11 @@ h1 { margin: 0; font-size: 24px; letter-spacing: .4px; }
 }
 .sort-btn.active { background: rgba(76,201,240,.15); color: var(--accent); border-color: var(--accent); }
 
+.channel-bar {
+  display: flex; align-items: center; gap: 8px;
+  padding: 0 28px; margin-top: 12px;
+}
+.channel-bar .bar-label { font-size: 12px; color: var(--muted); }
 .channel-switch { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
 .chan-btn {
   background: var(--panel); color: var(--muted); border: none; padding: 8px 14px;

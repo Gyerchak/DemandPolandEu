@@ -24,7 +24,8 @@
         "RTV Euro AGD",
         "Morele.net",
         "Neonet"
-      ]
+      ],
+      "search": "https://www.allegro.pl/listing?string={q}"
     },
     {
       "id": "visegrad",
@@ -49,7 +50,8 @@
         "eMAG.hu",
         "Extreme Digital (HU)",
         "Árukereső (HU)"
-      ]
+      ],
+      "search": "https://www.allegro.pl/listing?string={q}"
     },
     {
       "id": "china",
@@ -73,7 +75,8 @@
         "Made-in-China",
         "DHgate",
         "AliExpress"
-      ]
+      ],
+      "search": "https://www.alibaba.com/trade/search?SearchText={q}"
     },
     {
       "id": "europe",
@@ -97,7 +100,8 @@
         "eBay.de",
         "Cdiscount (FR)",
         "Fnac (FR)"
-      ]
+      ],
+      "search": "https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q={q}"
     },
     {
       "id": "baltic",
@@ -121,7 +125,8 @@
         "1a.lt",
         "elektromarkt.lt",
         "Kaup24.ee"
-      ]
+      ],
+      "search": "https://www.pigu.lt/search?q={q}"
     },
     {
       "id": "turkiye",
@@ -145,7 +150,8 @@
         "Amazon.com.tr",
         "Çiçeksepeti",
         "MediaMarkt (TR)"
-      ]
+      ],
+      "search": "https://www.hepsiburada.com/ara?q={q}"
     },
     {
       "id": "westeu",
@@ -170,7 +176,8 @@
         "Komplett.no",
         "Digitec.ch",
         "Galaxus.ch"
-      ]
+      ],
+      "search": "https://www.idealo.co.uk/preisvergleich/MainSearchProductCategory.html?q={q}"
     },
     {
       "id": "turkic",
@@ -190,7 +197,8 @@
       "shops": [
         "AliExpress",
         "local B2B marketplaces"
-      ]
+      ],
+      "search": "https://www.alibaba.com/trade/search?SearchText={q}"
     },
     {
       "id": "ukraine",
@@ -211,7 +219,8 @@
         "Rozetka",
         "Prom.ua",
         "Hotline.ua"
-      ]
+      ],
+      "search": "https://rozetka.com.ua/search/?text={q}"
     },
     {
       "id": "belarus",
@@ -232,7 +241,8 @@
         "Ozon",
         "Wildberries",
         "Yandex Market"
-      ]
+      ],
+      "search": "https://ozon.by/search/?text={q}"
     },
     {
       "id": "kaliningrad",
@@ -252,7 +262,8 @@
       "shops": [
         "Ozon",
         "Wildberries"
-      ]
+      ],
+      "search": "https://www.ozon.ru/search/?text={q}"
     },
     {
       "id": "belarus-russia",
@@ -273,7 +284,8 @@
         "Ozon",
         "Wildberries",
         "Yandex Market"
-      ]
+      ],
+      "search": "https://ozon.by/search/?text={q}"
     },
     {
       "id": "north-africa",
@@ -293,7 +305,8 @@
       "shops": [
         "Jumia (MA/TN)",
         "Mytek (TN)"
-      ]
+      ],
+      "search": "https://www.jumia.com.ma/catalog/?q={q}"
     },
     {
       "id": "balkan",
@@ -315,7 +328,8 @@
         "Ananas (RS)",
         "Tehnomanija (BA)",
         "KupujemProdajem (RS)"
-      ]
+      ],
+      "search": "https://www.emag.ro/search/{q}"
     }
   ]
 }
