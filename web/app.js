@@ -85,12 +85,12 @@ function productCell(t) {
   if (t.supplier_url) {
     return `<a class="prod" href="${t.supplier_url}" target="_blank" rel="noopener" title="supplier page for buy price in ${buyMarket}">${name}</a>`;
   }
-  // No direct page recorded for this market -> open the buy market's OWN
-  // platform search (the same place its price comes from), e.g. Hepsiburada for TR.
+  // No direct listing recorded -> go to the market's price-comparison page
+  // (Ceneo/Akakçe/Idealo/…) — exactly where that market's prices live.
   const mk = markets.find((m) => m.id === t.from_market_id);
   const tmpl = (mk && mk.search) ? mk.search : "https://www.alibaba.com/trade/search?SearchText=" + q;
   const href = tmpl.replace("{q}", q);
-  return `<a class="prod" href="${href}" target="_blank" rel="noopener" title="search ${buyMarket} platform for this product (direct source not recorded)">${name} 🔍</a>`;
+  return `<a class="prod" href="${href}" target="_blank" rel="noopener" title="compare ${buyMarket} prices for this product (no direct listing recorded)">${name} ⛓</a>`;
 }
 
 function rowHtml(t) {
@@ -104,7 +104,9 @@ function rowHtml(t) {
       <td><small style="color:var(--muted)">${t.category}</small></td>
       <td>${t.from_market}</td>
       <td>${t.to_market}</td>
-      <td>${fmtMoney(t.buy_eur)}</td>
+      <td>${t.price_source === "real"
+        ? `<span title="verified price from the linked source" style="color:var(--good)">✓</span> ${fmtMoney(t.buy_eur)}`
+        : `<span title="sample estimate — verify on the market search" style="color:var(--warn)">≈</span> ${fmtMoney(t.buy_eur)}`}</td>
       <td>${fmtMoney(t.freight_eur)}</td>
       <td>${fmtMoney(t.duty_eur)}</td>
       <td>${fmtMoney(t.handling_eur)}</td>

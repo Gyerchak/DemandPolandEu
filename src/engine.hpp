@@ -31,6 +31,7 @@ struct ProductMarket {
     double demand = 0.0;
     double popularity = 0.0;
     std::string supplier_url;  // where THIS market's buy price was found
+    std::string price_source;  // "real" (verified listing) | "est" (sample estimate)
     // Whole Market view: main platforms + all shops from price-comparison pages.
     double whole_sell = 0.0;
     double whole_demand = 0.0;
@@ -56,6 +57,7 @@ struct Trade {
     std::string to_market_id;
     std::string to_market;
     std::string supplier_url;   // link = the BUY market's source (import: from-market; export: home)
+    std::string price_source;   // "real" | "est"
     std::string channel;        // "main" | "whole"
     std::vector<std::string> shops;  // shops considered for this trade's sell side
     double buy_eur = 0.0;

@@ -25,7 +25,7 @@
         "Morele.net",
         "Neonet"
       ],
-      "search": "https://www.allegro.pl/listing?string={q}"
+      "search": "https://www.ceneo.pl/szukaj?query={q}"
     },
     {
       "id": "visegrad",
@@ -51,7 +51,7 @@
         "Extreme Digital (HU)",
         "Árukereső (HU)"
       ],
-      "search": "https://www.allegro.pl/listing?string={q}"
+      "search": "https://www.ceneo.pl/szukaj?query={q}"
     },
     {
       "id": "china",
@@ -126,7 +126,7 @@
         "elektromarkt.lt",
         "Kaup24.ee"
       ],
-      "search": "https://www.pigu.lt/search?q={q}"
+      "search": "https://kaina24.lt/search?q={q}"
     },
     {
       "id": "turkiye",
@@ -151,7 +151,7 @@
         "Çiçeksepeti",
         "MediaMarkt (TR)"
       ],
-      "search": "https://www.hepsiburada.com/ara?q={q}"
+      "search": "https://www.akakce.com/ara/?q={q}"
     },
     {
       "id": "westeu",
@@ -220,7 +220,7 @@
         "Prom.ua",
         "Hotline.ua"
       ],
-      "search": "https://rozetka.com.ua/search/?text={q}"
+      "search": "https://hotline.ua/search/?q={q}"
     },
     {
       "id": "belarus",
@@ -242,7 +242,7 @@
         "Wildberries",
         "Yandex Market"
       ],
-      "search": "https://ozon.by/search/?text={q}"
+      "search": "https://catalog.onliner.by/search?query={q}"
     },
     {
       "id": "kaliningrad",
@@ -263,7 +263,7 @@
         "Ozon",
         "Wildberries"
       ],
-      "search": "https://www.ozon.ru/search/?text={q}"
+      "search": "https://www.e-katalog.ru/ek-list.php?search_={q}"
     },
     {
       "id": "belarus-russia",
@@ -285,7 +285,7 @@
         "Wildberries",
         "Yandex Market"
       ],
-      "search": "https://ozon.by/search/?text={q}"
+      "search": "https://www.e-katalog.ru/ek-list.php?search_={q}"
     },
     {
       "id": "north-africa",
@@ -329,7 +329,7 @@
         "Tehnomanija (BA)",
         "KupujemProdajem (RS)"
       ],
-      "search": "https://www.emag.ro/search/{q}"
+      "search": "https://www.epiesa.ro/Cautare?q={q}"
     }
   ]
 }
