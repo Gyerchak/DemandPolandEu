@@ -56,7 +56,7 @@
           "price_source": "est"
         },
         "baltic": {
-          "buy": 1200,
+          "buy": 483.35,
           "sell": 1540,
           "demand": 0.7,
           "popularity": 0.7,
@@ -65,10 +65,12 @@
             "demand": 0.74,
             "popularity": 0.73
           },
-          "price_source": "est"
+          "price_source": "real",
+          "supplier_url": "https://ceno.lv/en/product/navee-n65",
+          "link_checked": "2026-08-24"
         },
         "turkiye": {
-          "buy": 21048.0,
+          "buy": 26729.01,
           "sell": 28000.0,
           "demand": 0.66,
           "popularity": 0.66,
@@ -77,13 +79,13 @@
             "demand": 0.7,
             "popularity": 0.69
           },
-          "supplier_url": "https://www.akakce.com/elektrikli-scooter/500-w.html",
+          "supplier_url": "https://www.trendyol.com/navee-elektrikli-scooter-x-b149608-c110353",
           "price_source": "real",
           "link_checked": "2026-08-24"
         },
         "westeu": {
-          "buy": 1350,
-          "sell": 1750,
+          "buy": 629.0,
+          "sell": 780.0,
           "demand": 0.75,
           "popularity": 0.75,
           "whole": {
@@ -91,7 +93,9 @@
             "demand": 0.79,
             "popularity": 0.78
           },
-          "price_source": "est"
+          "price_source": "real",
+          "supplier_url": "https://www.scootered.co.uk/electric-scooters/navee-n65-electric-scooter.html",
+          "link_checked": "2026-08-24"
         },
         "turkic": {
           "buy": 1100,
@@ -133,7 +137,7 @@
       "brand": "Navee",
       "model": "N65",
       "ean": "",
-      "source_notes": "Navee N65 500W 2026: CN wholesale ≈ 1 700-1 900 CNY (distributors: BCE/Kukirin/Geekbuying); EU retail 339-870 € (newtechstore 339 €, geekbuying 662 €)"
+      "source_notes": "Navee N65 500W 2026: exact sources — ceno.lv (N65 from 483 €, 10 stores) · scootered.co.uk (629 £) · newtechstore.eu (339 €) · Trendyol n65i (26,7k TL). CN wholesale ≈ 1700-1900 CNY via distributors (BCE/Kukirin/Geekbuying)."
     },
     {
       "id": "e-bike-conversion",

@@ -173,3 +173,5 @@ footer { padding-bottom: 30px; }
 /* Lead rows (no verified price yet): dimmed, clearly NOT a priced deal */
 .est-row td { opacity: .62; }
 .est-row:hover td { opacity: .9; }
+
+.realonly { margin-left: 14px; }

@@ -9,6 +9,7 @@ const catSel = $("#category");
 const homeSel = $("#home");
 const vatCheck = $("#vat");
 const allCheck = $("#all");
+const realOnlyCheck = $("#realOnly");
 const refreshBtn = $("#refresh");
 const marketsDiv = $("#markets");
 const meta = $("#meta");
@@ -259,8 +260,15 @@ async function load() {
     const res = await fetch("/api/trades?" + params.toString());
     if (!res.ok) throw new Error("HTTP " + res.status);
     const data = await res.json();
-    meta.innerHTML = `${data.count} trades (${data.imports.length} import, ${data.exports.length} export) &middot; home: <b>${data.home}</b> &middot; sort: <b>${sortSel.value}</b>`;
-    lastImports = data.imports;
+    const onlyReal = realOnlyCheck.checked;
+    const filterReal = (rows) => onlyReal ? rows.filter((r) => r.price_source === "real") : rows;
+    const imps = filterReal(data.imports), exps = filterReal(data.exports);
+    const realTot = data.imports.filter((r) => r.price_source === "real").length +
+                    data.exports.filter((r) => r.price_source === "real").length;
+    meta.innerHTML = `${data.count} trades (${imps.length} import shown, ${exps.length} export shown)`
+      + ` &middot; real deals: <b style="color:var(--good)">${realTot}</b> &middot; home: <b>${data.home}</b>`
+      + (onlyReal ? " &middot; <b>real only</b>" : "");
+    lastImports = imps;
     lastExports = data.exports;
     pageState.imports = 1; pageState.exports = 1;   // reset to page 1 on new load
     renderTable(importsTbody, "imports", data.imports);
@@ -314,7 +322,7 @@ refreshBtn.addEventListener("click", load);
 // When this page closes, pings stop and the server shuts itself down.
 setInterval(() => { fetch("/api/ping").catch(() => {}); }, 2000);
 ["change", "input"].forEach((ev) =>
-  [sortSel, catSel, homeSel, vatCheck, allCheck].forEach((el) => el.addEventListener(ev, load)));
+  [sortSel, catSel, homeSel, vatCheck, allCheck, realOnlyCheck].forEach((el) => el.addEventListener(ev, load)));
 
 (async () => {
   try {
