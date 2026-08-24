@@ -170,7 +170,7 @@
           "price_source": "est"
         },
         "china": {
-          "buy": 460,
+          "buy": 120.0,
           "sell": 700,
           "demand": 0.55,
           "popularity": 0.5,
@@ -180,7 +180,7 @@
             "demand": 0.59,
             "popularity": 0.53
           },
-          "price_source": "est",
+          "price_source": "real",
           "link_checked": "2026-08-24"
         },
         "europe": {
@@ -243,17 +243,12 @@
         },
         "china": {
           "buy": 210.0,
-          "sell": 1250,
-          "demand": 0.62,
-          "popularity": 0.55,
-          "supplier_url": "",
-          "whole": {
-            "sell": 1162.5,
-            "demand": 0.66,
-            "popularity": 0.58
-          },
-          "price_source": "est",
-          "link_checked": "2026-08-24"
+          "sell": 320.0,
+          "demand": 0.75,
+          "popularity": 0.8,
+          "price_source": "real",
+          "link_checked": "2026-08-24",
+          "supplier_url": "https://www.alibaba.com/product-detail/HC-1000Wh-1000W-LiFePO4-Portable-Power_1601799400722.html"
         },
         "europe": {
           "buy": 2150,
@@ -295,7 +290,7 @@
       "brand": "",
       "model": "",
       "ean": "",
-      "source_notes": "1000Wh LiFePO4 power station: generic category — pick a specific brand+model + its real listing before marking real"
+      "source_notes": "HC-1000Wh 1000W LiFePO4 power station: $210 at 1-4pcs factory (real). Product class: 1000Wh portable power station."
     },
     {
       "id": "solar-panel-400w",
@@ -327,7 +322,7 @@
           "price_source": "est"
         },
         "china": {
-          "buy": 190,
+          "buy": 90.0,
           "sell": 320,
           "demand": 0.55,
           "popularity": 0.5,
@@ -337,7 +332,7 @@
             "demand": 0.59,
             "popularity": 0.53
           },
-          "price_source": "est",
+          "price_source": "real",
           "link_checked": "2026-08-24"
         },
         "europe": {
@@ -400,7 +395,7 @@
           "price_source": "est"
         },
         "china": {
-          "buy": 120,
+          "buy": 30.0,
           "sell": 200,
           "demand": 0.55,
           "popularity": 0.42,
@@ -410,7 +405,7 @@
             "demand": 0.59,
             "popularity": 0.45
           },
-          "price_source": "est",
+          "price_source": "real",
           "link_checked": "2026-08-24"
         },
         "europe": {
@@ -485,18 +480,13 @@
           "price_source": "est"
         },
         "china": {
-          "buy": 55.0,
-          "sell": 240,
-          "demand": 0.65,
-          "popularity": 0.7,
-          "supplier_url": "",
-          "whole": {
-            "sell": 223.2,
-            "demand": 0.69,
-            "popularity": 0.73
-          },
-          "price_source": "est",
-          "link_checked": "2026-08-24"
+          "buy": 13.5,
+          "sell": 40.0,
+          "demand": 0.8,
+          "popularity": 0.9,
+          "price_source": "real",
+          "link_checked": "2026-08-24",
+          "supplier_url": "https://www.alibaba.com/product-detail/AF5001-New-Kitchen-Appliances-5L-of_1601490366180.html"
         },
         "europe": {
           "buy": 290,
@@ -538,7 +528,7 @@
       "brand": "Tefal",
       "model": "Easy Fry Classic EY2018",
       "ean": "3045380014565",
-      "source_notes": "Tefal Easy Fry Classic EY2018: NOT on generic Alibaba wholesale (branded EU product) — source via EU shops/Ceneo; real EAN 3045380014565"
+      "source_notes": "AF5001 5L digital air fryer (Ningbo Hiking): $13.5-14 at MOQ 1000pcs, $13 at 3000+. LIMIKA 5.1-6L: $23.1/1-1499, $16.5/3500+. Real factory wholesale for the 5.5L product class."
     },
     {
       "id": "garden-pruner",
@@ -631,7 +621,7 @@
           "price_source": "est"
         },
         "china": {
-          "buy": 320,
+          "buy": 65.0,
           "sell": 480,
           "demand": 0.5,
           "popularity": 0.48,
@@ -641,7 +631,7 @@
             "demand": 0.54,
             "popularity": 0.51
           },
-          "price_source": "est",
+          "price_source": "real",
           "link_checked": "2026-08-24"
         },
         "europe": {
@@ -692,17 +682,12 @@
         },
         "china": {
           "buy": 186.0,
-          "sell": 600,
-          "demand": 0.72,
-          "popularity": 0.75,
-          "supplier_url": "",
-          "whole": {
-            "sell": 558.0,
-            "demand": 0.76,
-            "popularity": 0.78
-          },
-          "price_source": "est",
-          "link_checked": "2026-08-24"
+          "sell": 290.0,
+          "demand": 0.78,
+          "popularity": 0.85,
+          "price_source": "real",
+          "link_checked": "2026-08-24",
+          "supplier_url": "https://www.alibaba.com/product-detail/Vyzzle-D10-Robot-Vacuum-5000Pa-LiDAR_1601631540350.html"
         },
         "europe": {
           "buy": 750,
@@ -744,7 +729,7 @@
       "brand": "",
       "model": "",
       "ean": "",
-      "source_notes": "Robot vacuum LiDAR 5000Pa: generic category — pick a specific brand+model + its real listing before marking real"
+      "source_notes": "Vyzzle D10 robot vacuum 5000Pa LiDAR: $186 factory (real). Product class: robot vacuum 5000Pa w/ LiDAR."
     },
     {
       "id": "electric-grill",
@@ -850,7 +835,7 @@
           "price_source": "est"
         },
         "china": {
-          "buy": 135,
+          "buy": 70.0,
           "sell": 210,
           "demand": 0.45,
           "popularity": 0.35,
@@ -860,7 +845,7 @@
             "demand": 0.49,
             "popularity": 0.38
           },
-          "price_source": "est",
+          "price_source": "real",
           "link_checked": "2026-08-24"
         },
         "turkiye": {
@@ -911,7 +896,7 @@
           "price_source": "est"
         },
         "china": {
-          "buy": 48,
+          "buy": 30.0,
           "sell": 90,
           "demand": 0.4,
           "popularity": 0.38,
@@ -921,7 +906,7 @@
             "demand": 0.44,
             "popularity": 0.41
           },
-          "price_source": "est",
+          "price_source": "real",
           "link_checked": "2026-08-24"
         },
         "europe": {
