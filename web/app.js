@@ -14,7 +14,9 @@ const exportsTbody = $("#exports tbody");
 
 let markets = [];
 let selected = new Set();
-let channel = "main";   // "main" (big platforms) | "whole" (platforms + all porównywarki shops)
+let channel = "main";
+let lastImports = [];
+let lastExports = [];   // "main" (big platforms) | "whole" (platforms + all porównywarki shops)
 
 const MAIN_WATCH = ["visegrad", "china", "poland", "europe", "baltic", "turkiye", "westeu"];
 
@@ -92,6 +94,10 @@ function productCell(t) {
 }
 
 function rowHtml(t) {
+  // Whole market: hover the sell price to see which shops make up the price.
+  const sellTitle = (channel === "whole" && t.shops && t.shops.length)
+    ? ` title="Whole-market price across: ${t.shops.join(", ")}" style="border-bottom:1px dotted var(--muted);cursor:help"`
+    : "";
   return `
     <tr>
       <td><b>${productCell(t)}</b></td>
@@ -104,16 +110,76 @@ function rowHtml(t) {
       <td>${fmtMoney(t.handling_eur)}</td>
       <td>${fmtMoney(t.vat_eur)}</td>
       <td><b>${fmtMoney(t.total_eur)}</b></td>
-      <td>${fmtMoney(t.sell_eur)}</td>
+      <td${sellTitle}>${fmtMoney(t.sell_eur)}</td>
       <td style="color:${moneyClass(t.profit_eur)}"><b>${fmtMoney(t.profit_eur)}</b></td>
       <td style="color:${moneyClass(t.margin)}">${fmtPct(t.margin)}</td>
       <td><span class="score ${scoreClass(t.opportunity)}">${t.opportunity.toFixed(0)}</span></td>
     </tr>`;
 }
 
-function renderTable(tbody, rows) {
-  tbody.innerHTML = rows.length ? rows.map(rowHtml).join("") : "<tr><td colspan=15 style='color:var(--muted)'>No trades</td></tr>";
+const PER_PAGE = 40;
+let pageState = { imports: 1, exports: 1 };   // current page per tab
+
+// Page window exactly like the request: 7 centred numbers + hard pages 1 and X,
+// ellipsized: e.g. total=20 cur=4 -> "1 2 3 [4] 5 6 7 … 20"; cur=10 -> "1 … 7 8 9 10 11 12 13 … 20".
+function pageWindow(cur, total) {
+  if (total <= 7) { const a = []; for (let i = 1; i <= total; i++) a.push(i); return a; }
+  const set = new Set([1, total]);
+  const lo = Math.max(1, cur - 3), hi = Math.min(total, cur + 3);
+  for (let i = lo; i <= hi; i++) set.add(i);   // 7-number window: cur-3 .. cur+3
+  const nums = [...set].sort((a, b) => a - b);
+  const out = [];
+  let prev = 0;
+  for (const n of nums) {
+    if (prev && n - prev > 1) out.push(0);     // gap -> ellipsis
+    out.push(n);
+    prev = n;
+  }
+  return out;
 }
+
+function pagerHtml(side, totalPages) {
+  const cur = pageState[side];
+  const prev = `<button class="pg-btn" data-side="${side}" data-go="prev" ${cur<=1?"disabled":""}>⬅</button>`;
+  const nxt  = `<button class="pg-btn" data-side="${side}" data-go="next" ${cur>=totalPages?"disabled":""}>➡</button>`;
+  const nums = pageWindow(cur, totalPages).map((n) =>
+    n === 0 ? `<span class="pg-ell">…</span>`
+            : `<button class="pg-btn ${n===cur?"active":""}" data-side="${side}" data-go="${n}">${n}</button>`
+  ).join("");
+  const jump = `<span class="pg-jump">go to <input type="number" min="1" max="${totalPages}" id="pg-input-${side}" value="" placeholder="#">
+                <button class="pg-btn" data-side="${side}" data-go="jump">Go</button></span>`;
+  return `Page ${cur} / ${totalPages} &nbsp; ${prev} ${nums} ${nxt} ${jump}`;
+}
+
+function renderTable(tbody, side, rows) {
+  const total = rows.length;
+  const pages = Math.max(1, Math.ceil(total / PER_PAGE));
+  if (pageState[side] > pages) pageState[side] = pages;
+  const cur = pageState[side];
+  const pageRows = rows.slice((cur - 1) * PER_PAGE, cur * PER_PAGE);
+  tbody.innerHTML = pageRows.length ? pageRows.map(rowHtml).join("") : "<tr><td colspan=15 style='color:var(--muted)'>No trades</td></tr>";
+  document.getElementById(`pager-${side}`).innerHTML = pages > 1
+    ? pagerHtml(side, pages)
+    : `<span style="color:var(--muted);font-size:12px">${total} trades — all on one page</span>`;
+}
+
+// pager clicks: page numbers, prev/next, jump-to-page
+document.addEventListener("click", (e) => {
+  const b = e.target.closest(".pg-btn");
+  if (!b || !b.dataset.side) return;
+  const side = b.dataset.side, go = b.dataset.go;
+  const total = (side === "imports" ? lastImports : lastExports).length;
+  const pages = Math.max(1, Math.ceil(total / PER_PAGE));
+  if (go === "prev") pageState[side] = Math.max(1, pageState[side] - 1);
+  else if (go === "next") pageState[side] = Math.min(pages, pageState[side] + 1);
+  else if (go === "jump") {
+    const inp = document.getElementById(`pg-input-${side}`);
+    const n = parseInt(inp.value, 10);
+    if (n >= 1 && n <= pages) pageState[side] = n; else inp.value = "";
+  }
+  else pageState[side] = parseInt(go, 10);
+  renderTable(side === "imports" ? importsTbody : exportsTbody, side, side === "imports" ? lastImports : lastExports);
+});
 
 async function load() {
   meta.innerHTML = "";
@@ -137,8 +203,11 @@ async function load() {
     if (!res.ok) throw new Error("HTTP " + res.status);
     const data = await res.json();
     meta.innerHTML = `${data.count} trades (${data.imports.length} import, ${data.exports.length} export) &middot; home: <b>${data.home}</b> &middot; sort: <b>${sortSel.value}</b>`;
-    renderTable(importsTbody, data.imports.slice(0, 40));
-    renderTable(exportsTbody, data.exports.slice(0, 40));
+    lastImports = data.imports;
+    lastExports = data.exports;
+    pageState.imports = 1; pageState.exports = 1;   // reset to page 1 on new load
+    renderTable(importsTbody, "imports", data.imports);
+    renderTable(exportsTbody, "exports", data.exports);
   } catch (err) {
     meta.innerHTML = `<span class="err">Error: ${err.message}</span>`;
   }

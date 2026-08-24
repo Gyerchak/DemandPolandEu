@@ -817,6 +817,742 @@
           }
         }
       }
+    },
+    {
+      "id": "mini-projector",
+      "name": "Mini projector 1080p",
+      "weight_kg": 1.4,
+      "markets": {
+        "poland": {
+          "buy": 117.0,
+          "sell": 154.0,
+          "demand": 0.74,
+          "popularity": 0.75
+        },
+        "visegrad": {
+          "buy": 110.0,
+          "sell": 159.0,
+          "demand": 0.59,
+          "popularity": 0.64
+        },
+        "china": {
+          "buy": 65.0,
+          "sell": 91.0,
+          "demand": 0.76,
+          "popularity": 0.86,
+          "supplier_url": "https://www.alibaba.com/trade/search?SearchText=mini+projector"
+        },
+        "europe": {
+          "buy": 114.0,
+          "sell": 159.0,
+          "demand": 0.82,
+          "popularity": 0.86
+        },
+        "baltic": {
+          "buy": 116.0,
+          "sell": 166.0,
+          "demand": 0.77,
+          "popularity": 0.65
+        },
+        "turkiye": {
+          "buy": 94.0,
+          "sell": 132.0,
+          "demand": 0.59,
+          "popularity": 0.88
+        },
+        "westeu": {
+          "buy": 130.0,
+          "sell": 179.0,
+          "demand": 0.85,
+          "popularity": 0.82
+        },
+        "turkic": {
+          "buy": 104.0,
+          "sell": 147.0,
+          "demand": 0.63,
+          "popularity": 0.65
+        },
+        "ukraine": {
+          "buy": 101.0,
+          "sell": 148.0,
+          "demand": 0.89,
+          "popularity": 0.87
+        },
+        "belarus": {
+          "buy": 98.0,
+          "sell": 144.0,
+          "demand": 0.74,
+          "popularity": 0.58
+        },
+        "kaliningrad": {
+          "buy": 103.0,
+          "sell": 140.0,
+          "demand": 0.76,
+          "popularity": 0.67
+        },
+        "belarus-russia": {
+          "buy": 98.0,
+          "sell": 135.0,
+          "demand": 0.87,
+          "popularity": 0.83
+        },
+        "north-africa": {
+          "buy": 110.0,
+          "sell": 154.0,
+          "demand": 0.56,
+          "popularity": 0.83
+        },
+        "balkan": {
+          "buy": 114.0,
+          "sell": 155.0,
+          "demand": 0.71,
+          "popularity": 0.71
+        }
+      }
+    },
+    {
+      "id": "dashcam",
+      "name": "4K dashcam dual",
+      "weight_kg": 0.4,
+      "markets": {
+        "poland": {
+          "buy": 45.0,
+          "sell": 63.0,
+          "demand": 0.73,
+          "popularity": 0.6
+        },
+        "visegrad": {
+          "buy": 42.0,
+          "sell": 58.0,
+          "demand": 0.83,
+          "popularity": 0.79
+        },
+        "china": {
+          "buy": 25.0,
+          "sell": 35.0,
+          "demand": 0.89,
+          "popularity": 0.65,
+          "supplier_url": "https://www.alibaba.com/trade/search?SearchText=dashcam"
+        },
+        "europe": {
+          "buy": 44.0,
+          "sell": 60.0,
+          "demand": 0.89,
+          "popularity": 0.74
+        },
+        "baltic": {
+          "buy": 44.0,
+          "sell": 61.0,
+          "demand": 0.56,
+          "popularity": 0.64
+        },
+        "turkiye": {
+          "buy": 36.0,
+          "sell": 48.0,
+          "demand": 0.57,
+          "popularity": 0.83
+        },
+        "westeu": {
+          "buy": 50.0,
+          "sell": 73.0,
+          "demand": 0.59,
+          "popularity": 0.8
+        },
+        "turkic": {
+          "buy": 40.0,
+          "sell": 55.0,
+          "demand": 0.73,
+          "popularity": 0.64
+        },
+        "ukraine": {
+          "buy": 39.0,
+          "sell": 57.0,
+          "demand": 0.78,
+          "popularity": 0.73
+        },
+        "belarus": {
+          "buy": 38.0,
+          "sell": 52.0,
+          "demand": 0.89,
+          "popularity": 0.94
+        },
+        "kaliningrad": {
+          "buy": 40.0,
+          "sell": 56.0,
+          "demand": 0.76,
+          "popularity": 0.82
+        },
+        "belarus-russia": {
+          "buy": 38.0,
+          "sell": 51.0,
+          "demand": 0.85,
+          "popularity": 0.75
+        },
+        "north-africa": {
+          "buy": 42.0,
+          "sell": 58.0,
+          "demand": 0.88,
+          "popularity": 0.72
+        },
+        "balkan": {
+          "buy": 44.0,
+          "sell": 59.0,
+          "demand": 0.65,
+          "popularity": 0.56
+        }
+      }
+    },
+    {
+      "id": "smart-kettle",
+      "name": "Smart kettle 1.7L Wi-Fi",
+      "weight_kg": 1.2,
+      "markets": {
+        "poland": {
+          "buy": 14.0,
+          "sell": 20.0,
+          "demand": 0.77,
+          "popularity": 0.73
+        },
+        "visegrad": {
+          "buy": 14.0,
+          "sell": 19.0,
+          "demand": 0.73,
+          "popularity": 0.92
+        },
+        "china": {
+          "buy": 8.0,
+          "sell": 11.0,
+          "demand": 0.73,
+          "popularity": 0.75,
+          "supplier_url": "https://www.alibaba.com/trade/search?SearchText=smart+kettle"
+        },
+        "europe": {
+          "buy": 14.0,
+          "sell": 20.0,
+          "demand": 0.85,
+          "popularity": 0.77
+        },
+        "baltic": {
+          "buy": 14.0,
+          "sell": 20.0,
+          "demand": 0.86,
+          "popularity": 0.68
+        },
+        "turkiye": {
+          "buy": 12.0,
+          "sell": 17.0,
+          "demand": 0.59,
+          "popularity": 0.83
+        },
+        "westeu": {
+          "buy": 16.0,
+          "sell": 23.0,
+          "demand": 0.74,
+          "popularity": 0.73
+        },
+        "turkic": {
+          "buy": 13.0,
+          "sell": 19.0,
+          "demand": 0.91,
+          "popularity": 0.89
+        },
+        "ukraine": {
+          "buy": 12.0,
+          "sell": 17.0,
+          "demand": 0.57,
+          "popularity": 0.66
+        },
+        "belarus": {
+          "buy": 12.0,
+          "sell": 17.0,
+          "demand": 0.59,
+          "popularity": 0.85
+        },
+        "kaliningrad": {
+          "buy": 13.0,
+          "sell": 18.0,
+          "demand": 0.72,
+          "popularity": 0.56
+        },
+        "belarus-russia": {
+          "buy": 12.0,
+          "sell": 16.0,
+          "demand": 0.76,
+          "popularity": 0.92
+        },
+        "north-africa": {
+          "buy": 14.0,
+          "sell": 18.0,
+          "demand": 0.84,
+          "popularity": 0.65
+        },
+        "balkan": {
+          "buy": 14.0,
+          "sell": 20.0,
+          "demand": 0.83,
+          "popularity": 0.93
+        }
+      }
+    },
+    {
+      "id": "espresso-machine",
+      "name": "Espresso machine 20bar",
+      "weight_kg": 5.5,
+      "markets": {
+        "poland": {
+          "buy": 54.0,
+          "sell": 76.0,
+          "demand": 0.79,
+          "popularity": 0.61
+        },
+        "visegrad": {
+          "buy": 51.0,
+          "sell": 69.0,
+          "demand": 0.77,
+          "popularity": 0.86
+        },
+        "china": {
+          "buy": 30.0,
+          "sell": 44.0,
+          "demand": 0.73,
+          "popularity": 0.84,
+          "supplier_url": "https://www.alibaba.com/trade/search?SearchText=espresso+machine"
+        },
+        "europe": {
+          "buy": 52.0,
+          "sell": 69.0,
+          "demand": 0.63,
+          "popularity": 0.79
+        },
+        "baltic": {
+          "buy": 53.0,
+          "sell": 78.0,
+          "demand": 0.87,
+          "popularity": 0.75
+        },
+        "turkiye": {
+          "buy": 44.0,
+          "sell": 58.0,
+          "demand": 0.8,
+          "popularity": 0.92
+        },
+        "westeu": {
+          "buy": 60.0,
+          "sell": 86.0,
+          "demand": 0.89,
+          "popularity": 0.67
+        },
+        "turkic": {
+          "buy": 48.0,
+          "sell": 66.0,
+          "demand": 0.85,
+          "popularity": 0.76
+        },
+        "ukraine": {
+          "buy": 46.0,
+          "sell": 61.0,
+          "demand": 0.56,
+          "popularity": 0.59
+        },
+        "belarus": {
+          "buy": 45.0,
+          "sell": 65.0,
+          "demand": 0.57,
+          "popularity": 0.69
+        },
+        "kaliningrad": {
+          "buy": 47.0,
+          "sell": 64.0,
+          "demand": 0.83,
+          "popularity": 0.56
+        },
+        "belarus-russia": {
+          "buy": 45.0,
+          "sell": 62.0,
+          "demand": 0.67,
+          "popularity": 0.67
+        },
+        "north-africa": {
+          "buy": 51.0,
+          "sell": 69.0,
+          "demand": 0.59,
+          "popularity": 0.93
+        },
+        "balkan": {
+          "buy": 52.0,
+          "sell": 73.0,
+          "demand": 0.85,
+          "popularity": 0.61
+        }
+      }
+    },
+    {
+      "id": "dehumidifier",
+      "name": "Dehumidifier 30L/day",
+      "weight_kg": 12.0,
+      "markets": {
+        "poland": {
+          "buy": 99.0,
+          "sell": 137.0,
+          "demand": 0.71,
+          "popularity": 0.68
+        },
+        "visegrad": {
+          "buy": 94.0,
+          "sell": 132.0,
+          "demand": 0.8,
+          "popularity": 0.58
+        },
+        "china": {
+          "buy": 55.0,
+          "sell": 75.0,
+          "demand": 0.62,
+          "popularity": 0.92,
+          "supplier_url": "https://www.alibaba.com/trade/search?SearchText=dehumidifier"
+        },
+        "europe": {
+          "buy": 96.0,
+          "sell": 126.0,
+          "demand": 0.75,
+          "popularity": 0.89
+        },
+        "baltic": {
+          "buy": 98.0,
+          "sell": 135.0,
+          "demand": 0.83,
+          "popularity": 0.63
+        },
+        "turkiye": {
+          "buy": 80.0,
+          "sell": 114.0,
+          "demand": 0.87,
+          "popularity": 0.6
+        },
+        "westeu": {
+          "buy": 110.0,
+          "sell": 153.0,
+          "demand": 0.84,
+          "popularity": 0.76
+        },
+        "turkic": {
+          "buy": 88.0,
+          "sell": 129.0,
+          "demand": 0.61,
+          "popularity": 0.89
+        },
+        "ukraine": {
+          "buy": 85.0,
+          "sell": 116.0,
+          "demand": 0.71,
+          "popularity": 0.72
+        },
+        "belarus": {
+          "buy": 82.0,
+          "sell": 108.0,
+          "demand": 0.66,
+          "popularity": 0.69
+        },
+        "kaliningrad": {
+          "buy": 87.0,
+          "sell": 117.0,
+          "demand": 0.73,
+          "popularity": 0.86
+        },
+        "belarus-russia": {
+          "buy": 82.0,
+          "sell": 112.0,
+          "demand": 0.72,
+          "popularity": 0.68
+        },
+        "north-africa": {
+          "buy": 94.0,
+          "sell": 130.0,
+          "demand": 0.59,
+          "popularity": 0.87
+        },
+        "balkan": {
+          "buy": 96.0,
+          "sell": 138.0,
+          "demand": 0.85,
+          "popularity": 0.89
+        }
+      }
+    },
+    {
+      "id": "high-speed-blender",
+      "name": "High-speed blender 2000W",
+      "weight_kg": 5.0,
+      "markets": {
+        "poland": {
+          "buy": 63.0,
+          "sell": 84.0,
+          "demand": 0.9,
+          "popularity": 0.9
+        },
+        "visegrad": {
+          "buy": 60.0,
+          "sell": 85.0,
+          "demand": 0.7,
+          "popularity": 0.86
+        },
+        "china": {
+          "buy": 35.0,
+          "sell": 51.0,
+          "demand": 0.8,
+          "popularity": 0.93,
+          "supplier_url": "https://www.alibaba.com/trade/search?SearchText=high+speed+blender"
+        },
+        "europe": {
+          "buy": 61.0,
+          "sell": 83.0,
+          "demand": 0.61,
+          "popularity": 0.77
+        },
+        "baltic": {
+          "buy": 62.0,
+          "sell": 87.0,
+          "demand": 0.75,
+          "popularity": 0.59
+        },
+        "turkiye": {
+          "buy": 51.0,
+          "sell": 73.0,
+          "demand": 0.76,
+          "popularity": 0.78
+        },
+        "westeu": {
+          "buy": 70.0,
+          "sell": 94.0,
+          "demand": 0.66,
+          "popularity": 0.66
+        },
+        "turkic": {
+          "buy": 56.0,
+          "sell": 78.0,
+          "demand": 0.59,
+          "popularity": 0.66
+        },
+        "ukraine": {
+          "buy": 54.0,
+          "sell": 79.0,
+          "demand": 0.61,
+          "popularity": 0.82
+        },
+        "belarus": {
+          "buy": 52.0,
+          "sell": 74.0,
+          "demand": 0.82,
+          "popularity": 0.62
+        },
+        "kaliningrad": {
+          "buy": 55.0,
+          "sell": 77.0,
+          "demand": 0.74,
+          "popularity": 0.66
+        },
+        "belarus-russia": {
+          "buy": 52.0,
+          "sell": 75.0,
+          "demand": 0.66,
+          "popularity": 0.68
+        },
+        "north-africa": {
+          "buy": 60.0,
+          "sell": 81.0,
+          "demand": 0.57,
+          "popularity": 0.71
+        },
+        "balkan": {
+          "buy": 61.0,
+          "sell": 89.0,
+          "demand": 0.84,
+          "popularity": 0.72
+        }
+      }
+    },
+    {
+      "id": "dyson-style-dryer",
+      "name": "High-speed hair dryer",
+      "weight_kg": 0.75,
+      "markets": {
+        "poland": {
+          "buy": 27.0,
+          "sell": 35.0,
+          "demand": 0.59,
+          "popularity": 0.56
+        },
+        "visegrad": {
+          "buy": 26.0,
+          "sell": 34.0,
+          "demand": 0.8,
+          "popularity": 0.78
+        },
+        "china": {
+          "buy": 15.0,
+          "sell": 22.0,
+          "demand": 0.68,
+          "popularity": 0.86,
+          "supplier_url": "https://www.alibaba.com/trade/search?SearchText=dyson+style+dryer"
+        },
+        "europe": {
+          "buy": 26.0,
+          "sell": 36.0,
+          "demand": 0.79,
+          "popularity": 0.8
+        },
+        "baltic": {
+          "buy": 27.0,
+          "sell": 39.0,
+          "demand": 0.67,
+          "popularity": 0.64
+        },
+        "turkiye": {
+          "buy": 22.0,
+          "sell": 30.0,
+          "demand": 0.91,
+          "popularity": 0.9
+        },
+        "westeu": {
+          "buy": 30.0,
+          "sell": 43.0,
+          "demand": 0.87,
+          "popularity": 0.82
+        },
+        "turkic": {
+          "buy": 24.0,
+          "sell": 35.0,
+          "demand": 0.69,
+          "popularity": 0.93
+        },
+        "ukraine": {
+          "buy": 23.0,
+          "sell": 31.0,
+          "demand": 0.82,
+          "popularity": 0.72
+        },
+        "belarus": {
+          "buy": 22.0,
+          "sell": 29.0,
+          "demand": 0.81,
+          "popularity": 0.67
+        },
+        "kaliningrad": {
+          "buy": 24.0,
+          "sell": 35.0,
+          "demand": 0.85,
+          "popularity": 0.6
+        },
+        "belarus-russia": {
+          "buy": 22.0,
+          "sell": 31.0,
+          "demand": 0.67,
+          "popularity": 0.91
+        },
+        "north-africa": {
+          "buy": 26.0,
+          "sell": 36.0,
+          "demand": 0.68,
+          "popularity": 0.77
+        },
+        "balkan": {
+          "buy": 26.0,
+          "sell": 37.0,
+          "demand": 0.59,
+          "popularity": 0.8
+        }
+      }
+    },
+    {
+      "id": "battery-jump-starter",
+      "name": "Jump starter 2000A",
+      "weight_kg": 1.0,
+      "markets": {
+        "poland": {
+          "buy": 50.0,
+          "sell": 66.0,
+          "demand": 0.6,
+          "popularity": 0.69
+        },
+        "visegrad": {
+          "buy": 48.0,
+          "sell": 68.0,
+          "demand": 0.79,
+          "popularity": 0.56
+        },
+        "china": {
+          "buy": 28.0,
+          "sell": 39.0,
+          "demand": 0.68,
+          "popularity": 0.7,
+          "supplier_url": "https://www.alibaba.com/trade/search?SearchText=battery+jump+starter"
+        },
+        "europe": {
+          "buy": 49.0,
+          "sell": 66.0,
+          "demand": 0.71,
+          "popularity": 0.64
+        },
+        "baltic": {
+          "buy": 50.0,
+          "sell": 66.0,
+          "demand": 0.75,
+          "popularity": 0.81
+        },
+        "turkiye": {
+          "buy": 41.0,
+          "sell": 60.0,
+          "demand": 0.8,
+          "popularity": 0.71
+        },
+        "westeu": {
+          "buy": 56.0,
+          "sell": 75.0,
+          "demand": 0.6,
+          "popularity": 0.56
+        },
+        "turkic": {
+          "buy": 45.0,
+          "sell": 61.0,
+          "demand": 0.73,
+          "popularity": 0.66
+        },
+        "ukraine": {
+          "buy": 43.0,
+          "sell": 58.0,
+          "demand": 0.9,
+          "popularity": 0.79
+        },
+        "belarus": {
+          "buy": 42.0,
+          "sell": 61.0,
+          "demand": 0.75,
+          "popularity": 0.81
+        },
+        "kaliningrad": {
+          "buy": 44.0,
+          "sell": 64.0,
+          "demand": 0.74,
+          "popularity": 0.66
+        },
+        "belarus-russia": {
+          "buy": 42.0,
+          "sell": 59.0,
+          "demand": 0.83,
+          "popularity": 0.68
+        },
+        "north-africa": {
+          "buy": 48.0,
+          "sell": 68.0,
+          "demand": 0.55,
+          "popularity": 0.94
+        },
+        "balkan": {
+          "buy": 49.0,
+          "sell": 68.0,
+          "demand": 0.91,
+          "popularity": 0.82
+        }
+      }
     }
   ]
 }

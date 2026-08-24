@@ -57,6 +57,7 @@ json market_to_json(const Market& m) {
         {"note", m.note},
         {"members", m.members},
         {"search", m.search},
+        {"shops", m.shops},
     };
 }
 
