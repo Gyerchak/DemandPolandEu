@@ -34,13 +34,13 @@
           "sell": 980,
           "demand": 0.7,
           "popularity": 0.7,
-          "supplier_url": "https://www.alibaba.com/product-detail/2025-New-Electric-Scooter-OOTD-T10_1601455273183.html",
+          "supplier_url": "",
           "whole": {
             "sell": 911.4,
             "demand": 0.74,
             "popularity": 0.73
           },
-          "price_source": "real",
+          "price_source": "est",
           "link_checked": "2026-08-24"
         },
         "europe": {
@@ -132,7 +132,8 @@
       },
       "brand": "Navee",
       "model": "N65",
-      "ean": ""
+      "ean": "",
+      "source_notes": "Navee N65 500W 2026: CN wholesale ≈ 1 700-1 900 CNY (distributors: BCE/Kukirin/Geekbuying); EU retail 339-870 € (newtechstore 339 €, geekbuying 662 €)"
     },
     {
       "id": "e-bike-conversion",
@@ -241,13 +242,13 @@
           "sell": 1250,
           "demand": 0.62,
           "popularity": 0.55,
-          "supplier_url": "https://www.alibaba.com/product-detail/HC-1000Wh-1000W-LiFePO4-Portable-Power_1601799400722.html",
+          "supplier_url": "",
           "whole": {
             "sell": 1162.5,
             "demand": 0.66,
             "popularity": 0.58
           },
-          "price_source": "real",
+          "price_source": "est",
           "link_checked": "2026-08-24"
         },
         "europe": {
@@ -289,7 +290,8 @@
       },
       "brand": "",
       "model": "",
-      "ean": ""
+      "ean": "",
+      "source_notes": "1000Wh LiFePO4 power station: generic category — pick a specific brand+model + its real listing before marking real"
     },
     {
       "id": "solar-panel-400w",
@@ -483,13 +485,13 @@
           "sell": 240,
           "demand": 0.65,
           "popularity": 0.7,
-          "supplier_url": "https://www.alibaba.com/product-detail/Multifunctional-Electric-Air-Fryer-Oil-Free_1600430223950.html",
+          "supplier_url": "",
           "whole": {
             "sell": 223.2,
             "demand": 0.69,
             "popularity": 0.73
           },
-          "price_source": "real",
+          "price_source": "est",
           "link_checked": "2026-08-24"
         },
         "europe": {
@@ -531,7 +533,8 @@
       },
       "brand": "Tefal",
       "model": "Easy Fry Classic EY2018",
-      "ean": "3045380014565"
+      "ean": "3045380014565",
+      "source_notes": "Tefal Easy Fry Classic EY2018: NOT on generic Alibaba wholesale (branded EU product) — source via EU shops/Ceneo; real EAN 3045380014565"
     },
     {
       "id": "garden-pruner",
@@ -688,13 +691,13 @@
           "sell": 600,
           "demand": 0.72,
           "popularity": 0.75,
-          "supplier_url": "https://www.alibaba.com/product-detail/Vyzzle-D10-Robot-Vacuum-5000Pa-LiDAR_1601631540350.html",
+          "supplier_url": "",
           "whole": {
             "sell": 558.0,
             "demand": 0.76,
             "popularity": 0.78
           },
-          "price_source": "real",
+          "price_source": "est",
           "link_checked": "2026-08-24"
         },
         "europe": {
@@ -736,7 +739,8 @@
       },
       "brand": "",
       "model": "",
-      "ean": ""
+      "ean": "",
+      "source_notes": "Robot vacuum LiDAR 5000Pa: generic category — pick a specific brand+model + its real listing before marking real"
     },
     {
       "id": "electric-grill",
