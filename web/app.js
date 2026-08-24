@@ -1,6 +1,7 @@
 "use strict";
 
 const MAG = "🔎";   // deep-search icon (magnifier)
+const CHK = "✓";   // verified-price checkmark
 
 const $ = (s) => document.querySelector(s);
 const sortSel = $("#sort");
