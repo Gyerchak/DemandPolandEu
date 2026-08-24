@@ -75,21 +75,18 @@ function tableHeaders() {
 
 function productCell(t) {
   const name = t.product_name;
-  const q = encodeURIComponent(name);
-  // The supplier page must be the market where the BUY price comes from:
-  //  import -> from_market (you buy there), export -> to_market? no — export buys at home.
-  // Server already sets supplier_url from the buy market; here we only title it.
-  // Buy market: import = from_market (you buy there); export = from_market too
-  // (in export rows from_market IS the home — the server sets from_market=home).
-  const buyMarket = t.from_market;
+  const ident = (t.brand || t.model || t.ean)
+    ? `<div class="ident" title="exact product identity — deep search targets this SKU">
+         ${[t.brand, t.model].filter(Boolean).join(" ")}${t.ean ? " · EAN " + t.ean : ""}</div>`
+    : `<div class="ident none" title="no verified identity — deep search matches the generic name only">generic</div>`;
+  // REAL verified deal => open the exact product page where that price lives.
   if (t.supplier_url) {
-    const fresh = t.link_checked
-      ? ` verified ${t.link_checked}` : ` not yet link-checked`;
-    return `<a class="prod" href="${t.supplier_url}" target="_blank" rel="noopener" title="direct source of the buy price in ${buyMarket}${fresh}">${name}</a>`;
+    const fresh = t.link_checked ? ` verified ${t.link_checked}` : "";
+    return `<div>${ident}<a class="prod" href="${t.supplier_url}" target="_blank" rel="noopener" title="exact source of the buy price in ${t.from_market}${fresh}">${name}</a></div>`;
   }
-  // No verified deal => DEEP-SEARCH this product across the whole supply market.
-  return `<button class="prod-link" data-deep="${t.product_name}" data-market="${t.from_market_id}"
-     title="deep-search this product across every market & platform">${name} 🔎</button>`;
+  // No verified deal => DEEP-SEARCH the exact identity (EAN > brand+model > name).
+  return `<div>${ident}<button class="prod-link" data-deep="${t.product_name}" data-brand="${t.brand||""}" data-model="${t.model||""}" data-ean="${t.ean||""}" data-market="${t.from_market_id}"
+     title="deep-search this exact product across every market">${name} ${MAG}</button></div>`;
 }
 
 function rowHtml(t) {

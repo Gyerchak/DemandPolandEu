@@ -43,6 +43,9 @@ struct ProductMarket {
 struct Product {
     std::string id;
     std::string name;
+    std::string brand;
+    std::string model;
+    std::string ean;           // the global SKU fingerprint — same product everywhere
     std::string category;      // broad, English; may be empty -> fallback
     std::string supplier_url;  // optional: direct supplier/product page
     double weight_kg = 0.0;
@@ -53,6 +56,9 @@ struct Trade {
     std::string kind;          // "import" | "export"
     std::string product_id;
     std::string product_name;
+    std::string brand;
+    std::string model;
+    std::string ean;
     std::string category;
     std::string from_market_id;
     std::string from_market;

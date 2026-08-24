@@ -96,6 +96,9 @@ std::vector<Product> load_products(const std::string& dir) {
         Product p;
         p.id = e.value("id", "");
         p.name = e.value("name", "");
+        p.brand = e.value("brand", "");
+        p.model = e.value("model", "");
+        p.ean = e.value("ean", "");
         p.category = e.value("category", "");
         p.weight_kg = get_double(e, "weight_kg", 0.0);
         p.supplier_url = e.value("supplier_url", "");
@@ -212,6 +215,9 @@ std::vector<Trade> build_trades(const std::string& dir,
                 t.kind = "import";
                 t.product_id = product.id;
                 t.product_name = product.name;
+                t.brand = product.brand;
+                t.model = product.model;
+                t.ean = product.ean;
                 t.supplier_url = pm.supplier_url;      // buy market = from_market
                 t.price_source = pm.price_source;
                 t.link_checked = pm.link_checked;
@@ -259,6 +265,9 @@ std::vector<Trade> build_trades(const std::string& dir,
                 t.kind = "export";
                 t.product_id = product.id;
                 t.product_name = product.name;
+                t.brand = product.brand;
+                t.model = product.model;
+                t.ean = product.ean;
                 t.supplier_url = hp.supplier_url;   // buy market = home
                 t.price_source = hp.price_source;
                 t.link_checked = hp.link_checked;

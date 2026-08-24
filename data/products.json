@@ -129,7 +129,10 @@
           },
           "price_source": "est"
         }
-      }
+      },
+      "brand": "Navee",
+      "model": "N65",
+      "ean": ""
     },
     {
       "id": "e-bike-conversion",
@@ -199,7 +202,10 @@
           },
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "power-station",
@@ -280,7 +286,10 @@
           },
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "solar-panel-400w",
@@ -349,7 +358,10 @@
           },
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "smart-heater",
@@ -431,7 +443,10 @@
           },
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "air-fryer",
@@ -513,7 +528,10 @@
           },
           "price_source": "est"
         }
-      }
+      },
+      "brand": "Tefal",
+      "model": "Easy Fry Classic EY2018",
+      "ean": "3045380014565"
     },
     {
       "id": "garden-pruner",
@@ -570,7 +588,10 @@
           },
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "bike-rack",
@@ -628,7 +649,10 @@
           },
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "robot-vacuum",
@@ -709,7 +733,10 @@
           },
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "electric-grill",
@@ -779,7 +806,10 @@
           },
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "solar-charger",
@@ -837,7 +867,10 @@
           },
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "heat-gun",
@@ -895,7 +928,10 @@
           },
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "mini-projector",
@@ -1002,7 +1038,10 @@
           "popularity": 0.71,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "dashcam",
@@ -1109,7 +1148,10 @@
           "popularity": 0.56,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "smart-kettle",
@@ -1216,7 +1258,10 @@
           "popularity": 0.93,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "espresso-machine",
@@ -1323,7 +1368,10 @@
           "popularity": 0.61,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "dehumidifier",
@@ -1430,7 +1478,10 @@
           "popularity": 0.89,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "high-speed-blender",
@@ -1537,7 +1588,10 @@
           "popularity": 0.72,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "dyson-style-dryer",
@@ -1644,7 +1698,10 @@
           "popularity": 0.8,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "battery-jump-starter",
@@ -1751,7 +1808,10 @@
           "popularity": 0.82,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "e-scooter-mini",
@@ -1856,7 +1916,10 @@
           "popularity": 0.63,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "electric-bike",
@@ -1961,7 +2024,10 @@
           "popularity": 0.85,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "e-bike-battery",
@@ -2066,7 +2132,10 @@
           "popularity": 0.53,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "hoverboard",
@@ -2171,7 +2240,10 @@
           "popularity": 0.85,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "stand-mixer",
@@ -2276,7 +2348,10 @@
           "popularity": 0.86,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "rice-cooker",
@@ -2381,7 +2456,10 @@
           "popularity": 0.74,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "food-processor",
@@ -2486,7 +2564,10 @@
           "popularity": 0.7,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "sous-vide",
@@ -2591,7 +2672,10 @@
           "popularity": 0.56,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "ice-maker",
@@ -2696,7 +2780,10 @@
           "popularity": 0.51,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "vacuum-sealer",
@@ -2801,7 +2888,10 @@
           "popularity": 0.93,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "induction-hob",
@@ -2906,7 +2996,10 @@
           "popularity": 0.9,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "lawn-mower",
@@ -3011,7 +3104,10 @@
           "popularity": 0.51,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "pressure-washer",
@@ -3116,7 +3212,10 @@
           "popularity": 0.65,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "cordless-drill",
@@ -3221,7 +3320,10 @@
           "popularity": 0.52,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "chainsaw",
@@ -3326,7 +3428,10 @@
           "popularity": 0.78,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "leaf-blower",
@@ -3431,7 +3536,10 @@
           "popularity": 0.81,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "smart-bulbs",
@@ -3536,7 +3644,10 @@
           "popularity": 0.84,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "led-strip",
@@ -3641,7 +3752,10 @@
           "popularity": 0.69,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "4k-drone",
@@ -3746,7 +3860,10 @@
           "popularity": 0.58,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "action-cam",
@@ -3851,7 +3968,10 @@
           "popularity": 0.61,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "wireless-earbuds",
@@ -3956,7 +4076,10 @@
           "popularity": 0.65,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "portable-speaker",
@@ -4061,7 +4184,10 @@
           "popularity": 0.78,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "soundbar",
@@ -4166,7 +4292,10 @@
           "popularity": 0.55,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "webcam-4k",
@@ -4271,7 +4400,10 @@
           "popularity": 0.94,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "mech-keyboard",
@@ -4376,7 +4508,10 @@
           "popularity": 0.62,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "Redragon",
+      "model": "K552 Kumara",
+      "ean": "740002400346"
     },
     {
       "id": "portable-monitor",
@@ -4481,7 +4616,10 @@
           "popularity": 0.79,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "power-bank-20000",
@@ -4586,7 +4724,10 @@
           "popularity": 0.7,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "smart-watch",
@@ -4691,7 +4832,10 @@
           "popularity": 0.64,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "tire-inflator",
@@ -4796,7 +4940,10 @@
           "popularity": 0.69,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "car-vacuum",
@@ -4901,7 +5048,10 @@
           "popularity": 0.79,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "pet-fountain",
@@ -5006,7 +5156,10 @@
           "popularity": 0.88,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "pet-camera",
@@ -5111,7 +5264,10 @@
           "popularity": 0.9,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "epilator",
@@ -5216,7 +5372,10 @@
           "popularity": 0.93,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "hair-clipper",
@@ -5321,7 +5480,10 @@
           "popularity": 0.66,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     },
     {
       "id": "sonic-toothbrush",
@@ -5426,7 +5588,10 @@
           "popularity": 0.85,
           "price_source": "est"
         }
-      }
+      },
+      "brand": "",
+      "model": "",
+      "ean": ""
     }
   ]
 }
