@@ -11,6 +11,7 @@ json trade_to_json(const Trade& t) {
         {"product_name", t.product_name},
         {"supplier_url", t.supplier_url},
         {"price_source", t.price_source},
+        {"link_checked", t.link_checked},
         {"channel", t.channel},
         {"shops", t.shops},
         {"category", t.category},

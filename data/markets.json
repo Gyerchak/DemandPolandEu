@@ -31,7 +31,7 @@
         "Pepper.pl shops",
         "Ceneo-listed"
       ],
-      "search": "https://www.ceneo.pl/szukaj?query={q}"
+      "search": "https://www.ceneo.pl/;szukaj-{q}"
     },
     {
       "id": "visegrad",
@@ -61,7 +61,7 @@
         "Alfa.hu",
         "Vásárolj.hu"
       ],
-      "search": "https://www.ceneo.pl/szukaj?query={q}"
+      "search": "https://www.ceneo.pl/;szukaj-{q}"
     },
     {
       "id": "china",
@@ -177,7 +177,7 @@
         "Mediamarkt TR shops",
         "Akakçe-listed"
       ],
-      "search": "https://www.akakce.com/ara/?q={q}"
+      "search": "https://www.akakce.com/arama/?q={q}"
     },
     {
       "id": "westeu",
@@ -378,7 +378,7 @@
         "Gigatron (RS)",
         "Studio Moderna (RO)"
       ],
-      "search": "https://www.epiesa.ro/Cautare?q={q}"
+      "search": "https://www.emag.ro/search/{q}"
     }
   ]
 }

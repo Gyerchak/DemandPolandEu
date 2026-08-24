@@ -100,6 +100,7 @@ std::vector<Product> load_products(const std::string& dir) {
                 pm.popularity = get_double(*it, "popularity", 0.0);
                 pm.supplier_url = it->value("supplier_url", "");
                 pm.price_source = it->value("price_source", "est");
+                pm.link_checked = it->value("link_checked", "");
                 auto w = it->find("whole");
                 if (w != it->end() && w->is_object()) {
                     pm.whole_sell = get_double(*w, "sell", 0.0);
@@ -204,6 +205,7 @@ std::vector<Trade> build_trades(const std::string& dir,
                 t.product_name = product.name;
                 t.supplier_url = pm.supplier_url;      // buy market = from_market
                 t.price_source = pm.price_source;
+                t.link_checked = pm.link_checked;
                 t.channel = channel;
                 t.shops = whole ? home->shops : std::vector<std::string>{};
                 t.category = cat;
@@ -250,6 +252,7 @@ std::vector<Trade> build_trades(const std::string& dir,
                 t.product_name = product.name;
                 t.supplier_url = hp.supplier_url;   // buy market = home
                 t.price_source = hp.price_source;
+                t.link_checked = hp.link_checked;
                 t.channel = channel;
                 t.shops = whole ? m.shops : std::vector<std::string>{};
                 t.category = cat;

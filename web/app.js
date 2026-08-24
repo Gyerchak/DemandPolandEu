@@ -83,7 +83,9 @@ function productCell(t) {
   // (in export rows from_market IS the home — the server sets from_market=home).
   const buyMarket = t.from_market;
   if (t.supplier_url) {
-    return `<a class="prod" href="${t.supplier_url}" target="_blank" rel="noopener" title="supplier page for buy price in ${buyMarket}">${name}</a>`;
+    const fresh = t.link_checked
+      ? ` verified ${t.link_checked}` : ` not yet link-checked`;
+    return `<a class="prod" href="${t.supplier_url}" target="_blank" rel="noopener" title="direct source of the buy price in ${buyMarket}${fresh}">${name}</a>`;
   }
   // No direct listing recorded -> go to the market's price-comparison page
   // (Ceneo/Akakçe/Idealo/…) — exactly where that market's prices live.
