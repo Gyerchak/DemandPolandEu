@@ -47,6 +47,9 @@ struct Product {
     std::string model;
     std::string ean;           // the global SKU fingerprint — same product everywhere
     std::string category;      // broad, English; may be empty -> fallback
+    bool live = false;         // from the live/discovered catalog
+    std::string discovered;    // date added to the live list
+    bool official = false;     // offer from an official/verified store
     std::string supplier_url;  // optional: direct supplier/product page
     double weight_kg = 0.0;
     std::map<std::string, ProductMarket> markets;  // market_id -> data
@@ -59,6 +62,9 @@ struct Trade {
     std::string brand;
     std::string model;
     std::string ean;
+    bool live = false;
+    std::string discovered;
+    bool official = false;
     std::string category;
     std::string from_market_id;
     std::string from_market;
@@ -91,6 +97,8 @@ std::string resolve_category(const Product& p, const std::string& dir);
 
 std::vector<Market> load_markets(const std::string& dir);
 std::vector<Product> load_products(const std::string& dir);
+std::vector<Product> load_products_impl(const std::string& dir, const std::string& filename);
+std::vector<Product> load_products_live(const std::string& dir);
 
 // Build import/export trades. home_market_id anchors the trade; watch_markets
 // restricts the counterparty markets (empty = all markets).

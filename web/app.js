@@ -1,5 +1,7 @@
 "use strict";
 
+const MAG = "🔎";   // deep-search icon (magnifier)
+
 const $ = (s) => document.querySelector(s);
 const sortSel = $("#sort");
 const catSel = $("#category");

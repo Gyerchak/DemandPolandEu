@@ -90,8 +90,18 @@ std::vector<Market> load_markets(const std::string& dir) {
 }
 
 std::vector<Product> load_products(const std::string& dir) {
+    return load_products_impl(dir, "products");
+}
+
+// Live items borrow the same schema; they live in data/live-products.json and
+// grow over time (searched-items list). They are merged BEFORE markets math.
+std::vector<Product> load_products_live(const std::string& dir) {
+    return load_products_impl(dir, "live-products");
+}
+
+std::vector<Product> load_products_impl(const std::string& dir, const std::string& filename) {
     std::vector<Product> out;
-    json j = read_json(dir + "/data/products.json");
+    json j = read_json(dir + "/data/" + filename + ".json");
     for (const auto& e : j.at("products")) {
         Product p;
         p.id = e.value("id", "");
@@ -99,6 +109,9 @@ std::vector<Product> load_products(const std::string& dir) {
         p.brand = e.value("brand", "");
         p.model = e.value("model", "");
         p.ean = e.value("ean", "");
+        p.live = e.value("live", false);
+        p.discovered = e.value("discovered", "");
+        p.official = e.value("official", false);
         p.category = e.value("category", "");
         p.weight_kg = get_double(e, "weight_kg", 0.0);
         p.supplier_url = e.value("supplier_url", "");
@@ -161,6 +174,8 @@ std::vector<Trade> build_trades(const std::string& dir,
     const bool whole = (channel == "whole");
     auto markets = load_markets(dir);
     auto products = load_products(dir);
+    auto live = load_products_live(dir);
+    products.insert(products.end(), live.begin(), live.end());
 
     std::map<std::string, const Market*> market_by_id;
     for (const auto& m : markets) market_by_id[m.id] = &m;
@@ -218,6 +233,9 @@ std::vector<Trade> build_trades(const std::string& dir,
                 t.brand = product.brand;
                 t.model = product.model;
                 t.ean = product.ean;
+                t.live = product.live;
+                t.discovered = product.discovered;
+                t.official = product.official;
                 t.supplier_url = pm.supplier_url;      // buy market = from_market
                 t.price_source = pm.price_source;
                 t.link_checked = pm.link_checked;
@@ -268,6 +286,9 @@ std::vector<Trade> build_trades(const std::string& dir,
                 t.brand = product.brand;
                 t.model = product.model;
                 t.ean = product.ean;
+                t.live = product.live;
+                t.discovered = product.discovered;
+                t.official = product.official;
                 t.supplier_url = hp.supplier_url;   // buy market = home
                 t.price_source = hp.price_source;
                 t.link_checked = hp.link_checked;
