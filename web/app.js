@@ -73,7 +73,7 @@ function tableHeaders() {
     <tr>
       <th>Product</th><th>Cat</th><th>From</th><th>To</th>
       <th>Buy</th><th>Freight</th><th>Duty</th><th>Handling</th><th>VAT</th>
-      <th>Total cost</th><th>Sell</th><th>Profit</th><th>Margin</th><th>Opp</th>
+      <th>Total cost</th><th>Sell</th><th>Profit</th><th>Margin</th><th>Opp</th><th>Best sell</th>
     </tr>`;
 }
 
@@ -93,6 +93,18 @@ function productCell(t) {
      title="deep-search this exact product across every market">${name} ${MAG}</button></div>`;
 }
 
+// BEST-SELL: open the cheapest offer for this EXACT product in the destination
+// market (its porównywarka / official-store search). Survives any table mode.
+function bestSellBtn(t) {
+  const mk = markets.find((m) => m.id === t.to_market_id);
+  if (!mk || !mk.search) return `<span title="no destination search available">—</span>`;
+  const q = encodeURIComponent(
+    t.ean || [t.brand, t.model, t.product_name].filter(Boolean).join(" "));
+  const href = mk.search.replace("{q}", q);
+  const lbl = t.ean ? "EAN " + t.ean : ([t.brand, t.model].filter(Boolean).join(" ") || t.product_name);
+  return `<a class="best-sell" href="${href}" target="_blank" rel="noopener"
+     title="cheapest offer of ${lbl} in ${mk.name}">${CART} best sell</a>`;
+}
 function rowHtml(t) {
   const real = t.price_source === "real";   // only REAL buy prices drive profit math
   const sellTitle = (channel === "whole" && t.shops && t.shops.length)
@@ -105,7 +117,8 @@ function rowHtml(t) {
       <td><small style="color:var(--muted)">${t.category}</small></td>
       <td>${t.from_market}</td>
       <td>${t.to_market}</td>
-      <td colspan="9"><span class="est" title="buy price not verified yet — deep-search this exact product">no verified price — deep-search first</span></td>
+      <td colspan="8"><span class="est" title="buy price not verified yet — deep-search this exact product">no verified price — deep-search first</span></td>
+      <td>${bestSellBtn(t)}</td>
     </tr>`;
   }
   return `
@@ -114,7 +127,8 @@ function rowHtml(t) {
       <td><small style="color:var(--muted)">${t.category}</small></td>
       <td>${t.from_market}</td>
       <td>${t.to_market}</td>
-      <td><span title="verified price from the linked exact product" style="color:var(--good)">${CHK}</span> ${fmtMoney(t.buy_eur)}</td>
+      <td><span title="verified price from the linked exact product" style="color:var(--good)">${CHK}</span> ${fmtMoney(t.buy_eur)}
+        <div class="bulk" title="bulk landed cost ×100 units (buy + freight + duty + handling) — a real 100-unit container">×100 ≈ ${fmtMoney((t.buy_eur + t.freight_eur + t.duty_eur + t.handling_eur) * 100)}</div></td>
       <td>${fmtMoney(t.freight_eur)}</td>
       <td>${fmtMoney(t.duty_eur)}</td>
       <td>${fmtMoney(t.handling_eur)}</td>
