@@ -10,6 +10,8 @@ json trade_to_json(const Trade& t) {
         {"product_id", t.product_id},
         {"product_name", t.product_name},
         {"supplier_url", t.supplier_url},
+        {"channel", t.channel},
+        {"shops", t.shops},
         {"category", t.category},
         {"from_market_id", t.from_market_id},
         {"from_market", t.from_market},

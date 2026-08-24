@@ -21,6 +21,7 @@ struct Market {
     int lead_days = 30;
     std::string note;
     std::string members;   // country list for legend (e.g. "PL, CZ, SK, HU")
+    std::vector<std::string> shops;  // marketplaces/porównywarki-listed shops for Whole Market view
 };
 
 struct ProductMarket {
@@ -29,6 +30,10 @@ struct ProductMarket {
     double demand = 0.0;
     double popularity = 0.0;
     std::string supplier_url;  // where THIS market's buy price was found
+    // Whole Market view: main platforms + all shops from price-comparison pages.
+    double whole_sell = 0.0;
+    double whole_demand = 0.0;
+    double whole_popularity = 0.0;
 };
 
 struct Product {
@@ -50,6 +55,8 @@ struct Trade {
     std::string to_market_id;
     std::string to_market;
     std::string supplier_url;   // link = the BUY market's source (import: from-market; export: home)
+    std::string channel;        // "main" | "whole"
+    std::vector<std::string> shops;  // shops considered for this trade's sell side
     double buy_eur = 0.0;
     double sell_eur = 0.0;
     double freight_eur = 0.0;
@@ -79,7 +86,8 @@ std::vector<Trade> build_trades(const std::string& dir,
                                 const std::string& home_market_id,
                                 const std::vector<std::string>& watch_markets,
                                 bool include_sale_vat,
-                                double margin_ref = 0.3);
+                                double margin_ref = 0.3,
+                                const std::string& channel = "main");
 void sort_trades(std::vector<Trade>& trades, const std::string& key);
 std::vector<std::string> list_categories(const std::string& dir);
 

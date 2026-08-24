@@ -9,62 +9,112 @@
           "buy": 1240,
           "sell": 1599,
           "demand": 0.92,
-          "popularity": 0.95
+          "popularity": 0.95,
+          "whole": {
+            "sell": 1487.07,
+            "demand": 0.96,
+            "popularity": 0.98
+          }
         },
         "visegrad": {
           "buy": 1150,
           "sell": 1520,
           "demand": 0.8,
-          "popularity": 0.8
+          "popularity": 0.8,
+          "whole": {
+            "sell": 1413.6,
+            "demand": 0.84,
+            "popularity": 0.83
+          }
         },
         "china": {
           "buy": 690,
           "sell": 980,
           "demand": 0.7,
           "popularity": 0.7,
-          "supplier_url": "https://www.alibaba.com/product-detail/2025-New-Electric-Scooter-OOTD-T10_1601455273183.html"
+          "supplier_url": "https://www.alibaba.com/product-detail/2025-New-Electric-Scooter-OOTD-T10_1601455273183.html",
+          "whole": {
+            "sell": 911.4,
+            "demand": 0.74,
+            "popularity": 0.73
+          }
         },
         "europe": {
           "buy": 1180,
           "sell": 1500,
           "demand": 0.72,
-          "popularity": 0.72
+          "popularity": 0.72,
+          "whole": {
+            "sell": 1395.0,
+            "demand": 0.76,
+            "popularity": 0.75
+          }
         },
         "baltic": {
           "buy": 1200,
           "sell": 1540,
           "demand": 0.7,
-          "popularity": 0.7
+          "popularity": 0.7,
+          "whole": {
+            "sell": 1432.2,
+            "demand": 0.74,
+            "popularity": 0.73
+          }
         },
         "turkiye": {
           "buy": 980,
           "sell": 1320,
           "demand": 0.66,
-          "popularity": 0.66
+          "popularity": 0.66,
+          "whole": {
+            "sell": 1227.6,
+            "demand": 0.7,
+            "popularity": 0.69
+          }
         },
         "westeu": {
           "buy": 1350,
           "sell": 1750,
           "demand": 0.75,
-          "popularity": 0.75
+          "popularity": 0.75,
+          "whole": {
+            "sell": 1627.5,
+            "demand": 0.79,
+            "popularity": 0.78
+          }
         },
         "turkic": {
           "buy": 1100,
           "sell": 1500,
           "demand": 0.55,
-          "popularity": 0.55
+          "popularity": 0.55,
+          "whole": {
+            "sell": 1395.0,
+            "demand": 0.59,
+            "popularity": 0.58
+          }
         },
         "ukraine": {
           "buy": 1050,
           "sell": 1420,
           "demand": 0.6,
-          "popularity": 0.6
+          "popularity": 0.6,
+          "whole": {
+            "sell": 1320.6,
+            "demand": 0.64,
+            "popularity": 0.63
+          }
         },
         "balkan": {
           "buy": 1120,
           "sell": 1480,
           "demand": 0.58,
-          "popularity": 0.58
+          "popularity": 0.58,
+          "whole": {
+            "sell": 1376.4,
+            "demand": 0.62,
+            "popularity": 0.61
+          }
         }
       }
     },
@@ -78,32 +128,57 @@
           "buy": 1050,
           "sell": 1299,
           "demand": 0.7,
-          "popularity": 0.55
+          "popularity": 0.55,
+          "whole": {
+            "sell": 1208.07,
+            "demand": 0.74,
+            "popularity": 0.58
+          }
         },
         "visegrad": {
           "buy": 990,
           "sell": 1240,
           "demand": 0.62,
-          "popularity": 0.55
+          "popularity": 0.55,
+          "whole": {
+            "sell": 1153.2,
+            "demand": 0.66,
+            "popularity": 0.58
+          }
         },
         "china": {
           "buy": 460,
           "sell": 700,
           "demand": 0.55,
           "popularity": 0.5,
-          "supplier_url": "https://www.alibaba.com/product-detail/250W-3000W-Ebike-Conversion-Kit-36V_1601926766493.html"
+          "supplier_url": "https://www.alibaba.com/product-detail/250W-3000W-Ebike-Conversion-Kit-36V_1601926766493.html",
+          "whole": {
+            "sell": 651.0,
+            "demand": 0.59,
+            "popularity": 0.53
+          }
         },
         "europe": {
           "buy": 1000,
           "sell": 1250,
           "demand": 0.55,
-          "popularity": 0.5
+          "popularity": 0.5,
+          "whole": {
+            "sell": 1162.5,
+            "demand": 0.59,
+            "popularity": 0.53
+          }
         },
         "turkiye": {
           "buy": 820,
           "sell": 1100,
           "demand": 0.55,
-          "popularity": 0.5
+          "popularity": 0.5,
+          "whole": {
+            "sell": 1023.0,
+            "demand": 0.59,
+            "popularity": 0.53
+          }
         }
       }
     },
@@ -116,38 +191,68 @@
           "buy": 2200,
           "sell": 2600,
           "demand": 0.8,
-          "popularity": 0.6
+          "popularity": 0.6,
+          "whole": {
+            "sell": 2418.0,
+            "demand": 0.84,
+            "popularity": 0.63
+          }
         },
         "visegrad": {
           "buy": 2100,
           "sell": 2520,
           "demand": 0.68,
-          "popularity": 0.58
+          "popularity": 0.58,
+          "whole": {
+            "sell": 2343.6,
+            "demand": 0.72,
+            "popularity": 0.61
+          }
         },
         "china": {
           "buy": 880,
           "sell": 1250,
           "demand": 0.62,
           "popularity": 0.55,
-          "supplier_url": "https://www.alibaba.com/product-detail/HC-1000Wh-1000W-LiFePO4-Portable-Power_1601799400722.html"
+          "supplier_url": "https://www.alibaba.com/product-detail/HC-1000Wh-1000W-LiFePO4-Portable-Power_1601799400722.html",
+          "whole": {
+            "sell": 1162.5,
+            "demand": 0.66,
+            "popularity": 0.58
+          }
         },
         "europe": {
           "buy": 2150,
           "sell": 2550,
           "demand": 0.6,
-          "popularity": 0.52
+          "popularity": 0.52,
+          "whole": {
+            "sell": 2371.5,
+            "demand": 0.64,
+            "popularity": 0.55
+          }
         },
         "baltic": {
           "buy": 2200,
           "sell": 2600,
           "demand": 0.62,
-          "popularity": 0.55
+          "popularity": 0.55,
+          "whole": {
+            "sell": 2418.0,
+            "demand": 0.66,
+            "popularity": 0.58
+          }
         },
         "westeu": {
           "buy": 2400,
           "sell": 2850,
           "demand": 0.65,
-          "popularity": 0.58
+          "popularity": 0.58,
+          "whole": {
+            "sell": 2650.5,
+            "demand": 0.69,
+            "popularity": 0.61
+          }
         }
       }
     },
@@ -160,32 +265,57 @@
           "buy": 480,
           "sell": 620,
           "demand": 0.65,
-          "popularity": 0.5
+          "popularity": 0.5,
+          "whole": {
+            "sell": 576.6,
+            "demand": 0.69,
+            "popularity": 0.53
+          }
         },
         "visegrad": {
           "buy": 450,
           "sell": 590,
           "demand": 0.58,
-          "popularity": 0.5
+          "popularity": 0.5,
+          "whole": {
+            "sell": 548.7,
+            "demand": 0.62,
+            "popularity": 0.53
+          }
         },
         "china": {
           "buy": 190,
           "sell": 320,
           "demand": 0.55,
           "popularity": 0.5,
-          "supplier_url": "https://www.alibaba.com/product-detail/High-Efficient-JA-Solar-400W-EU_1600705368223.html"
+          "supplier_url": "https://www.alibaba.com/product-detail/High-Efficient-JA-Solar-400W-EU_1600705368223.html",
+          "whole": {
+            "sell": 297.6,
+            "demand": 0.59,
+            "popularity": 0.53
+          }
         },
         "europe": {
           "buy": 460,
           "sell": 600,
           "demand": 0.5,
-          "popularity": 0.48
+          "popularity": 0.48,
+          "whole": {
+            "sell": 558.0,
+            "demand": 0.54,
+            "popularity": 0.51
+          }
         },
         "turkiye": {
           "buy": 380,
           "sell": 520,
           "demand": 0.58,
-          "popularity": 0.5
+          "popularity": 0.5,
+          "whole": {
+            "sell": 483.6,
+            "demand": 0.62,
+            "popularity": 0.53
+          }
         }
       }
     },
@@ -199,38 +329,68 @@
           "buy": 240,
           "sell": 320,
           "demand": 0.75,
-          "popularity": 0.45
+          "popularity": 0.45,
+          "whole": {
+            "sell": 297.6,
+            "demand": 0.79,
+            "popularity": 0.48
+          }
         },
         "visegrad": {
           "buy": 225,
           "sell": 305,
           "demand": 0.66,
-          "popularity": 0.45
+          "popularity": 0.45,
+          "whole": {
+            "sell": 283.65,
+            "demand": 0.7,
+            "popularity": 0.48
+          }
         },
         "china": {
           "buy": 120,
           "sell": 200,
           "demand": 0.55,
           "popularity": 0.42,
-          "supplier_url": "https://www.alibaba.com/product-detail/9-Fins-2000W-Freestanding-Room-Heater_1601929893335.html"
+          "supplier_url": "https://www.alibaba.com/product-detail/9-Fins-2000W-Freestanding-Room-Heater_1601929893335.html",
+          "whole": {
+            "sell": 186.0,
+            "demand": 0.59,
+            "popularity": 0.45
+          }
         },
         "europe": {
           "buy": 230,
           "sell": 310,
           "demand": 0.55,
-          "popularity": 0.4
+          "popularity": 0.4,
+          "whole": {
+            "sell": 288.3,
+            "demand": 0.59,
+            "popularity": 0.43
+          }
         },
         "baltic": {
           "buy": 235,
           "sell": 315,
           "demand": 0.6,
-          "popularity": 0.44
+          "popularity": 0.44,
+          "whole": {
+            "sell": 292.95,
+            "demand": 0.64,
+            "popularity": 0.47
+          }
         },
         "ukraine": {
           "buy": 200,
           "sell": 280,
           "demand": 0.62,
-          "popularity": 0.45
+          "popularity": 0.45,
+          "whole": {
+            "sell": 260.4,
+            "demand": 0.66,
+            "popularity": 0.48
+          }
         }
       }
     },
@@ -244,38 +404,68 @@
           "buy": 300,
           "sell": 380,
           "demand": 0.85,
-          "popularity": 0.9
+          "popularity": 0.9,
+          "whole": {
+            "sell": 353.4,
+            "demand": 0.89,
+            "popularity": 0.93
+          }
         },
         "visegrad": {
           "buy": 285,
           "sell": 365,
           "demand": 0.75,
-          "popularity": 0.8
+          "popularity": 0.8,
+          "whole": {
+            "sell": 339.45,
+            "demand": 0.79,
+            "popularity": 0.83
+          }
         },
         "china": {
           "buy": 155,
           "sell": 240,
           "demand": 0.65,
           "popularity": 0.7,
-          "supplier_url": "https://www.alibaba.com/product-detail/Multifunctional-Electric-Air-Fryer-Oil-Free_1600430223950.html"
+          "supplier_url": "https://www.alibaba.com/product-detail/Multifunctional-Electric-Air-Fryer-Oil-Free_1600430223950.html",
+          "whole": {
+            "sell": 223.2,
+            "demand": 0.69,
+            "popularity": 0.73
+          }
         },
         "europe": {
           "buy": 290,
           "sell": 370,
           "demand": 0.68,
-          "popularity": 0.7
+          "popularity": 0.7,
+          "whole": {
+            "sell": 344.1,
+            "demand": 0.72,
+            "popularity": 0.73
+          }
         },
         "baltic": {
           "buy": 295,
           "sell": 375,
           "demand": 0.7,
-          "popularity": 0.72
+          "popularity": 0.72,
+          "whole": {
+            "sell": 348.75,
+            "demand": 0.74,
+            "popularity": 0.75
+          }
         },
         "turkiye": {
           "buy": 250,
           "sell": 340,
           "demand": 0.68,
-          "popularity": 0.7
+          "popularity": 0.7,
+          "whole": {
+            "sell": 316.2,
+            "demand": 0.72,
+            "popularity": 0.73
+          }
         }
       }
     },
@@ -288,26 +478,46 @@
           "buy": 200,
           "sell": 260,
           "demand": 0.6,
-          "popularity": 0.4
+          "popularity": 0.4,
+          "whole": {
+            "sell": 241.8,
+            "demand": 0.64,
+            "popularity": 0.43
+          }
         },
         "visegrad": {
           "buy": 190,
           "sell": 248,
           "demand": 0.52,
-          "popularity": 0.4
+          "popularity": 0.4,
+          "whole": {
+            "sell": 230.64,
+            "demand": 0.56,
+            "popularity": 0.43
+          }
         },
         "china": {
           "buy": 88,
           "sell": 150,
           "demand": 0.5,
           "popularity": 0.38,
-          "supplier_url": "https://www.alibaba.com/product-detail/20V-Cordless-Electric-Hedge-Trimmer-with_10000041350229.html"
+          "supplier_url": "https://www.alibaba.com/product-detail/20V-Cordless-Electric-Hedge-Trimmer-with_10000041350229.html",
+          "whole": {
+            "sell": 139.5,
+            "demand": 0.54,
+            "popularity": 0.41
+          }
         },
         "europe": {
           "buy": 195,
           "sell": 252,
           "demand": 0.48,
-          "popularity": 0.38
+          "popularity": 0.38,
+          "whole": {
+            "sell": 234.36,
+            "demand": 0.52,
+            "popularity": 0.41
+          }
         }
       }
     },
@@ -321,26 +531,46 @@
           "buy": 640,
           "sell": 800,
           "demand": 0.55,
-          "popularity": 0.5
+          "popularity": 0.5,
+          "whole": {
+            "sell": 744.0,
+            "demand": 0.59,
+            "popularity": 0.53
+          }
         },
         "visegrad": {
           "buy": 610,
           "sell": 770,
           "demand": 0.5,
-          "popularity": 0.5
+          "popularity": 0.5,
+          "whole": {
+            "sell": 716.1,
+            "demand": 0.54,
+            "popularity": 0.53
+          }
         },
         "china": {
           "buy": 320,
           "sell": 480,
           "demand": 0.5,
           "popularity": 0.48,
-          "supplier_url": "https://www.alibaba.com/product-detail/Towbar-Bike-Rack_10000013522794.html"
+          "supplier_url": "https://www.alibaba.com/product-detail/Towbar-Bike-Rack_10000013522794.html",
+          "whole": {
+            "sell": 446.4,
+            "demand": 0.54,
+            "popularity": 0.51
+          }
         },
         "europe": {
           "buy": 630,
           "sell": 790,
           "demand": 0.5,
-          "popularity": 0.48
+          "popularity": 0.48,
+          "whole": {
+            "sell": 734.7,
+            "demand": 0.54,
+            "popularity": 0.51
+          }
         }
       }
     },
@@ -353,38 +583,68 @@
           "buy": 780,
           "sell": 950,
           "demand": 0.88,
-          "popularity": 0.92
+          "popularity": 0.92,
+          "whole": {
+            "sell": 883.5,
+            "demand": 0.92,
+            "popularity": 0.95
+          }
         },
         "visegrad": {
           "buy": 740,
           "sell": 910,
           "demand": 0.78,
-          "popularity": 0.82
+          "popularity": 0.82,
+          "whole": {
+            "sell": 846.3,
+            "demand": 0.82,
+            "popularity": 0.85
+          }
         },
         "china": {
           "buy": 420,
           "sell": 600,
           "demand": 0.72,
           "popularity": 0.75,
-          "supplier_url": "https://www.alibaba.com/product-detail/Vyzzle-D10-Robot-Vacuum-5000Pa-LiDAR_1601631540350.html"
+          "supplier_url": "https://www.alibaba.com/product-detail/Vyzzle-D10-Robot-Vacuum-5000Pa-LiDAR_1601631540350.html",
+          "whole": {
+            "sell": 558.0,
+            "demand": 0.76,
+            "popularity": 0.78
+          }
         },
         "europe": {
           "buy": 750,
           "sell": 920,
           "demand": 0.72,
-          "popularity": 0.75
+          "popularity": 0.75,
+          "whole": {
+            "sell": 855.6,
+            "demand": 0.76,
+            "popularity": 0.78
+          }
         },
         "baltic": {
           "buy": 770,
           "sell": 940,
           "demand": 0.74,
-          "popularity": 0.76
+          "popularity": 0.76,
+          "whole": {
+            "sell": 874.2,
+            "demand": 0.78,
+            "popularity": 0.79
+          }
         },
         "westeu": {
           "buy": 830,
           "sell": 1010,
           "demand": 0.78,
-          "popularity": 0.8
+          "popularity": 0.8,
+          "whole": {
+            "sell": 939.3,
+            "demand": 0.82,
+            "popularity": 0.83
+          }
         }
       }
     },
@@ -398,32 +658,57 @@
           "buy": 420,
           "sell": 520,
           "demand": 0.72,
-          "popularity": 0.6
+          "popularity": 0.6,
+          "whole": {
+            "sell": 483.6,
+            "demand": 0.76,
+            "popularity": 0.63
+          }
         },
         "visegrad": {
           "buy": 400,
           "sell": 500,
           "demand": 0.62,
-          "popularity": 0.55
+          "popularity": 0.55,
+          "whole": {
+            "sell": 465.0,
+            "demand": 0.66,
+            "popularity": 0.58
+          }
         },
         "china": {
           "buy": 210,
           "sell": 310,
           "demand": 0.55,
           "popularity": 0.5,
-          "supplier_url": "https://www.alibaba.com/product-detail/Electric-Steak-Grill-2200W-Indoor-Smokeless_1601155020936.html"
+          "supplier_url": "https://www.alibaba.com/product-detail/Electric-Steak-Grill-2200W-Indoor-Smokeless_1601155020936.html",
+          "whole": {
+            "sell": 288.3,
+            "demand": 0.59,
+            "popularity": 0.53
+          }
         },
         "turkiye": {
           "buy": 340,
           "sell": 450,
           "demand": 0.6,
-          "popularity": 0.55
+          "popularity": 0.55,
+          "whole": {
+            "sell": 418.5,
+            "demand": 0.64,
+            "popularity": 0.58
+          }
         },
         "balkan": {
           "buy": 390,
           "sell": 490,
           "demand": 0.55,
-          "popularity": 0.5
+          "popularity": 0.5,
+          "whole": {
+            "sell": 455.7,
+            "demand": 0.59,
+            "popularity": 0.53
+          }
         }
       }
     },
@@ -437,26 +722,46 @@
           "buy": 360,
           "sell": 440,
           "demand": 0.5,
-          "popularity": 0.35
+          "popularity": 0.35,
+          "whole": {
+            "sell": 409.2,
+            "demand": 0.54,
+            "popularity": 0.38
+          }
         },
         "visegrad": {
           "buy": 345,
           "sell": 425,
           "demand": 0.45,
-          "popularity": 0.35
+          "popularity": 0.35,
+          "whole": {
+            "sell": 395.25,
+            "demand": 0.49,
+            "popularity": 0.38
+          }
         },
         "china": {
           "buy": 135,
           "sell": 210,
           "demand": 0.45,
           "popularity": 0.35,
-          "supplier_url": "https://www.alibaba.com/product-detail/Portable-100W-Solar-Battery-Charger-Monocrystalline_1600978431139.html"
+          "supplier_url": "https://www.alibaba.com/product-detail/Portable-100W-Solar-Battery-Charger-Monocrystalline_1600978431139.html",
+          "whole": {
+            "sell": 195.3,
+            "demand": 0.49,
+            "popularity": 0.38
+          }
         },
         "turkiye": {
           "buy": 280,
           "sell": 370,
           "demand": 0.45,
-          "popularity": 0.35
+          "popularity": 0.35,
+          "whole": {
+            "sell": 344.1,
+            "demand": 0.49,
+            "popularity": 0.38
+          }
         }
       }
     },
@@ -470,26 +775,46 @@
           "buy": 120,
           "sell": 160,
           "demand": 0.45,
-          "popularity": 0.4
+          "popularity": 0.4,
+          "whole": {
+            "sell": 148.8,
+            "demand": 0.49,
+            "popularity": 0.43
+          }
         },
         "visegrad": {
           "buy": 115,
           "sell": 155,
           "demand": 0.4,
-          "popularity": 0.4
+          "popularity": 0.4,
+          "whole": {
+            "sell": 144.15,
+            "demand": 0.44,
+            "popularity": 0.43
+          }
         },
         "china": {
           "buy": 48,
           "sell": 90,
           "demand": 0.4,
           "popularity": 0.38,
-          "supplier_url": "https://www.alibaba.com/product-detail/2000W-Heat-gun-soldering-gun-with_1600559234368.html"
+          "supplier_url": "https://www.alibaba.com/product-detail/2000W-Heat-gun-soldering-gun-with_1600559234368.html",
+          "whole": {
+            "sell": 83.7,
+            "demand": 0.44,
+            "popularity": 0.41
+          }
         },
         "europe": {
           "buy": 118,
           "sell": 158,
           "demand": 0.38,
-          "popularity": 0.38
+          "popularity": 0.38,
+          "whole": {
+            "sell": 146.94,
+            "demand": 0.42,
+            "popularity": 0.41
+          }
         }
       }
     }

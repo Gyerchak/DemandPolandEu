@@ -71,6 +71,9 @@ std::vector<Market> load_markets(const std::string& dir) {
         m.lead_days = e.value("lead_days", 30);
         m.note = e.value("note", "");
         m.members = e.value("members", "");
+        auto sh = e.find("shops");
+        if (sh != e.end() && sh->is_array())
+            for (const auto& s : *sh) if (s.is_string()) m.shops.push_back(s.get<std::string>());
         out.push_back(std::move(m));
     }
     return out;
@@ -95,6 +98,12 @@ std::vector<Product> load_products(const std::string& dir) {
                 pm.demand = get_double(*it, "demand", 0.0);
                 pm.popularity = get_double(*it, "popularity", 0.0);
                 pm.supplier_url = it->value("supplier_url", "");
+                auto w = it->find("whole");
+                if (w != it->end() && w->is_object()) {
+                    pm.whole_sell = get_double(*w, "sell", 0.0);
+                    pm.whole_demand = get_double(*w, "demand", 0.0);
+                    pm.whole_popularity = get_double(*w, "popularity", 0.0);
+                }
                 p.markets[it.key()] = pm;
             }
         }
@@ -132,7 +141,9 @@ std::vector<Trade> build_trades(const std::string& dir,
                                 const std::string& home_market_id,
                                 const std::vector<std::string>& watch_markets,
                                 bool include_sale_vat,
-                                double margin_ref) {
+                                double margin_ref,
+                                const std::string& channel) {
+    const bool whole = (channel == "whole");
     auto markets = load_markets(dir);
     auto products = load_products(dir);
 
@@ -169,8 +180,12 @@ std::vector<Trade> build_trades(const std::string& dir,
             const std::string cat = resolve_category(product, dir);
 
             {
+                const ProductMarket& hp = ph->second;
+                double sell_ref = whole && hp.whole_sell > 0 ? hp.whole_sell : hp.sell;
+                double dem_ref  = whole ? hp.whole_demand  : hp.demand;
+                double pop_ref  = whole ? hp.whole_popularity : hp.popularity;
                 double buy_eur = local_to_eur(pm.buy, m);
-                double sell_eur = local_to_eur(ph->second.sell, *home);
+                double sell_eur = local_to_eur(sell_ref, *home);
                 double freight = m.freight_per_unit_eur + m.freight_per_kg_eur * product.weight_kg;
                 double duty = buy_eur * m.duty_rate;
                 double handling = m.handling_eur;
@@ -179,13 +194,15 @@ std::vector<Trade> build_trades(const std::string& dir,
                 double total = cost + vat;
                 double profit = sell_eur - total;
                 double margin = sell_eur != 0.0 ? profit / sell_eur : 0.0;
-                double sr = success_rate(ph->second.popularity, ph->second.demand);
+                double sr = success_rate(pop_ref, dem_ref);
 
                 Trade t;
                 t.kind = "import";
                 t.product_id = product.id;
                 t.product_name = product.name;
                 t.supplier_url = pm.supplier_url;      // buy market = from_market
+                t.channel = channel;
+                t.shops = whole ? home->shops : std::vector<std::string>{};
                 t.category = cat;
                 t.from_market_id = m.id;
                 t.from_market = m.name;
@@ -208,8 +225,12 @@ std::vector<Trade> build_trades(const std::string& dir,
             }
 
             {
-                double buy_eur = local_to_eur(ph->second.buy, *home);
-                double sell_eur = local_to_eur(pm.sell, m);
+                const ProductMarket& hp = ph->second;
+                double sell_ref = whole && pm.whole_sell > 0 ? pm.whole_sell : pm.sell;
+                double dem_ref  = whole ? pm.whole_demand  : pm.demand;
+                double pop_ref  = whole ? pm.whole_popularity : pm.popularity;
+                double buy_eur = local_to_eur(hp.buy, *home);
+                double sell_eur = local_to_eur(sell_ref, m);
                 double freight = home->freight_per_unit_eur + home->freight_per_kg_eur * product.weight_kg;
                 double duty = buy_eur * m.duty_rate;
                 double handling = m.handling_eur;
@@ -218,13 +239,15 @@ std::vector<Trade> build_trades(const std::string& dir,
                 double total = cost + vat;
                 double profit = sell_eur - total;
                 double margin = sell_eur != 0.0 ? profit / sell_eur : 0.0;
-                double sr = success_rate(pm.popularity, pm.demand);
+                double sr = success_rate(pop_ref, dem_ref);
 
                 Trade t;
                 t.kind = "export";
                 t.product_id = product.id;
                 t.product_name = product.name;
-                t.supplier_url = ph->second.supplier_url;   // buy market = home
+                t.supplier_url = hp.supplier_url;   // buy market = home
+                t.channel = channel;
+                t.shops = whole ? m.shops : std::vector<std::string>{};
                 t.category = cat;
                 t.from_market_id = home->id;
                 t.from_market = home->name;

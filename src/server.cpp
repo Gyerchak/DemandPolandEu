@@ -203,6 +203,8 @@ int run_web(const std::string& data_dir, const std::string& host, int port) {
             std::string sort = query_value(target, "sort");
             if (sort.empty()) sort = "opportunity";
             std::string category = query_value(target, "category");
+            std::string channel = query_value(target, "channel");
+            if (channel != "whole") channel = "main";
 
             // homes=all  ->  every WATCHED market acts as its own home market,
             // matched against ALL counterparty markets (full cross-market matrix).
@@ -212,12 +214,12 @@ int run_web(const std::string& data_dir, const std::string& host, int port) {
             if (homes_q == "all") {
                 for (const auto& m : markets) {
                     if (!m.watch) continue;                    // watched = home candidates
-                    auto part = build_trades(".", m.id, {}, include_vat, margin_ref);
+                    auto part = build_trades(".", m.id, {}, include_vat, margin_ref, channel);
                     trades.insert(trades.end(), part.begin(), part.end());
                 }
                 home_label = "all watched";
             } else {
-                trades = build_trades(".", home, watch, include_vat, margin_ref);
+                trades = build_trades(".", home, watch, include_vat, margin_ref, channel);
             }
             if (!category.empty()) {
                 trades.erase(std::remove_if(trades.begin(), trades.end(),
@@ -235,6 +237,7 @@ int run_web(const std::string& data_dir, const std::string& host, int port) {
 
             nlohmann::json resp{
                 {"home", home_label},
+                {"channel", channel},
                 {"count", trades.size()},
                 {"imports", imports},
                 {"exports", exports},

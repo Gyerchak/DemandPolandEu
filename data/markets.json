@@ -14,7 +14,17 @@
       "vat_rate": 0.23,
       "lead_days": 3,
       "note": "Home market",
-      "members": ""
+      "members": "",
+      "shops": [
+        "Allegro",
+        "Amazon.pl",
+        "Media Expert",
+        "X-KOM",
+        "MediaMarkt",
+        "RTV Euro AGD",
+        "Morele.net",
+        "Neonet"
+      ]
     },
     {
       "id": "visegrad",
@@ -30,7 +40,16 @@
       "vat_rate": 0.21,
       "lead_days": 7,
       "note": "Poland, Czechia, Slovakia, Hungary — main export/import market",
-      "members": "PL, CZ, SK, HU"
+      "members": "PL, CZ, SK, HU",
+      "shops": [
+        "Allegro (PL)",
+        "Amazon.pl",
+        "Alza.cz",
+        "Alza.sk",
+        "eMAG.hu",
+        "Extreme Digital (HU)",
+        "Árukereső (HU)"
+      ]
     },
     {
       "id": "china",
@@ -46,7 +65,15 @@
       "vat_rate": 0.13,
       "lead_days": 45,
       "note": "Sourcing giant",
-      "members": ""
+      "members": "",
+      "shops": [
+        "1688.com",
+        "Taobao",
+        "Tmall",
+        "Made-in-China",
+        "DHgate",
+        "AliExpress"
+      ]
     },
     {
       "id": "europe",
@@ -62,7 +89,15 @@
       "vat_rate": 0.21,
       "lead_days": 9,
       "note": "EU core markets",
-      "members": ""
+      "members": "",
+      "shops": [
+        "Amazon.de",
+        "OTTO.de",
+        "Idealo-listed (DE)",
+        "eBay.de",
+        "Cdiscount (FR)",
+        "Fnac (FR)"
+      ]
     },
     {
       "id": "baltic",
@@ -78,7 +113,15 @@
       "vat_rate": 0.21,
       "lead_days": 6,
       "note": "Lithuania, Latvia, Estonia",
-      "members": "LT, LV, EE"
+      "members": "LT, LV, EE",
+      "shops": [
+        "Pigu.lt",
+        "Pigu.lv",
+        "Pigu.ee",
+        "1a.lt",
+        "elektromarkt.lt",
+        "Kaup24.ee"
+      ]
     },
     {
       "id": "turkiye",
@@ -94,7 +137,15 @@
       "vat_rate": 0.2,
       "lead_days": 15,
       "note": "Manufacturing hub",
-      "members": ""
+      "members": "",
+      "shops": [
+        "Trendyol",
+        "Hepsiburada",
+        "N11",
+        "Amazon.com.tr",
+        "Çiçeksepeti",
+        "MediaMarkt (TR)"
+      ]
     },
     {
       "id": "westeu",
@@ -110,7 +161,16 @@
       "vat_rate": 0.2,
       "lead_days": 8,
       "note": "Western non-EU countries",
-      "members": "UK, CH, NO"
+      "members": "UK, CH, NO",
+      "shops": [
+        "Amazon.co.uk",
+        "Argos",
+        "Currys (UK)",
+        "Idealo.co.uk",
+        "Komplett.no",
+        "Digitec.ch",
+        "Galaxus.ch"
+      ]
     },
     {
       "id": "turkic",
@@ -126,7 +186,11 @@
       "vat_rate": 0.15,
       "lead_days": 25,
       "note": "Azerbaijan + Central Asia (Turkic only)",
-      "members": "AZ, KZ, UZ (etc.)"
+      "members": "AZ, KZ, UZ (etc.)",
+      "shops": [
+        "AliExpress",
+        "local B2B marketplaces"
+      ]
     },
     {
       "id": "ukraine",
@@ -142,7 +206,12 @@
       "vat_rate": 0.2,
       "lead_days": 12,
       "note": "Ukraine",
-      "members": ""
+      "members": "",
+      "shops": [
+        "Rozetka",
+        "Prom.ua",
+        "Hotline.ua"
+      ]
     },
     {
       "id": "belarus",
@@ -158,7 +227,12 @@
       "vat_rate": 0.2,
       "lead_days": 10,
       "note": "Belarus",
-      "members": ""
+      "members": "",
+      "shops": [
+        "Ozon",
+        "Wildberries",
+        "Yandex Market"
+      ]
     },
     {
       "id": "kaliningrad",
@@ -174,7 +248,11 @@
       "vat_rate": 0.2,
       "lead_days": 11,
       "note": "Kaliningrad exclave",
-      "members": ""
+      "members": "",
+      "shops": [
+        "Ozon",
+        "Wildberries"
+      ]
     },
     {
       "id": "belarus-russia",
@@ -190,7 +268,12 @@
       "vat_rate": 0.2,
       "lead_days": 14,
       "note": "Belarus + Russia without Kaliningrad",
-      "members": ""
+      "members": "",
+      "shops": [
+        "Ozon",
+        "Wildberries",
+        "Yandex Market"
+      ]
     },
     {
       "id": "north-africa",
@@ -206,7 +289,11 @@
       "vat_rate": 0.2,
       "lead_days": 16,
       "note": "Morocco, Tunisia, Algeria, Libya",
-      "members": "MA, TN, DZ, LY"
+      "members": "MA, TN, DZ, LY",
+      "shops": [
+        "Jumia (MA/TN)",
+        "Mytek (TN)"
+      ]
     },
     {
       "id": "balkan",
@@ -222,7 +309,13 @@
       "vat_rate": 0.2,
       "lead_days": 10,
       "note": "Non-EU Balkan countries",
-      "members": "non-EU"
+      "members": "non-EU",
+      "shops": [
+        "eMAG.ro",
+        "Ananas (RS)",
+        "Tehnomanija (BA)",
+        "KupujemProdajem (RS)"
+      ]
     }
   ]
 }
