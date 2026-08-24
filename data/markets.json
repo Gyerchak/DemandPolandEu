@@ -23,7 +23,13 @@
         "MediaMarkt",
         "RTV Euro AGD",
         "Morele.net",
-        "Neonet"
+        "Neonet",
+        "euro.com.pl",
+        "Sferis",
+        "Komputronik",
+        "Ollie",
+        "Pepper.pl shops",
+        "Ceneo-listed"
       ],
       "search": "https://www.ceneo.pl/szukaj?query={q}"
     },
@@ -49,7 +55,11 @@
         "Alza.sk",
         "eMAG.hu",
         "Extreme Digital (HU)",
-        "Árukereső (HU)"
+        "Árukereső (HU)",
+        "Mall.sk",
+        "CZC.cz",
+        "Alfa.hu",
+        "Vásárolj.hu"
       ],
       "search": "https://www.ceneo.pl/szukaj?query={q}"
     },
@@ -74,7 +84,10 @@
         "Tmall",
         "Made-in-China",
         "DHgate",
-        "AliExpress"
+        "AliExpress",
+        "Alibaba.com",
+        "JD.com",
+        "Pinduoduo"
       ],
       "search": "https://www.alibaba.com/trade/search?SearchText={q}"
     },
@@ -99,7 +112,12 @@
         "Idealo-listed (DE)",
         "eBay.de",
         "Cdiscount (FR)",
-        "Fnac (FR)"
+        "Fnac (FR)",
+        "MediaMarkt.de",
+        "Saturn",
+        "Conrad",
+        "Notebooksbilliger",
+        "Galaxus.de"
       ],
       "search": "https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q={q}"
     },
@@ -124,7 +142,11 @@
         "Pigu.ee",
         "1a.lt",
         "elektromarkt.lt",
-        "Kaup24.ee"
+        "Kaup24.ee",
+        "Senukai.lt",
+        "Rde.lv",
+        "Hobbyteam.lt",
+        "Kainos24"
       ],
       "search": "https://kaina24.lt/search?q={q}"
     },
@@ -149,7 +171,11 @@
         "N11",
         "Amazon.com.tr",
         "Çiçeksepeti",
-        "MediaMarkt (TR)"
+        "MediaMarkt (TR)",
+        "Vatan Bilgisayar",
+        "Teknosa",
+        "Mediamarkt TR shops",
+        "Akakçe-listed"
       ],
       "search": "https://www.akakce.com/ara/?q={q}"
     },
@@ -175,7 +201,11 @@
         "Idealo.co.uk",
         "Komplett.no",
         "Digitec.ch",
-        "Galaxus.ch"
+        "Galaxus.ch",
+        "ebay.co.uk",
+        "John Lewis",
+        "Very.co.uk",
+        "Coolblue.nl"
       ],
       "search": "https://www.idealo.co.uk/preisvergleich/MainSearchProductCategory.html?q={q}"
     },
@@ -196,7 +226,10 @@
       "members": "AZ, KZ, UZ (etc.)",
       "shops": [
         "AliExpress",
-        "local B2B marketplaces"
+        "local B2B marketplaces",
+        "Uzum (UZ)",
+        "Kaspi.kz (KZ)",
+        "Yandex Market"
       ],
       "search": "https://www.alibaba.com/trade/search?SearchText={q}"
     },
@@ -218,7 +251,11 @@
       "shops": [
         "Rozetka",
         "Prom.ua",
-        "Hotline.ua"
+        "Hotline.ua",
+        "Foxtrot",
+        "Allo.ua",
+        "Citrus.ua",
+        "Eldorado.ua"
       ],
       "search": "https://hotline.ua/search/?q={q}"
     },
@@ -240,7 +277,10 @@
       "shops": [
         "Ozon",
         "Wildberries",
-        "Yandex Market"
+        "Yandex Market",
+        "Onliner.by",
+        "21vek.by",
+        "e-Dostavka"
       ],
       "search": "https://catalog.onliner.by/search?query={q}"
     },
@@ -261,7 +301,9 @@
       "members": "",
       "shops": [
         "Ozon",
-        "Wildberries"
+        "Wildberries",
+        "DNS-shop",
+        "Citilink"
       ],
       "search": "https://www.e-katalog.ru/ek-list.php?search_={q}"
     },
@@ -283,7 +325,10 @@
       "shops": [
         "Ozon",
         "Wildberries",
-        "Yandex Market"
+        "Yandex Market",
+        "DNS-shop",
+        "Citilink",
+        "M.Video"
       ],
       "search": "https://www.e-katalog.ru/ek-list.php?search_={q}"
     },
@@ -304,7 +349,9 @@
       "members": "MA, TN, DZ, LY",
       "shops": [
         "Jumia (MA/TN)",
-        "Mytek (TN)"
+        "Mytek (TN)",
+        "Tunisianet",
+        "Carrefour (MA)"
       ],
       "search": "https://www.jumia.com.ma/catalog/?q={q}"
     },
@@ -327,7 +374,9 @@
         "eMAG.ro",
         "Ananas (RS)",
         "Tehnomanija (BA)",
-        "KupujemProdajem (RS)"
+        "KupujemProdajem (RS)",
+        "Gigatron (RS)",
+        "Studio Moderna (RO)"
       ],
       "search": "https://www.epiesa.ro/Cautare?q={q}"
     }

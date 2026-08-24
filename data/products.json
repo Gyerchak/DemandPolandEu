@@ -1731,6 +1731,3681 @@
           "price_source": "est"
         }
       }
+    },
+    {
+      "id": "e-scooter-mini",
+      "name": "Foldable mini e-scooter 350W",
+      "weight_kg": 13.5,
+      "markets": {
+        "poland": {
+          "buy": 864.0,
+          "sell": 1245.0,
+          "demand": 0.57,
+          "popularity": 0.79,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 816.0,
+          "sell": 1117.6,
+          "demand": 0.74,
+          "popularity": 0.66,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 480.0,
+          "sell": 655.4,
+          "demand": 0.73,
+          "popularity": 0.52,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 840.0,
+          "sell": 1236.6,
+          "demand": 0.53,
+          "popularity": 0.54,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 854.4,
+          "sell": 1255.6,
+          "demand": 0.87,
+          "popularity": 0.56,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 696.0,
+          "sell": 983.0,
+          "demand": 0.78,
+          "popularity": 0.93,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 960.0,
+          "sell": 1452.4,
+          "demand": 0.68,
+          "popularity": 0.94,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 768.0,
+          "sell": 1046.2,
+          "demand": 0.89,
+          "popularity": 0.63,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 744.0,
+          "sell": 1034.1,
+          "demand": 0.55,
+          "popularity": 0.64,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 720.0,
+          "sell": 1138.2,
+          "demand": 0.58,
+          "popularity": 0.76,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 758.4,
+          "sell": 1160.7,
+          "demand": 0.67,
+          "popularity": 0.75,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 720.0,
+          "sell": 984.1,
+          "demand": 0.53,
+          "popularity": 0.59,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 816.0,
+          "sell": 1258.5,
+          "demand": 0.69,
+          "popularity": 0.64,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 840.0,
+          "sell": 1272.9,
+          "demand": 0.7,
+          "popularity": 0.63,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "electric-bike",
+      "name": "Electric city bike 48V",
+      "weight_kg": 24.0,
+      "markets": {
+        "poland": {
+          "buy": 2250.0,
+          "sell": 3542.9,
+          "demand": 0.81,
+          "popularity": 0.61,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 2125.0,
+          "sell": 3213.3,
+          "demand": 0.74,
+          "popularity": 0.89,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 1250.0,
+          "sell": 1945.2,
+          "demand": 0.63,
+          "popularity": 0.94,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 2187.5,
+          "sell": 3024.3,
+          "demand": 0.69,
+          "popularity": 0.84,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 2225.0,
+          "sell": 3097.6,
+          "demand": 0.72,
+          "popularity": 0.52,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 1812.5,
+          "sell": 2789.0,
+          "demand": 0.84,
+          "popularity": 0.76,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 2500.0,
+          "sell": 3994.1,
+          "demand": 0.64,
+          "popularity": 0.81,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 2000.0,
+          "sell": 3035.6,
+          "demand": 0.76,
+          "popularity": 0.71,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 1937.5,
+          "sell": 3075.9,
+          "demand": 0.93,
+          "popularity": 0.71,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 1875.0,
+          "sell": 2883.0,
+          "demand": 0.53,
+          "popularity": 0.82,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 1975.0,
+          "sell": 3027.2,
+          "demand": 0.95,
+          "popularity": 0.87,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 1875.0,
+          "sell": 2680.9,
+          "demand": 0.67,
+          "popularity": 0.8,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 2125.0,
+          "sell": 2880.2,
+          "demand": 0.71,
+          "popularity": 0.58,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 2187.5,
+          "sell": 3023.7,
+          "demand": 0.53,
+          "popularity": 0.85,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "e-bike-battery",
+      "name": "E-bike battery 48V 15Ah",
+      "weight_kg": 7.0,
+      "markets": {
+        "poland": {
+          "buy": 684.0,
+          "sell": 947.8,
+          "demand": 0.61,
+          "popularity": 0.68,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 646.0,
+          "sell": 1031.3,
+          "demand": 0.54,
+          "popularity": 0.7,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 380.0,
+          "sell": 571.9,
+          "demand": 0.9,
+          "popularity": 0.87,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 665.0,
+          "sell": 1060.3,
+          "demand": 0.63,
+          "popularity": 0.69,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 676.4,
+          "sell": 981.4,
+          "demand": 0.9,
+          "popularity": 0.93,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 551.0,
+          "sell": 766.9,
+          "demand": 0.58,
+          "popularity": 0.6,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 760.0,
+          "sell": 1075.6,
+          "demand": 0.72,
+          "popularity": 0.77,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 608.0,
+          "sell": 865.6,
+          "demand": 0.5,
+          "popularity": 0.69,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 589.0,
+          "sell": 856.3,
+          "demand": 0.75,
+          "popularity": 0.93,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 570.0,
+          "sell": 880.7,
+          "demand": 0.73,
+          "popularity": 0.78,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 600.4,
+          "sell": 925.2,
+          "demand": 0.52,
+          "popularity": 0.9,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 570.0,
+          "sell": 895.2,
+          "demand": 0.89,
+          "popularity": 0.86,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 646.0,
+          "sell": 943.4,
+          "demand": 0.68,
+          "popularity": 0.55,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 665.0,
+          "sell": 1016.9,
+          "demand": 0.53,
+          "popularity": 0.53,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "hoverboard",
+      "name": "Hoverboard self-balancing",
+      "weight_kg": 10.0,
+      "markets": {
+        "poland": {
+          "buy": 630.0,
+          "sell": 887.2,
+          "demand": 0.57,
+          "popularity": 0.65,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 595.0,
+          "sell": 811.5,
+          "demand": 0.5,
+          "popularity": 0.57,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 350.0,
+          "sell": 482.2,
+          "demand": 0.66,
+          "popularity": 0.51,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 612.5,
+          "sell": 978.4,
+          "demand": 0.78,
+          "popularity": 0.57,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 623.0,
+          "sell": 885.1,
+          "demand": 0.66,
+          "popularity": 0.66,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 507.5,
+          "sell": 702.3,
+          "demand": 0.88,
+          "popularity": 0.95,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 700.0,
+          "sell": 1036.9,
+          "demand": 0.72,
+          "popularity": 0.54,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 560.0,
+          "sell": 771.7,
+          "demand": 0.65,
+          "popularity": 0.62,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 542.5,
+          "sell": 859.5,
+          "demand": 0.57,
+          "popularity": 0.51,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 525.0,
+          "sell": 850.0,
+          "demand": 0.74,
+          "popularity": 0.57,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 553.0,
+          "sell": 831.3,
+          "demand": 0.51,
+          "popularity": 0.74,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 525.0,
+          "sell": 854.1,
+          "demand": 0.89,
+          "popularity": 0.81,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 595.0,
+          "sell": 846.8,
+          "demand": 0.67,
+          "popularity": 0.58,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 612.5,
+          "sell": 960.5,
+          "demand": 0.74,
+          "popularity": 0.85,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "stand-mixer",
+      "name": "Stand mixer 1200W",
+      "weight_kg": 6.5,
+      "markets": {
+        "poland": {
+          "buy": 324.0,
+          "sell": 467.4,
+          "demand": 0.6,
+          "popularity": 0.87,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 306.0,
+          "sell": 498.4,
+          "demand": 0.88,
+          "popularity": 0.86,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 180.0,
+          "sell": 284.7,
+          "demand": 0.83,
+          "popularity": 0.6,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 315.0,
+          "sell": 471.2,
+          "demand": 0.66,
+          "popularity": 0.51,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 320.4,
+          "sell": 434.8,
+          "demand": 0.63,
+          "popularity": 0.62,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 261.0,
+          "sell": 403.4,
+          "demand": 0.93,
+          "popularity": 0.7,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 360.0,
+          "sell": 581.4,
+          "demand": 0.94,
+          "popularity": 0.93,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 288.0,
+          "sell": 418.3,
+          "demand": 0.6,
+          "popularity": 0.6,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 279.0,
+          "sell": 392.0,
+          "demand": 0.59,
+          "popularity": 0.78,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 270.0,
+          "sell": 433.3,
+          "demand": 0.88,
+          "popularity": 0.72,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 284.4,
+          "sell": 436.4,
+          "demand": 0.86,
+          "popularity": 0.54,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 270.0,
+          "sell": 414.9,
+          "demand": 0.91,
+          "popularity": 0.85,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 306.0,
+          "sell": 478.0,
+          "demand": 0.72,
+          "popularity": 0.58,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 315.0,
+          "sell": 495.5,
+          "demand": 0.65,
+          "popularity": 0.86,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "rice-cooker",
+      "name": "Rice cooker 1.8L digital",
+      "weight_kg": 3.0,
+      "markets": {
+        "poland": {
+          "buy": 81.0,
+          "sell": 131.6,
+          "demand": 0.68,
+          "popularity": 0.68,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 76.5,
+          "sell": 123.8,
+          "demand": 0.83,
+          "popularity": 0.58,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 45.0,
+          "sell": 62.3,
+          "demand": 0.57,
+          "popularity": 0.91,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 78.8,
+          "sell": 124.4,
+          "demand": 0.57,
+          "popularity": 0.87,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 80.1,
+          "sell": 130.4,
+          "demand": 0.8,
+          "popularity": 0.66,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 65.2,
+          "sell": 98.1,
+          "demand": 0.56,
+          "popularity": 0.51,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 90.0,
+          "sell": 146.2,
+          "demand": 0.79,
+          "popularity": 0.74,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 72.0,
+          "sell": 116.2,
+          "demand": 0.7,
+          "popularity": 0.89,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 69.8,
+          "sell": 110.5,
+          "demand": 0.59,
+          "popularity": 0.61,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 67.5,
+          "sell": 96.7,
+          "demand": 0.61,
+          "popularity": 0.76,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 71.1,
+          "sell": 101.2,
+          "demand": 0.69,
+          "popularity": 0.56,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 67.5,
+          "sell": 108.5,
+          "demand": 0.66,
+          "popularity": 0.71,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 76.5,
+          "sell": 115.9,
+          "demand": 0.91,
+          "popularity": 0.69,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 78.8,
+          "sell": 126.8,
+          "demand": 0.73,
+          "popularity": 0.74,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "food-processor",
+      "name": "Food processor 800W",
+      "weight_kg": 4.5,
+      "markets": {
+        "poland": {
+          "buy": 216.0,
+          "sell": 323.5,
+          "demand": 0.51,
+          "popularity": 0.7,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 204.0,
+          "sell": 285.8,
+          "demand": 0.5,
+          "popularity": 0.86,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 120.0,
+          "sell": 167.8,
+          "demand": 0.71,
+          "popularity": 0.83,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 210.0,
+          "sell": 316.5,
+          "demand": 0.65,
+          "popularity": 0.73,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 213.6,
+          "sell": 321.8,
+          "demand": 0.85,
+          "popularity": 0.55,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 174.0,
+          "sell": 262.4,
+          "demand": 0.61,
+          "popularity": 0.62,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 240.0,
+          "sell": 376.4,
+          "demand": 0.73,
+          "popularity": 0.75,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 192.0,
+          "sell": 300.4,
+          "demand": 0.91,
+          "popularity": 0.7,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 186.0,
+          "sell": 283.3,
+          "demand": 0.73,
+          "popularity": 0.73,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 180.0,
+          "sell": 278.2,
+          "demand": 0.7,
+          "popularity": 0.74,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 189.6,
+          "sell": 281.5,
+          "demand": 0.92,
+          "popularity": 0.81,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 180.0,
+          "sell": 287.6,
+          "demand": 0.92,
+          "popularity": 0.62,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 204.0,
+          "sell": 307.6,
+          "demand": 0.92,
+          "popularity": 0.88,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 210.0,
+          "sell": 291.5,
+          "demand": 0.55,
+          "popularity": 0.7,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "sous-vide",
+      "name": "Sous vide immersion cooker",
+      "weight_kg": 1.2,
+      "markets": {
+        "poland": {
+          "buy": 117.0,
+          "sell": 160.2,
+          "demand": 0.61,
+          "popularity": 0.53,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 110.5,
+          "sell": 170.1,
+          "demand": 0.85,
+          "popularity": 0.9,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 65.0,
+          "sell": 90.5,
+          "demand": 0.82,
+          "popularity": 0.8,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 113.8,
+          "sell": 158.1,
+          "demand": 0.9,
+          "popularity": 0.94,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 115.7,
+          "sell": 163.3,
+          "demand": 0.93,
+          "popularity": 0.68,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 94.2,
+          "sell": 140.1,
+          "demand": 0.95,
+          "popularity": 0.87,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 130.0,
+          "sell": 181.3,
+          "demand": 0.69,
+          "popularity": 0.73,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 104.0,
+          "sell": 150.3,
+          "demand": 0.59,
+          "popularity": 0.64,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 100.8,
+          "sell": 156.7,
+          "demand": 0.51,
+          "popularity": 0.75,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 97.5,
+          "sell": 143.7,
+          "demand": 0.51,
+          "popularity": 0.65,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 102.7,
+          "sell": 156.7,
+          "demand": 0.73,
+          "popularity": 0.53,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 97.5,
+          "sell": 158.8,
+          "demand": 0.85,
+          "popularity": 0.94,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 110.5,
+          "sell": 152.4,
+          "demand": 0.62,
+          "popularity": 0.52,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 113.8,
+          "sell": 178.7,
+          "demand": 0.62,
+          "popularity": 0.56,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "ice-maker",
+      "name": "Countertop ice maker",
+      "weight_kg": 8.0,
+      "markets": {
+        "poland": {
+          "buy": 540.0,
+          "sell": 793.2,
+          "demand": 0.91,
+          "popularity": 0.87,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 510.0,
+          "sell": 725.4,
+          "demand": 0.57,
+          "popularity": 0.91,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 300.0,
+          "sell": 453.3,
+          "demand": 0.82,
+          "popularity": 0.54,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 525.0,
+          "sell": 716.8,
+          "demand": 0.81,
+          "popularity": 0.69,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 534.0,
+          "sell": 731.3,
+          "demand": 0.92,
+          "popularity": 0.79,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 435.0,
+          "sell": 685.8,
+          "demand": 0.54,
+          "popularity": 0.89,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 600.0,
+          "sell": 820.8,
+          "demand": 0.89,
+          "popularity": 0.7,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 480.0,
+          "sell": 693.8,
+          "demand": 0.75,
+          "popularity": 0.92,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 465.0,
+          "sell": 662.7,
+          "demand": 0.56,
+          "popularity": 0.74,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 450.0,
+          "sell": 637.5,
+          "demand": 0.55,
+          "popularity": 0.57,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 474.0,
+          "sell": 646.2,
+          "demand": 0.59,
+          "popularity": 0.64,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 450.0,
+          "sell": 646.0,
+          "demand": 0.84,
+          "popularity": 0.63,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 510.0,
+          "sell": 760.4,
+          "demand": 0.58,
+          "popularity": 0.66,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 525.0,
+          "sell": 710.9,
+          "demand": 0.61,
+          "popularity": 0.51,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "vacuum-sealer",
+      "name": "Vacuum sealer 30cm",
+      "weight_kg": 2.5,
+      "markets": {
+        "poland": {
+          "buy": 144.0,
+          "sell": 224.2,
+          "demand": 0.75,
+          "popularity": 0.59,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 136.0,
+          "sell": 201.8,
+          "demand": 0.92,
+          "popularity": 0.55,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 80.0,
+          "sell": 126.5,
+          "demand": 0.69,
+          "popularity": 0.72,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 140.0,
+          "sell": 222.0,
+          "demand": 0.68,
+          "popularity": 0.73,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 142.4,
+          "sell": 219.9,
+          "demand": 0.94,
+          "popularity": 0.65,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 116.0,
+          "sell": 183.9,
+          "demand": 0.82,
+          "popularity": 0.79,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 160.0,
+          "sell": 234.2,
+          "demand": 0.66,
+          "popularity": 0.52,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 128.0,
+          "sell": 177.4,
+          "demand": 0.53,
+          "popularity": 0.83,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 124.0,
+          "sell": 176.3,
+          "demand": 0.57,
+          "popularity": 0.54,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 120.0,
+          "sell": 190.6,
+          "demand": 0.89,
+          "popularity": 0.8,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 126.4,
+          "sell": 180.6,
+          "demand": 0.61,
+          "popularity": 0.63,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 120.0,
+          "sell": 177.5,
+          "demand": 0.57,
+          "popularity": 0.7,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 136.0,
+          "sell": 193.6,
+          "demand": 0.93,
+          "popularity": 0.94,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 140.0,
+          "sell": 210.6,
+          "demand": 0.61,
+          "popularity": 0.93,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "induction-hob",
+      "name": "Portable induction hob 2000W",
+      "weight_kg": 3.2,
+      "markets": {
+        "poland": {
+          "buy": 162.0,
+          "sell": 232.8,
+          "demand": 0.66,
+          "popularity": 0.5,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 153.0,
+          "sell": 223.0,
+          "demand": 0.71,
+          "popularity": 0.73,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 90.0,
+          "sell": 126.5,
+          "demand": 0.73,
+          "popularity": 0.5,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 157.5,
+          "sell": 224.3,
+          "demand": 0.54,
+          "popularity": 0.68,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 160.2,
+          "sell": 218.0,
+          "demand": 0.51,
+          "popularity": 0.64,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 130.5,
+          "sell": 184.7,
+          "demand": 0.76,
+          "popularity": 0.74,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 180.0,
+          "sell": 281.2,
+          "demand": 0.8,
+          "popularity": 0.82,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 144.0,
+          "sell": 230.2,
+          "demand": 0.68,
+          "popularity": 0.65,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 139.5,
+          "sell": 227.2,
+          "demand": 0.57,
+          "popularity": 0.83,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 135.0,
+          "sell": 206.8,
+          "demand": 0.52,
+          "popularity": 0.88,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 142.2,
+          "sell": 227.8,
+          "demand": 0.78,
+          "popularity": 0.83,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 135.0,
+          "sell": 213.3,
+          "demand": 0.56,
+          "popularity": 0.74,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 153.0,
+          "sell": 228.3,
+          "demand": 0.88,
+          "popularity": 0.86,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 157.5,
+          "sell": 249.4,
+          "demand": 0.76,
+          "popularity": 0.9,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "lawn-mower",
+      "name": "Electric lawn mower 1400W",
+      "weight_kg": 18.0,
+      "markets": {
+        "poland": {
+          "buy": 756.0,
+          "sell": 1166.5,
+          "demand": 0.81,
+          "popularity": 0.6,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 714.0,
+          "sell": 969.5,
+          "demand": 0.56,
+          "popularity": 0.66,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 420.0,
+          "sell": 579.1,
+          "demand": 0.88,
+          "popularity": 0.75,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 735.0,
+          "sell": 1122.6,
+          "demand": 0.78,
+          "popularity": 0.81,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 747.6,
+          "sell": 1112.4,
+          "demand": 0.5,
+          "popularity": 0.86,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 609.0,
+          "sell": 951.0,
+          "demand": 0.73,
+          "popularity": 0.74,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 840.0,
+          "sell": 1290.4,
+          "demand": 0.53,
+          "popularity": 0.83,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 672.0,
+          "sell": 954.7,
+          "demand": 0.53,
+          "popularity": 0.62,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 651.0,
+          "sell": 1013.0,
+          "demand": 0.59,
+          "popularity": 0.83,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 630.0,
+          "sell": 1024.4,
+          "demand": 0.72,
+          "popularity": 0.67,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 663.6,
+          "sell": 985.5,
+          "demand": 0.81,
+          "popularity": 0.85,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 630.0,
+          "sell": 960.3,
+          "demand": 0.79,
+          "popularity": 0.53,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 714.0,
+          "sell": 993.1,
+          "demand": 0.61,
+          "popularity": 0.83,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 735.0,
+          "sell": 1055.1,
+          "demand": 0.76,
+          "popularity": 0.51,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "pressure-washer",
+      "name": "Pressure washer 1800W",
+      "weight_kg": 11.0,
+      "markets": {
+        "poland": {
+          "buy": 414.0,
+          "sell": 565.6,
+          "demand": 0.62,
+          "popularity": 0.8,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 391.0,
+          "sell": 604.3,
+          "demand": 0.8,
+          "popularity": 0.63,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 230.0,
+          "sell": 344.0,
+          "demand": 0.71,
+          "popularity": 0.71,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 402.5,
+          "sell": 556.5,
+          "demand": 0.9,
+          "popularity": 0.59,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 409.4,
+          "sell": 666.0,
+          "demand": 0.92,
+          "popularity": 0.51,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 333.5,
+          "sell": 493.4,
+          "demand": 0.87,
+          "popularity": 0.94,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 460.0,
+          "sell": 679.3,
+          "demand": 0.62,
+          "popularity": 0.59,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 368.0,
+          "sell": 595.3,
+          "demand": 0.59,
+          "popularity": 0.76,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 356.5,
+          "sell": 495.3,
+          "demand": 0.74,
+          "popularity": 0.93,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 345.0,
+          "sell": 478.4,
+          "demand": 0.87,
+          "popularity": 0.73,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 363.4,
+          "sell": 581.8,
+          "demand": 0.82,
+          "popularity": 0.6,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 345.0,
+          "sell": 553.4,
+          "demand": 0.72,
+          "popularity": 0.51,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 391.0,
+          "sell": 527.9,
+          "demand": 0.72,
+          "popularity": 0.7,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 402.5,
+          "sell": 577.5,
+          "demand": 0.56,
+          "popularity": 0.65,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "cordless-drill",
+      "name": "Cordless drill 20V 2Ah",
+      "weight_kg": 2.0,
+      "markets": {
+        "poland": {
+          "buy": 153.0,
+          "sell": 220.1,
+          "demand": 0.88,
+          "popularity": 0.5,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 144.5,
+          "sell": 225.7,
+          "demand": 0.88,
+          "popularity": 0.55,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 85.0,
+          "sell": 137.0,
+          "demand": 0.82,
+          "popularity": 0.91,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 148.8,
+          "sell": 213.0,
+          "demand": 0.67,
+          "popularity": 0.68,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 151.3,
+          "sell": 247.0,
+          "demand": 0.77,
+          "popularity": 0.66,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 123.2,
+          "sell": 181.2,
+          "demand": 0.62,
+          "popularity": 0.52,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 170.0,
+          "sell": 234.2,
+          "demand": 0.88,
+          "popularity": 0.63,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 136.0,
+          "sell": 219.6,
+          "demand": 0.61,
+          "popularity": 0.62,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 131.8,
+          "sell": 196.9,
+          "demand": 0.59,
+          "popularity": 0.67,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 127.5,
+          "sell": 206.6,
+          "demand": 0.9,
+          "popularity": 0.87,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 134.3,
+          "sell": 205.2,
+          "demand": 0.91,
+          "popularity": 0.92,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 127.5,
+          "sell": 191.9,
+          "demand": 0.82,
+          "popularity": 0.52,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 144.5,
+          "sell": 225.0,
+          "demand": 0.7,
+          "popularity": 0.84,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 148.8,
+          "sell": 228.0,
+          "demand": 0.63,
+          "popularity": 0.52,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "chainsaw",
+      "name": "Mini chainsaw 8-inch cordless",
+      "weight_kg": 3.5,
+      "markets": {
+        "poland": {
+          "buy": 198.0,
+          "sell": 319.2,
+          "demand": 0.56,
+          "popularity": 0.71,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 187.0,
+          "sell": 270.5,
+          "demand": 0.63,
+          "popularity": 0.83,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 110.0,
+          "sell": 178.9,
+          "demand": 0.62,
+          "popularity": 0.8,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 192.5,
+          "sell": 276.1,
+          "demand": 0.75,
+          "popularity": 0.68,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 195.8,
+          "sell": 273.4,
+          "demand": 0.57,
+          "popularity": 0.59,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 159.5,
+          "sell": 256.2,
+          "demand": 0.72,
+          "popularity": 0.6,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 220.0,
+          "sell": 353.4,
+          "demand": 0.95,
+          "popularity": 0.7,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 176.0,
+          "sell": 244.4,
+          "demand": 0.59,
+          "popularity": 0.54,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 170.5,
+          "sell": 246.6,
+          "demand": 0.54,
+          "popularity": 0.61,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 165.0,
+          "sell": 234.7,
+          "demand": 0.76,
+          "popularity": 0.9,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 173.8,
+          "sell": 271.5,
+          "demand": 0.69,
+          "popularity": 0.69,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 165.0,
+          "sell": 247.1,
+          "demand": 0.67,
+          "popularity": 0.65,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 187.0,
+          "sell": 255.6,
+          "demand": 0.62,
+          "popularity": 0.94,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 192.5,
+          "sell": 266.6,
+          "demand": 0.73,
+          "popularity": 0.78,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "leaf-blower",
+      "name": "Cordless leaf blower 20V",
+      "weight_kg": 2.8,
+      "markets": {
+        "poland": {
+          "buy": 171.0,
+          "sell": 272.6,
+          "demand": 0.6,
+          "popularity": 0.62,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 161.5,
+          "sell": 229.3,
+          "demand": 0.68,
+          "popularity": 0.7,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 95.0,
+          "sell": 153.9,
+          "demand": 0.88,
+          "popularity": 0.89,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 166.2,
+          "sell": 225.2,
+          "demand": 0.51,
+          "popularity": 0.82,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 169.1,
+          "sell": 271.1,
+          "demand": 0.71,
+          "popularity": 0.76,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 137.8,
+          "sell": 185.9,
+          "demand": 0.68,
+          "popularity": 0.92,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 190.0,
+          "sell": 300.9,
+          "demand": 0.88,
+          "popularity": 0.94,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 152.0,
+          "sell": 215.8,
+          "demand": 0.55,
+          "popularity": 0.57,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 147.2,
+          "sell": 220.4,
+          "demand": 0.81,
+          "popularity": 0.92,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 142.5,
+          "sell": 221.4,
+          "demand": 0.79,
+          "popularity": 0.84,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 150.1,
+          "sell": 222.0,
+          "demand": 0.75,
+          "popularity": 0.52,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 142.5,
+          "sell": 223.9,
+          "demand": 0.6,
+          "popularity": 0.91,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 161.5,
+          "sell": 247.5,
+          "demand": 0.64,
+          "popularity": 0.56,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 166.2,
+          "sell": 236.1,
+          "demand": 0.79,
+          "popularity": 0.81,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "smart-bulbs",
+      "name": "Smart LED bulb pack 4x",
+      "weight_kg": 0.3,
+      "markets": {
+        "poland": {
+          "buy": 63.0,
+          "sell": 87.0,
+          "demand": 0.53,
+          "popularity": 0.74,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 59.5,
+          "sell": 90.1,
+          "demand": 0.67,
+          "popularity": 0.6,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 35.0,
+          "sell": 53.2,
+          "demand": 0.5,
+          "popularity": 0.64,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 61.2,
+          "sell": 90.6,
+          "demand": 0.93,
+          "popularity": 0.79,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 62.3,
+          "sell": 99.7,
+          "demand": 0.71,
+          "popularity": 0.61,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 50.8,
+          "sell": 72.1,
+          "demand": 0.93,
+          "popularity": 0.82,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 70.0,
+          "sell": 100.5,
+          "demand": 0.51,
+          "popularity": 0.72,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 56.0,
+          "sell": 86.3,
+          "demand": 0.69,
+          "popularity": 0.62,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 54.2,
+          "sell": 83.4,
+          "demand": 0.92,
+          "popularity": 0.6,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 52.5,
+          "sell": 71.3,
+          "demand": 0.65,
+          "popularity": 0.69,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 55.3,
+          "sell": 85.3,
+          "demand": 0.59,
+          "popularity": 0.86,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 52.5,
+          "sell": 81.8,
+          "demand": 0.73,
+          "popularity": 0.59,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 59.5,
+          "sell": 96.7,
+          "demand": 0.64,
+          "popularity": 0.87,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 61.2,
+          "sell": 86.6,
+          "demand": 0.6,
+          "popularity": 0.84,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "led-strip",
+      "name": "LED strip RGB 5m wifi",
+      "weight_kg": 0.4,
+      "markets": {
+        "poland": {
+          "buy": 50.4,
+          "sell": 72.2,
+          "demand": 0.93,
+          "popularity": 0.72,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 47.6,
+          "sell": 66.7,
+          "demand": 0.6,
+          "popularity": 0.69,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 28.0,
+          "sell": 43.1,
+          "demand": 0.93,
+          "popularity": 0.57,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 49.0,
+          "sell": 71.6,
+          "demand": 0.6,
+          "popularity": 0.94,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 49.8,
+          "sell": 69.2,
+          "demand": 0.52,
+          "popularity": 0.53,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 40.6,
+          "sell": 59.3,
+          "demand": 0.9,
+          "popularity": 0.9,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 56.0,
+          "sell": 87.2,
+          "demand": 0.95,
+          "popularity": 0.92,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 44.8,
+          "sell": 64.6,
+          "demand": 0.58,
+          "popularity": 0.92,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 43.4,
+          "sell": 67.7,
+          "demand": 0.51,
+          "popularity": 0.8,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 42.0,
+          "sell": 61.2,
+          "demand": 0.67,
+          "popularity": 0.65,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 44.2,
+          "sell": 61.8,
+          "demand": 0.5,
+          "popularity": 0.63,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 42.0,
+          "sell": 60.9,
+          "demand": 0.93,
+          "popularity": 0.56,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 47.6,
+          "sell": 77.2,
+          "demand": 0.59,
+          "popularity": 0.66,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 49.0,
+          "sell": 77.5,
+          "demand": 0.87,
+          "popularity": 0.69,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "4k-drone",
+      "name": "4K camera drone GPS",
+      "weight_kg": 1.1,
+      "markets": {
+        "poland": {
+          "buy": 756.0,
+          "sell": 1030.4,
+          "demand": 0.71,
+          "popularity": 0.67,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 714.0,
+          "sell": 1149.6,
+          "demand": 0.59,
+          "popularity": 0.66,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 420.0,
+          "sell": 673.6,
+          "demand": 0.51,
+          "popularity": 0.68,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 735.0,
+          "sell": 1161.0,
+          "demand": 0.85,
+          "popularity": 0.52,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 747.6,
+          "sell": 1015.9,
+          "demand": 0.53,
+          "popularity": 0.91,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 609.0,
+          "sell": 866.0,
+          "demand": 0.84,
+          "popularity": 0.9,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 840.0,
+          "sell": 1214.0,
+          "demand": 0.62,
+          "popularity": 0.93,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 672.0,
+          "sell": 1024.3,
+          "demand": 0.62,
+          "popularity": 0.82,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 651.0,
+          "sell": 936.7,
+          "demand": 0.62,
+          "popularity": 0.5,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 630.0,
+          "sell": 985.1,
+          "demand": 0.91,
+          "popularity": 0.79,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 663.6,
+          "sell": 1073.0,
+          "demand": 0.51,
+          "popularity": 0.61,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 630.0,
+          "sell": 934.9,
+          "demand": 0.93,
+          "popularity": 0.93,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 714.0,
+          "sell": 1041.6,
+          "demand": 0.61,
+          "popularity": 0.69,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 735.0,
+          "sell": 1094.5,
+          "demand": 0.92,
+          "popularity": 0.58,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "action-cam",
+      "name": "Action camera 4K waterproof",
+      "weight_kg": 0.4,
+      "markets": {
+        "poland": {
+          "buy": 324.0,
+          "sell": 510.9,
+          "demand": 0.83,
+          "popularity": 0.87,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 306.0,
+          "sell": 480.0,
+          "demand": 0.77,
+          "popularity": 0.65,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 180.0,
+          "sell": 259.2,
+          "demand": 0.66,
+          "popularity": 0.85,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 315.0,
+          "sell": 432.0,
+          "demand": 0.59,
+          "popularity": 0.84,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 320.4,
+          "sell": 454.7,
+          "demand": 0.53,
+          "popularity": 0.52,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 261.0,
+          "sell": 393.0,
+          "demand": 0.65,
+          "popularity": 0.94,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 360.0,
+          "sell": 576.0,
+          "demand": 0.94,
+          "popularity": 0.62,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 288.0,
+          "sell": 395.4,
+          "demand": 0.54,
+          "popularity": 0.72,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 279.0,
+          "sell": 432.6,
+          "demand": 0.7,
+          "popularity": 0.61,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 270.0,
+          "sell": 396.2,
+          "demand": 0.78,
+          "popularity": 0.8,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 284.4,
+          "sell": 444.1,
+          "demand": 0.88,
+          "popularity": 0.8,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 270.0,
+          "sell": 373.5,
+          "demand": 0.88,
+          "popularity": 0.63,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 306.0,
+          "sell": 462.1,
+          "demand": 0.67,
+          "popularity": 0.83,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 315.0,
+          "sell": 442.8,
+          "demand": 0.61,
+          "popularity": 0.61,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "wireless-earbuds",
+      "name": "Wireless earbuds ANC",
+      "weight_kg": 0.1,
+      "markets": {
+        "poland": {
+          "buy": 81.0,
+          "sell": 112.8,
+          "demand": 0.9,
+          "popularity": 0.76,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 76.5,
+          "sell": 110.3,
+          "demand": 0.68,
+          "popularity": 0.95,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 45.0,
+          "sell": 67.2,
+          "demand": 0.6,
+          "popularity": 0.86,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 78.8,
+          "sell": 120.9,
+          "demand": 0.95,
+          "popularity": 0.55,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 80.1,
+          "sell": 118.9,
+          "demand": 0.87,
+          "popularity": 0.88,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 65.2,
+          "sell": 104.9,
+          "demand": 0.52,
+          "popularity": 0.63,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 90.0,
+          "sell": 124.5,
+          "demand": 0.59,
+          "popularity": 0.94,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 72.0,
+          "sell": 109.1,
+          "demand": 0.92,
+          "popularity": 0.67,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 69.8,
+          "sell": 111.3,
+          "demand": 0.7,
+          "popularity": 0.62,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 67.5,
+          "sell": 106.0,
+          "demand": 0.93,
+          "popularity": 0.55,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 71.1,
+          "sell": 108.0,
+          "demand": 0.78,
+          "popularity": 0.6,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 67.5,
+          "sell": 98.1,
+          "demand": 0.56,
+          "popularity": 0.59,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 76.5,
+          "sell": 108.7,
+          "demand": 0.77,
+          "popularity": 0.79,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 78.8,
+          "sell": 110.9,
+          "demand": 0.51,
+          "popularity": 0.65,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "portable-speaker",
+      "name": "Portable Bluetooth speaker 30W",
+      "weight_kg": 0.9,
+      "markets": {
+        "poland": {
+          "buy": 216.0,
+          "sell": 333.0,
+          "demand": 0.58,
+          "popularity": 0.64,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 204.0,
+          "sell": 287.0,
+          "demand": 0.86,
+          "popularity": 0.75,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 120.0,
+          "sell": 164.0,
+          "demand": 0.55,
+          "popularity": 0.68,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 210.0,
+          "sell": 316.1,
+          "demand": 0.79,
+          "popularity": 0.54,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 213.6,
+          "sell": 298.1,
+          "demand": 0.81,
+          "popularity": 0.68,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 174.0,
+          "sell": 248.7,
+          "demand": 0.64,
+          "popularity": 0.93,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 240.0,
+          "sell": 345.1,
+          "demand": 0.75,
+          "popularity": 0.66,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 192.0,
+          "sell": 281.7,
+          "demand": 0.89,
+          "popularity": 0.95,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 186.0,
+          "sell": 270.1,
+          "demand": 0.59,
+          "popularity": 0.83,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 180.0,
+          "sell": 253.2,
+          "demand": 0.5,
+          "popularity": 0.91,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 189.6,
+          "sell": 278.6,
+          "demand": 0.87,
+          "popularity": 0.68,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 180.0,
+          "sell": 288.0,
+          "demand": 0.71,
+          "popularity": 0.57,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 204.0,
+          "sell": 276.1,
+          "demand": 0.75,
+          "popularity": 0.79,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 210.0,
+          "sell": 337.6,
+          "demand": 0.54,
+          "popularity": 0.78,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "soundbar",
+      "name": "Soundbar 2.1 100W",
+      "weight_kg": 3.0,
+      "markets": {
+        "poland": {
+          "buy": 288.0,
+          "sell": 418.8,
+          "demand": 0.73,
+          "popularity": 0.57,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 272.0,
+          "sell": 388.8,
+          "demand": 0.73,
+          "popularity": 0.92,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 160.0,
+          "sell": 220.8,
+          "demand": 0.72,
+          "popularity": 0.86,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 280.0,
+          "sell": 454.6,
+          "demand": 0.59,
+          "popularity": 0.56,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 284.8,
+          "sell": 460.5,
+          "demand": 0.94,
+          "popularity": 0.72,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 232.0,
+          "sell": 316.5,
+          "demand": 0.92,
+          "popularity": 0.67,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 320.0,
+          "sell": 513.9,
+          "demand": 0.78,
+          "popularity": 0.87,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 256.0,
+          "sell": 357.0,
+          "demand": 0.85,
+          "popularity": 0.6,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 248.0,
+          "sell": 363.0,
+          "demand": 0.88,
+          "popularity": 0.87,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 240.0,
+          "sell": 336.2,
+          "demand": 0.6,
+          "popularity": 0.68,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 252.8,
+          "sell": 378.2,
+          "demand": 0.67,
+          "popularity": 0.56,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 240.0,
+          "sell": 340.6,
+          "demand": 0.83,
+          "popularity": 0.9,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 272.0,
+          "sell": 370.1,
+          "demand": 0.75,
+          "popularity": 0.84,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 280.0,
+          "sell": 380.8,
+          "demand": 0.88,
+          "popularity": 0.55,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "webcam-4k",
+      "name": "4K webcam autofocus",
+      "weight_kg": 0.25,
+      "markets": {
+        "poland": {
+          "buy": 135.0,
+          "sell": 205.1,
+          "demand": 0.75,
+          "popularity": 0.78,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 127.5,
+          "sell": 183.1,
+          "demand": 0.69,
+          "popularity": 0.76,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 75.0,
+          "sell": 110.2,
+          "demand": 0.8,
+          "popularity": 0.7,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 131.2,
+          "sell": 193.3,
+          "demand": 0.51,
+          "popularity": 0.78,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 133.5,
+          "sell": 198.7,
+          "demand": 0.61,
+          "popularity": 0.84,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 108.8,
+          "sell": 170.9,
+          "demand": 0.71,
+          "popularity": 0.58,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 150.0,
+          "sell": 222.5,
+          "demand": 0.55,
+          "popularity": 0.56,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 120.0,
+          "sell": 176.6,
+          "demand": 0.54,
+          "popularity": 0.7,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 116.2,
+          "sell": 173.6,
+          "demand": 0.52,
+          "popularity": 0.79,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 112.5,
+          "sell": 154.4,
+          "demand": 0.83,
+          "popularity": 0.85,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 118.5,
+          "sell": 177.1,
+          "demand": 0.52,
+          "popularity": 0.73,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 112.5,
+          "sell": 163.8,
+          "demand": 0.93,
+          "popularity": 0.56,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 127.5,
+          "sell": 203.0,
+          "demand": 0.95,
+          "popularity": 0.83,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 131.2,
+          "sell": 207.4,
+          "demand": 0.59,
+          "popularity": 0.94,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "mech-keyboard",
+      "name": "Mechanical keyboard RGB",
+      "weight_kg": 1.1,
+      "markets": {
+        "poland": {
+          "buy": 162.0,
+          "sell": 241.2,
+          "demand": 0.93,
+          "popularity": 0.91,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 153.0,
+          "sell": 213.6,
+          "demand": 0.85,
+          "popularity": 0.92,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 90.0,
+          "sell": 123.1,
+          "demand": 0.66,
+          "popularity": 0.84,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 157.5,
+          "sell": 219.6,
+          "demand": 0.9,
+          "popularity": 0.62,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 160.2,
+          "sell": 253.2,
+          "demand": 0.56,
+          "popularity": 0.73,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 130.5,
+          "sell": 210.1,
+          "demand": 0.59,
+          "popularity": 0.62,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 180.0,
+          "sell": 268.7,
+          "demand": 0.64,
+          "popularity": 0.52,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 144.0,
+          "sell": 201.7,
+          "demand": 0.57,
+          "popularity": 0.92,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 139.5,
+          "sell": 215.1,
+          "demand": 0.9,
+          "popularity": 0.58,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 135.0,
+          "sell": 212.2,
+          "demand": 0.55,
+          "popularity": 0.74,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 142.2,
+          "sell": 217.5,
+          "demand": 0.66,
+          "popularity": 0.89,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 135.0,
+          "sell": 203.4,
+          "demand": 0.76,
+          "popularity": 0.9,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 153.0,
+          "sell": 210.9,
+          "demand": 0.95,
+          "popularity": 0.78,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 157.5,
+          "sell": 230.1,
+          "demand": 0.86,
+          "popularity": 0.62,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "portable-monitor",
+      "name": "Portable monitor 15.6 1080p",
+      "weight_kg": 1.0,
+      "markets": {
+        "poland": {
+          "buy": 468.0,
+          "sell": 763.0,
+          "demand": 0.76,
+          "popularity": 0.66,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 442.0,
+          "sell": 692.2,
+          "demand": 0.7,
+          "popularity": 0.58,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 260.0,
+          "sell": 405.6,
+          "demand": 0.52,
+          "popularity": 0.87,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 455.0,
+          "sell": 646.6,
+          "demand": 0.79,
+          "popularity": 0.94,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 462.8,
+          "sell": 701.3,
+          "demand": 0.8,
+          "popularity": 0.64,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 377.0,
+          "sell": 508.8,
+          "demand": 0.52,
+          "popularity": 0.57,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 520.0,
+          "sell": 792.5,
+          "demand": 0.69,
+          "popularity": 0.73,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 416.0,
+          "sell": 667.0,
+          "demand": 0.56,
+          "popularity": 0.6,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 403.0,
+          "sell": 618.4,
+          "demand": 0.51,
+          "popularity": 0.5,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 390.0,
+          "sell": 565.4,
+          "demand": 0.55,
+          "popularity": 0.66,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 410.8,
+          "sell": 580.3,
+          "demand": 0.76,
+          "popularity": 0.77,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 390.0,
+          "sell": 548.7,
+          "demand": 0.78,
+          "popularity": 0.71,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 442.0,
+          "sell": 613.2,
+          "demand": 0.92,
+          "popularity": 0.61,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 455.0,
+          "sell": 633.1,
+          "demand": 0.54,
+          "popularity": 0.79,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "power-bank-20000",
+      "name": "Power bank 20000mAh 65W",
+      "weight_kg": 0.45,
+      "markets": {
+        "poland": {
+          "buy": 108.0,
+          "sell": 172.4,
+          "demand": 0.85,
+          "popularity": 0.68,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 102.0,
+          "sell": 145.3,
+          "demand": 0.51,
+          "popularity": 0.79,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 60.0,
+          "sell": 90.5,
+          "demand": 0.66,
+          "popularity": 0.79,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 105.0,
+          "sell": 154.9,
+          "demand": 0.92,
+          "popularity": 0.83,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 106.8,
+          "sell": 151.6,
+          "demand": 0.91,
+          "popularity": 0.52,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 87.0,
+          "sell": 130.5,
+          "demand": 0.68,
+          "popularity": 0.61,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 120.0,
+          "sell": 163.9,
+          "demand": 0.85,
+          "popularity": 0.51,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 96.0,
+          "sell": 144.5,
+          "demand": 0.92,
+          "popularity": 0.56,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 93.0,
+          "sell": 130.7,
+          "demand": 0.77,
+          "popularity": 0.73,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 90.0,
+          "sell": 137.8,
+          "demand": 0.87,
+          "popularity": 0.58,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 94.8,
+          "sell": 136.2,
+          "demand": 0.64,
+          "popularity": 0.52,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 90.0,
+          "sell": 144.1,
+          "demand": 0.85,
+          "popularity": 0.82,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 102.0,
+          "sell": 137.8,
+          "demand": 0.88,
+          "popularity": 0.84,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 105.0,
+          "sell": 155.5,
+          "demand": 0.83,
+          "popularity": 0.7,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "smart-watch",
+      "name": "Smart watch AMOLED",
+      "weight_kg": 0.2,
+      "markets": {
+        "poland": {
+          "buy": 198.0,
+          "sell": 279.8,
+          "demand": 0.55,
+          "popularity": 0.6,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 187.0,
+          "sell": 254.3,
+          "demand": 0.65,
+          "popularity": 0.84,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 110.0,
+          "sell": 170.1,
+          "demand": 0.88,
+          "popularity": 0.82,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 192.5,
+          "sell": 274.2,
+          "demand": 0.75,
+          "popularity": 0.7,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 195.8,
+          "sell": 308.0,
+          "demand": 0.74,
+          "popularity": 0.62,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 159.5,
+          "sell": 244.2,
+          "demand": 0.93,
+          "popularity": 0.6,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 220.0,
+          "sell": 351.8,
+          "demand": 0.51,
+          "popularity": 0.62,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 176.0,
+          "sell": 249.2,
+          "demand": 0.83,
+          "popularity": 0.93,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 170.5,
+          "sell": 266.1,
+          "demand": 0.65,
+          "popularity": 0.9,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 165.0,
+          "sell": 238.0,
+          "demand": 0.61,
+          "popularity": 0.91,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 173.8,
+          "sell": 265.6,
+          "demand": 0.81,
+          "popularity": 0.8,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 165.0,
+          "sell": 268.5,
+          "demand": 0.71,
+          "popularity": 0.88,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 187.0,
+          "sell": 289.3,
+          "demand": 0.89,
+          "popularity": 0.7,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 192.5,
+          "sell": 299.3,
+          "demand": 0.76,
+          "popularity": 0.64,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "tire-inflator",
+      "name": "Cordless tire inflator 12V",
+      "weight_kg": 1.3,
+      "markets": {
+        "poland": {
+          "buy": 126.0,
+          "sell": 177.6,
+          "demand": 0.78,
+          "popularity": 0.54,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 119.0,
+          "sell": 191.3,
+          "demand": 0.57,
+          "popularity": 0.51,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 70.0,
+          "sell": 96.6,
+          "demand": 0.92,
+          "popularity": 0.66,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 122.5,
+          "sell": 170.2,
+          "demand": 0.51,
+          "popularity": 0.52,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 124.6,
+          "sell": 192.6,
+          "demand": 0.79,
+          "popularity": 0.81,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 101.5,
+          "sell": 158.2,
+          "demand": 0.53,
+          "popularity": 0.77,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 140.0,
+          "sell": 203.3,
+          "demand": 0.87,
+          "popularity": 0.87,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 112.0,
+          "sell": 179.4,
+          "demand": 0.53,
+          "popularity": 0.89,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 108.5,
+          "sell": 174.5,
+          "demand": 0.92,
+          "popularity": 0.55,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 105.0,
+          "sell": 147.8,
+          "demand": 0.55,
+          "popularity": 0.52,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 110.6,
+          "sell": 175.8,
+          "demand": 0.87,
+          "popularity": 0.79,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 105.0,
+          "sell": 166.2,
+          "demand": 0.78,
+          "popularity": 0.63,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 119.0,
+          "sell": 163.9,
+          "demand": 0.54,
+          "popularity": 0.84,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 122.5,
+          "sell": 172.4,
+          "demand": 0.64,
+          "popularity": 0.69,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "car-vacuum",
+      "name": "Car vacuum handheld",
+      "weight_kg": 1.5,
+      "markets": {
+        "poland": {
+          "buy": 153.0,
+          "sell": 207.3,
+          "demand": 0.62,
+          "popularity": 0.63,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 144.5,
+          "sell": 224.3,
+          "demand": 0.67,
+          "popularity": 0.64,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 85.0,
+          "sell": 137.9,
+          "demand": 0.73,
+          "popularity": 0.88,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 148.8,
+          "sell": 226.9,
+          "demand": 0.51,
+          "popularity": 0.69,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 151.3,
+          "sell": 222.9,
+          "demand": 0.85,
+          "popularity": 0.66,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 123.2,
+          "sell": 190.9,
+          "demand": 0.74,
+          "popularity": 0.6,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 170.0,
+          "sell": 271.0,
+          "demand": 0.54,
+          "popularity": 0.87,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 136.0,
+          "sell": 190.0,
+          "demand": 0.5,
+          "popularity": 0.59,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 131.8,
+          "sell": 206.3,
+          "demand": 0.94,
+          "popularity": 0.5,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 127.5,
+          "sell": 189.8,
+          "demand": 0.72,
+          "popularity": 0.86,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 134.3,
+          "sell": 188.2,
+          "demand": 0.72,
+          "popularity": 0.66,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 127.5,
+          "sell": 202.1,
+          "demand": 0.62,
+          "popularity": 0.92,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 144.5,
+          "sell": 206.6,
+          "demand": 0.6,
+          "popularity": 0.81,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 148.8,
+          "sell": 221.8,
+          "demand": 0.55,
+          "popularity": 0.79,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "pet-fountain",
+      "name": "Pet water fountain 2L",
+      "weight_kg": 1.0,
+      "markets": {
+        "poland": {
+          "buy": 99.0,
+          "sell": 135.8,
+          "demand": 0.85,
+          "popularity": 0.81,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 93.5,
+          "sell": 147.0,
+          "demand": 0.78,
+          "popularity": 0.66,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 55.0,
+          "sell": 80.5,
+          "demand": 0.68,
+          "popularity": 0.9,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 96.2,
+          "sell": 132.1,
+          "demand": 0.9,
+          "popularity": 0.51,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 97.9,
+          "sell": 137.8,
+          "demand": 0.62,
+          "popularity": 0.91,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 79.8,
+          "sell": 119.0,
+          "demand": 0.67,
+          "popularity": 0.9,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 110.0,
+          "sell": 155.7,
+          "demand": 0.71,
+          "popularity": 0.74,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 88.0,
+          "sell": 137.6,
+          "demand": 0.84,
+          "popularity": 0.79,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 85.2,
+          "sell": 123.4,
+          "demand": 0.65,
+          "popularity": 0.57,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 82.5,
+          "sell": 131.0,
+          "demand": 0.8,
+          "popularity": 0.83,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 86.9,
+          "sell": 121.4,
+          "demand": 0.7,
+          "popularity": 0.85,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 82.5,
+          "sell": 124.9,
+          "demand": 0.56,
+          "popularity": 0.71,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 93.5,
+          "sell": 149.6,
+          "demand": 0.61,
+          "popularity": 0.59,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 96.2,
+          "sell": 138.0,
+          "demand": 0.82,
+          "popularity": 0.88,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "pet-camera",
+      "name": "Pet camera treat dispenser",
+      "weight_kg": 1.2,
+      "markets": {
+        "poland": {
+          "buy": 288.0,
+          "sell": 401.2,
+          "demand": 0.57,
+          "popularity": 0.61,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 272.0,
+          "sell": 392.2,
+          "demand": 0.73,
+          "popularity": 0.57,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 160.0,
+          "sell": 230.7,
+          "demand": 0.59,
+          "popularity": 0.94,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 280.0,
+          "sell": 435.7,
+          "demand": 0.55,
+          "popularity": 0.93,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 284.8,
+          "sell": 392.4,
+          "demand": 0.67,
+          "popularity": 0.94,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 232.0,
+          "sell": 365.3,
+          "demand": 0.83,
+          "popularity": 0.7,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 320.0,
+          "sell": 449.5,
+          "demand": 0.79,
+          "popularity": 0.55,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 256.0,
+          "sell": 360.4,
+          "demand": 0.67,
+          "popularity": 0.52,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 248.0,
+          "sell": 362.7,
+          "demand": 0.86,
+          "popularity": 0.81,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 240.0,
+          "sell": 357.9,
+          "demand": 0.78,
+          "popularity": 0.71,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 252.8,
+          "sell": 351.2,
+          "demand": 0.77,
+          "popularity": 0.68,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 240.0,
+          "sell": 374.3,
+          "demand": 0.91,
+          "popularity": 0.69,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 272.0,
+          "sell": 411.3,
+          "demand": 0.84,
+          "popularity": 0.69,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 280.0,
+          "sell": 395.9,
+          "demand": 0.82,
+          "popularity": 0.9,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "epilator",
+      "name": "Epilator wet&dry",
+      "weight_kg": 0.4,
+      "markets": {
+        "poland": {
+          "buy": 99.0,
+          "sell": 155.3,
+          "demand": 0.82,
+          "popularity": 0.88,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 93.5,
+          "sell": 144.2,
+          "demand": 0.79,
+          "popularity": 0.7,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 55.0,
+          "sell": 79.1,
+          "demand": 0.78,
+          "popularity": 0.54,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 96.2,
+          "sell": 141.2,
+          "demand": 0.85,
+          "popularity": 0.82,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 97.9,
+          "sell": 149.6,
+          "demand": 0.61,
+          "popularity": 0.69,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 79.8,
+          "sell": 118.0,
+          "demand": 0.78,
+          "popularity": 0.68,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 110.0,
+          "sell": 169.5,
+          "demand": 0.92,
+          "popularity": 0.58,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 88.0,
+          "sell": 135.1,
+          "demand": 0.85,
+          "popularity": 0.67,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 85.2,
+          "sell": 126.8,
+          "demand": 0.94,
+          "popularity": 0.52,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 82.5,
+          "sell": 124.0,
+          "demand": 0.57,
+          "popularity": 0.85,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 86.9,
+          "sell": 140.4,
+          "demand": 0.73,
+          "popularity": 0.55,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 82.5,
+          "sell": 124.8,
+          "demand": 0.74,
+          "popularity": 0.82,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 93.5,
+          "sell": 139.7,
+          "demand": 0.79,
+          "popularity": 0.87,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 96.2,
+          "sell": 144.0,
+          "demand": 0.68,
+          "popularity": 0.93,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "hair-clipper",
+      "name": "Hair clipper kit 20V",
+      "weight_kg": 0.5,
+      "markets": {
+        "poland": {
+          "buy": 117.0,
+          "sell": 164.8,
+          "demand": 0.81,
+          "popularity": 0.68,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 110.5,
+          "sell": 173.0,
+          "demand": 0.56,
+          "popularity": 0.94,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 65.0,
+          "sell": 94.2,
+          "demand": 0.53,
+          "popularity": 0.62,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 113.8,
+          "sell": 166.4,
+          "demand": 0.51,
+          "popularity": 0.69,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 115.7,
+          "sell": 169.9,
+          "demand": 0.81,
+          "popularity": 0.66,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 94.2,
+          "sell": 134.2,
+          "demand": 0.6,
+          "popularity": 0.83,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 130.0,
+          "sell": 210.1,
+          "demand": 0.74,
+          "popularity": 0.6,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 104.0,
+          "sell": 164.0,
+          "demand": 0.68,
+          "popularity": 0.6,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 100.8,
+          "sell": 139.7,
+          "demand": 0.85,
+          "popularity": 0.86,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 97.5,
+          "sell": 149.1,
+          "demand": 0.71,
+          "popularity": 0.75,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 102.7,
+          "sell": 145.1,
+          "demand": 0.93,
+          "popularity": 0.66,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 97.5,
+          "sell": 149.2,
+          "demand": 0.87,
+          "popularity": 0.87,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 110.5,
+          "sell": 163.8,
+          "demand": 0.63,
+          "popularity": 0.75,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 113.8,
+          "sell": 157.6,
+          "demand": 0.88,
+          "popularity": 0.66,
+          "price_source": "est"
+        }
+      }
+    },
+    {
+      "id": "sonic-toothbrush",
+      "name": "Sonic toothbrush 2-pack",
+      "weight_kg": 0.3,
+      "markets": {
+        "poland": {
+          "buy": 72.0,
+          "sell": 114.5,
+          "demand": 0.62,
+          "popularity": 0.67,
+          "price_source": "est"
+        },
+        "visegrad": {
+          "buy": 68.0,
+          "sell": 96.6,
+          "demand": 0.69,
+          "popularity": 0.58,
+          "price_source": "est"
+        },
+        "china": {
+          "buy": 40.0,
+          "sell": 54.0,
+          "demand": 0.82,
+          "popularity": 0.63,
+          "price_source": "est"
+        },
+        "europe": {
+          "buy": 70.0,
+          "sell": 99.3,
+          "demand": 0.64,
+          "popularity": 0.72,
+          "price_source": "est"
+        },
+        "baltic": {
+          "buy": 71.2,
+          "sell": 104.7,
+          "demand": 0.79,
+          "popularity": 0.8,
+          "price_source": "est"
+        },
+        "turkiye": {
+          "buy": 58.0,
+          "sell": 84.2,
+          "demand": 0.92,
+          "popularity": 0.88,
+          "price_source": "est"
+        },
+        "westeu": {
+          "buy": 80.0,
+          "sell": 109.2,
+          "demand": 0.87,
+          "popularity": 0.91,
+          "price_source": "est"
+        },
+        "turkic": {
+          "buy": 64.0,
+          "sell": 100.6,
+          "demand": 0.56,
+          "popularity": 0.87,
+          "price_source": "est"
+        },
+        "ukraine": {
+          "buy": 62.0,
+          "sell": 94.8,
+          "demand": 0.51,
+          "popularity": 0.51,
+          "price_source": "est"
+        },
+        "belarus": {
+          "buy": 60.0,
+          "sell": 97.2,
+          "demand": 0.8,
+          "popularity": 0.61,
+          "price_source": "est"
+        },
+        "kaliningrad": {
+          "buy": 63.2,
+          "sell": 87.1,
+          "demand": 0.56,
+          "popularity": 0.61,
+          "price_source": "est"
+        },
+        "belarus-russia": {
+          "buy": 60.0,
+          "sell": 94.2,
+          "demand": 0.66,
+          "popularity": 0.57,
+          "price_source": "est"
+        },
+        "north-africa": {
+          "buy": 68.0,
+          "sell": 109.2,
+          "demand": 0.86,
+          "popularity": 0.58,
+          "price_source": "est"
+        },
+        "balkan": {
+          "buy": 70.0,
+          "sell": 112.1,
+          "demand": 0.77,
+          "popularity": 0.85,
+          "price_source": "est"
+        }
+      }
     }
   ]
 }
