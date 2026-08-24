@@ -28,6 +28,7 @@ struct ProductMarket {
     double sell = 0.0;         // what a buyer pays you (local currency)
     double demand = 0.0;
     double popularity = 0.0;
+    std::string supplier_url;  // where THIS market's buy price was found
 };
 
 struct Product {
@@ -48,7 +49,7 @@ struct Trade {
     std::string from_market;
     std::string to_market_id;
     std::string to_market;
-    std::string supplier_url;   // clickable product name -> supplier page
+    std::string supplier_url;   // link = the BUY market's source (import: from-market; export: home)
     double buy_eur = 0.0;
     double sell_eur = 0.0;
     double freight_eur = 0.0;

@@ -21,7 +21,8 @@
           "buy": 690,
           "sell": 980,
           "demand": 0.7,
-          "popularity": 0.7
+          "popularity": 0.7,
+          "supplier_url": "https://www.alibaba.com/product-detail/2025-New-Electric-Scooter-OOTD-T10_1601455273183.html"
         },
         "europe": {
           "buy": 1180,
@@ -65,8 +66,7 @@
           "demand": 0.58,
           "popularity": 0.58
         }
-      },
-      "supplier_url": "https://www.alibaba.com/product-detail/2025-New-Electric-Scooter-OOTD-T10_1601455273183.html"
+      }
     },
     {
       "id": "e-bike-conversion",
@@ -90,7 +90,8 @@
           "buy": 460,
           "sell": 700,
           "demand": 0.55,
-          "popularity": 0.5
+          "popularity": 0.5,
+          "supplier_url": "https://www.alibaba.com/product-detail/250W-3000W-Ebike-Conversion-Kit-36V_1601926766493.html"
         },
         "europe": {
           "buy": 1000,
@@ -104,8 +105,7 @@
           "demand": 0.55,
           "popularity": 0.5
         }
-      },
-      "supplier_url": "https://www.alibaba.com/product-detail/250W-3000W-Ebike-Conversion-Kit-36V_1601926766493.html"
+      }
     },
     {
       "id": "power-station",
@@ -128,7 +128,8 @@
           "buy": 880,
           "sell": 1250,
           "demand": 0.62,
-          "popularity": 0.55
+          "popularity": 0.55,
+          "supplier_url": "https://www.alibaba.com/product-detail/HC-1000Wh-1000W-LiFePO4-Portable-Power_1601799400722.html"
         },
         "europe": {
           "buy": 2150,
@@ -148,8 +149,7 @@
           "demand": 0.65,
           "popularity": 0.58
         }
-      },
-      "supplier_url": "https://www.alibaba.com/product-detail/HC-1000Wh-1000W-LiFePO4-Portable-Power_1601799400722.html"
+      }
     },
     {
       "id": "solar-panel-400w",
@@ -172,7 +172,8 @@
           "buy": 190,
           "sell": 320,
           "demand": 0.55,
-          "popularity": 0.5
+          "popularity": 0.5,
+          "supplier_url": "https://www.alibaba.com/product-detail/High-Efficient-JA-Solar-400W-EU_1600705368223.html"
         },
         "europe": {
           "buy": 460,
@@ -186,8 +187,7 @@
           "demand": 0.58,
           "popularity": 0.5
         }
-      },
-      "supplier_url": "https://www.alibaba.com/product-detail/High-Efficient-JA-Solar-400W-EU_1600705368223.html"
+      }
     },
     {
       "id": "smart-heater",
@@ -211,7 +211,8 @@
           "buy": 120,
           "sell": 200,
           "demand": 0.55,
-          "popularity": 0.42
+          "popularity": 0.42,
+          "supplier_url": "https://www.alibaba.com/product-detail/9-Fins-2000W-Freestanding-Room-Heater_1601929893335.html"
         },
         "europe": {
           "buy": 230,
@@ -231,8 +232,7 @@
           "demand": 0.62,
           "popularity": 0.45
         }
-      },
-      "supplier_url": "https://www.alibaba.com/product-detail/9-Fins-2000W-Freestanding-Room-Heater_1601929893335.html"
+      }
     },
     {
       "id": "air-fryer",
@@ -256,7 +256,8 @@
           "buy": 155,
           "sell": 240,
           "demand": 0.65,
-          "popularity": 0.7
+          "popularity": 0.7,
+          "supplier_url": "https://www.alibaba.com/product-detail/Multifunctional-Electric-Air-Fryer-Oil-Free_1600430223950.html"
         },
         "europe": {
           "buy": 290,
@@ -276,8 +277,7 @@
           "demand": 0.68,
           "popularity": 0.7
         }
-      },
-      "supplier_url": "https://www.alibaba.com/product-detail/Multifunctional-Electric-Air-Fryer-Oil-Free_1600430223950.html"
+      }
     },
     {
       "id": "garden-pruner",
@@ -300,7 +300,8 @@
           "buy": 88,
           "sell": 150,
           "demand": 0.5,
-          "popularity": 0.38
+          "popularity": 0.38,
+          "supplier_url": "https://www.alibaba.com/product-detail/20V-Cordless-Electric-Hedge-Trimmer-with_10000041350229.html"
         },
         "europe": {
           "buy": 195,
@@ -308,8 +309,7 @@
           "demand": 0.48,
           "popularity": 0.38
         }
-      },
-      "supplier_url": "https://www.alibaba.com/product-detail/20V-Cordless-Electric-Hedge-Trimmer-with_10000041350229.html"
+      }
     },
     {
       "id": "bike-rack",
@@ -333,7 +333,8 @@
           "buy": 320,
           "sell": 480,
           "demand": 0.5,
-          "popularity": 0.48
+          "popularity": 0.48,
+          "supplier_url": "https://www.alibaba.com/product-detail/Towbar-Bike-Rack_10000013522794.html"
         },
         "europe": {
           "buy": 630,
@@ -341,8 +342,7 @@
           "demand": 0.5,
           "popularity": 0.48
         }
-      },
-      "supplier_url": "https://www.alibaba.com/product-detail/Towbar-Bike-Rack_10000013522794.html"
+      }
     },
     {
       "id": "robot-vacuum",
@@ -365,7 +365,8 @@
           "buy": 420,
           "sell": 600,
           "demand": 0.72,
-          "popularity": 0.75
+          "popularity": 0.75,
+          "supplier_url": "https://www.alibaba.com/product-detail/Vyzzle-D10-Robot-Vacuum-5000Pa-LiDAR_1601631540350.html"
         },
         "europe": {
           "buy": 750,
@@ -385,8 +386,7 @@
           "demand": 0.78,
           "popularity": 0.8
         }
-      },
-      "supplier_url": "https://www.alibaba.com/product-detail/Vyzzle-D10-Robot-Vacuum-5000Pa-LiDAR_1601631540350.html"
+      }
     },
     {
       "id": "electric-grill",
@@ -410,7 +410,8 @@
           "buy": 210,
           "sell": 310,
           "demand": 0.55,
-          "popularity": 0.5
+          "popularity": 0.5,
+          "supplier_url": "https://www.alibaba.com/product-detail/Electric-Steak-Grill-2200W-Indoor-Smokeless_1601155020936.html"
         },
         "turkiye": {
           "buy": 340,
@@ -424,8 +425,7 @@
           "demand": 0.55,
           "popularity": 0.5
         }
-      },
-      "supplier_url": "https://www.alibaba.com/product-detail/Electric-Steak-Grill-2200W-Indoor-Smokeless_1601155020936.html"
+      }
     },
     {
       "id": "solar-charger",
@@ -449,7 +449,8 @@
           "buy": 135,
           "sell": 210,
           "demand": 0.45,
-          "popularity": 0.35
+          "popularity": 0.35,
+          "supplier_url": "https://www.alibaba.com/product-detail/Portable-100W-Solar-Battery-Charger-Monocrystalline_1600978431139.html"
         },
         "turkiye": {
           "buy": 280,
@@ -457,8 +458,7 @@
           "demand": 0.45,
           "popularity": 0.35
         }
-      },
-      "supplier_url": "https://www.alibaba.com/product-detail/Portable-100W-Solar-Battery-Charger-Monocrystalline_1600978431139.html"
+      }
     },
     {
       "id": "heat-gun",
@@ -482,7 +482,8 @@
           "buy": 48,
           "sell": 90,
           "demand": 0.4,
-          "popularity": 0.38
+          "popularity": 0.38,
+          "supplier_url": "https://www.alibaba.com/product-detail/2000W-Heat-gun-soldering-gun-with_1600559234368.html"
         },
         "europe": {
           "buy": 118,
@@ -490,8 +491,7 @@
           "demand": 0.38,
           "popularity": 0.38
         }
-      },
-      "supplier_url": "https://www.alibaba.com/product-detail/2000W-Heat-gun-soldering-gun-with_1600559234368.html"
+      }
     }
   ]
 }

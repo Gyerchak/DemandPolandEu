@@ -72,11 +72,18 @@ function tableHeaders() {
 
 function productCell(t) {
   const name = t.product_name;
-  if (t.supplier_url) {
-    return `<a class="prod" href="${t.supplier_url}" target="_blank" rel="noopener">${name}</a>`;
-  }
   const q = encodeURIComponent(name);
-  return `<a class="prod" href="https://www.alibaba.com/trade/search?SearchText=${q}" target="_blank" rel="noopener" title="Alibaba search">${name}</a>`;
+  // The supplier page must be the market where the BUY price comes from:
+  //  import -> from_market (you buy there), export -> to_market? no — export buys at home.
+  // Server already sets supplier_url from the buy market; here we only title it.
+  // Buy market: import = from_market (you buy there); export = from_market too
+  // (in export rows from_market IS the home — the server sets from_market=home).
+  const buyMarket = t.from_market;
+  if (t.supplier_url) {
+    return `<a class="prod" href="${t.supplier_url}" target="_blank" rel="noopener" title="supplier page for buy price in ${buyMarket}">${name}</a>`;
+  }
+  // No direct supplier link for this market yet -> platform search for the product.
+  return `<a class="prod" href="https://www.alibaba.com/trade/search?SearchText=${q}" target="_blank" rel="noopener" title="search supplier for ${buyMarket} (direct source not set yet)">${name} 🔍</a>`;
 }
 
 function rowHtml(t) {

@@ -94,6 +94,7 @@ std::vector<Product> load_products(const std::string& dir) {
                 pm.sell = get_double(*it, "sell", 0.0);
                 pm.demand = get_double(*it, "demand", 0.0);
                 pm.popularity = get_double(*it, "popularity", 0.0);
+                pm.supplier_url = it->value("supplier_url", "");
                 p.markets[it.key()] = pm;
             }
         }
@@ -184,7 +185,7 @@ std::vector<Trade> build_trades(const std::string& dir,
                 t.kind = "import";
                 t.product_id = product.id;
                 t.product_name = product.name;
-                t.supplier_url = product.supplier_url;
+                t.supplier_url = pm.supplier_url;      // buy market = from_market
                 t.category = cat;
                 t.from_market_id = m.id;
                 t.from_market = m.name;
@@ -223,7 +224,7 @@ std::vector<Trade> build_trades(const std::string& dir,
                 t.kind = "export";
                 t.product_id = product.id;
                 t.product_name = product.name;
-                t.supplier_url = product.supplier_url;
+                t.supplier_url = ph->second.supplier_url;   // buy market = home
                 t.category = cat;
                 t.from_market_id = home->id;
                 t.from_market = home->name;
