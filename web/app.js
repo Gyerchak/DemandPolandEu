@@ -21,12 +21,16 @@ let markets = [];
 let selected = new Set();
 let channel = "main";
 let lastImports = [];
-let lastExports = [];   // "main" (big platforms) | "whole" (platforms + all porównywarki shops)
+let lastExports = [];
+let qtyMult = 100;   // default: bulk ×100 (real trade minimum from a supplier)
 
 const MAIN_WATCH = ["visegrad", "china", "poland", "europe", "baltic", "turkiye", "westeu"];
 
 function fmtMoney(v) {
-  return v.toLocaleString("en-IE", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " €";
+  // ×100 by default: every price shown is the bulk trade value (buying from a
+  // real supplier means 100+ units). Columns keep their names — values are bulk.
+  const bulk = v * qtyMult;
+  return bulk.toLocaleString("en-IE", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " €";
 }
 function fmtPct(v) { return (v * 100).toFixed(1) + "%"; }
 
@@ -128,8 +132,7 @@ function rowHtml(t) {
       <td><small style="color:var(--muted)">${t.category}</small></td>
       <td>${t.from_market}</td>
       <td>${t.to_market}</td>
-      <td><span title="verified price from the linked exact product" style="color:var(--good)">${CHK}</span> ${fmtMoney(t.buy_eur)}
-        <div class="bulk" title="bulk landed cost ×100 units (buy + freight + duty + handling) — a real 100-unit container">×100 ≈ ${fmtMoney((t.buy_eur + t.freight_eur + t.duty_eur + t.handling_eur) * 100)}</div></td>
+      <td><span title="verified price from the linked exact product" style="color:var(--good)">${CHK}</span> ${fmtMoney(t.buy_eur)}</td>
       <td>${fmtMoney(t.freight_eur)}</td>
       <td>${fmtMoney(t.duty_eur)}</td>
       <td>${fmtMoney(t.handling_eur)}</td>
@@ -139,6 +142,7 @@ function rowHtml(t) {
       <td style="color:${moneyClass(t.profit_eur)}"><b>${fmtMoney(t.profit_eur)}</b></td>
       <td style="color:${moneyClass(t.margin)}">${fmtPct(t.margin)}</td>
       <td><span class="score ${scoreClass(t.opportunity)}">${t.opportunity.toFixed(0)}</span></td>
+      <td>${bestSellBtn(t)}</td>
     </tr>`;
 }
 
@@ -276,18 +280,18 @@ async function load() {
     if (!res.ok) throw new Error("HTTP " + res.status);
     const data = await res.json();
     const onlyReal = realOnlyCheck.checked;
-    const filterReal = (rows) => onlyReal ? rows.filter((r) => r.price_source === "real") : rows;
-    const imps = filterReal(data.imports), exps = filterReal(data.exports);
+    const keepReal = (rows) => onlyReal ? rows.filter((r) => r.price_source === "real") : rows;
+    const imps = keepReal(data.imports), exps = keepReal(data.exports);
     const realTot = data.imports.filter((r) => r.price_source === "real").length +
                     data.exports.filter((r) => r.price_source === "real").length;
     meta.innerHTML = `${data.count} trades (${imps.length} import shown, ${exps.length} export shown)`
       + ` &middot; real deals: <b style="color:var(--good)">${realTot}</b> &middot; home: <b>${data.home}</b>`
       + (onlyReal ? " &middot; <b>real only</b>" : "");
     lastImports = imps;
-    lastExports = data.exports;
-    pageState.imports = 1; pageState.exports = 1;   // reset to page 1 on new load
-    renderTable(importsTbody, "imports", data.imports);
-    renderTable(exportsTbody, "exports", data.exports);
+    lastExports = exps;                                   // FIXED: was data.exports
+    pageState.imports = 1; pageState.exports = 1;
+    renderTable(importsTbody, "imports", imps);           // FIXED: was data.imports
+    renderTable(exportsTbody, "exports", exps);           // FIXED: was data.exports
   } catch (err) {
     meta.innerHTML = `<span class="err">Error: ${err.message}</span>`;
   }
